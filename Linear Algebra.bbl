@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{ElementaryLinearAlgebra}
+Howard Anton, Chris Rorres, and Anton Kaul.
+\newblock {\em Elementary Linear Algebra: Applications Version, 12th Australia
+  and New Zealand Edition}.
+\newblock John Wiley \& Sons Australia, 12th edition, 2019.
+
+\bibitem{PaulsNotes}
+Paul Dawkins.
+\newblock {Solutions To Systems}.
+\newblock URL:
+  \url{https://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx}.
+
+\bibitem{UCBerkeley}
+Arash Komeili.
+\newblock {The Superposition Principle and Undetermined Coefficients
+  Revisited}, 2020.
+\newblock URL: \url{https://math.berkeley.edu/~arash/54/notes/n4_5.pdf}.
+
+\bibitem{TexasAM}
+Glenn Lahodny~Jr.
+\newblock {Converting Higher-Order Equations to First-Order Systems}, 2018.
+\newblock URL:
+  \url{https://www.math.tamu.edu/~glahodny/Math469/Section%204.6.pdf}.
+
+\bibitem{UCDavis}
+Isaiah Lankham, Bruno Nachtergaele, and Anne Schilling.
+\newblock {Eigenvalues and Eigenvectors}, 2007.
+\newblock URL:
+  \url{https://www.math.ucdavis.edu/~anne/WQ2007/mat67-Li-Eigenvectors.pdf}.
+
+\bibitem{GaTech}
+John McCuan.
+\newblock {Invariant Subspaces and Eigenspaces}, 2008.
+\newblock URL:
+  \url{https://people.math.gatech.edu/~mccuan/courses/1502/linear3.pdf}.
+
+\bibitem{MITOCW}
+Gilbert Strang.
+\newblock {18.06SC Linear Algebra}, 2011.
+\newblock MIT OpenCourseWare.
+\newblock URL:
+  \url{https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011}.
+
+\bibitem{MITOCW_properties_of_determinants}
+Gilbert Strang.
+\newblock {Properties of determinants}, 2011.
+\newblock MIT OpenCourseWare.
+\newblock URL:
+  \url{https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/least-squares-determinants-and-eigenvalues/properties-of-determinants/MIT18_06SCF11_Ses2.5sum.pdf}.
+
+\bibitem{MITOCW_the_four_fundamental_subspaces}
+Gilbert Strang.
+\newblock {The Four Fundamental Subspaces: 4 Lines}, 2011.
+\newblock MIT OpenCourseWare.
+\newblock URL: \url{http://web.mit.edu/18.06/www/Essays/newpaper_ver3.pdf}.
+
+\bibitem{UCLA}
+Terrence Tao.
+\newblock {Axioms of real vector spaces}, 2000.
+\newblock URL:
+  \url{https://www.math.ucla.edu/~tao/resource/general/121.1.00s/vector_axioms.html}.
+
+\bibitem{WolframMathWorld_eigen_decomposition}
+Eric~W. Weisstein.
+\newblock {Eigen Decomposition}.
+\newblock From MathWorld--A Wolfram Web Resource.
+\newblock URL: \url{https://mathworld.wolfram.com/EigenDecomposition.html}.
+
+\bibitem{WolframMathWorld_matrix_diagonalization}
+Eric~W. Weisstein.
+\newblock {Matrix Diagonalization}.
+\newblock From MathWorld--A Wolfram Web Resource.
+\newblock URL: \url{https://mathworld.wolfram.com/MatrixDiagonalization.html}.
+
+\bibitem{WolframMathWorld_matrix_power}
+Eric~W. Weisstein.
+\newblock {Matrix Power}.
+\newblock From MathWorld--A Wolfram Web Resource.
+\newblock URL: \url{https://mathworld.wolfram.com/MatrixPower.html}.
+
+\bibitem{WolframMathWorld_similarity_transformation}
+Eric~W. Weisstein.
+\newblock {Similarity Transformation}.
+\newblock From MathWorld--A Wolfram Web Resource.
+\newblock URL:
+  \url{https://mathworld.wolfram.com/SimilarityTransformation.html}.
+
+\end{thebibliography}

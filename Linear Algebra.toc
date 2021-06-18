@@ -1,0 +1,81 @@
+\contentsline {section}{Contents}{2}{section*.1}%
+\contentsline {section}{\numberline {1}Euclidean Vector Spaces}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Vectors}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Position and Displacement Vectors}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Vector Addition}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Scalar Multiplication}{6}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Norm of a Vector}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}The Unit Vector}{6}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}The Dot Product}{6}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}The Cross Product}{6}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Vector Identities}{8}{section.2}%
+\contentsline {section}{\numberline {3}Linear System of Equations}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Linear Equations}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Homogeneous Linear Equations}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Linear Systems}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Coefficient Matrices}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Augmented Matrices}{9}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Elementary Row Operations}{10}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Pivots}{10}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Gaussian Elimination}{10}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Row-Echelon Form}{10}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Gauss-Jordan Elimination}{10}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Solutions to Linear Systems}{11}{subsection.3.11}%
+\contentsline {section}{\numberline {4}Matrices}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Matrix Addition}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Scalar Multiplication}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Matrix Multiplication}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The Identity Matrix}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}The Inverse Matrix}{13}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}The Diagonal Matrix}{13}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Matrix Transpose}{13}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Matrix Trace}{13}{subsection.4.8}%
+\contentsline {section}{\numberline {5}General Vector Spaces}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Real Vector Spaces}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Subspaces}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Spanning Sets}{16}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Linear Independence}{16}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Basis Vectors}{16}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Dimension}{16}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Fundamental Subspaces}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The Four Fundamental Subspaces of a Matrix}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}The General Solution of a System of Equations}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Row Equivalence}{18}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Rank}{18}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Nullity}{18}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Orthogonality}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Orthogonal Subspaces}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Orthogonal Complements}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Vector Projections}{20}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Projection onto a Subspace}{20}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Least Squares}{21}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Linear Maps}{22}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Matrix Transformations}{22}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}General Linear Transformations}{22}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Subspaces of Linear Transformations}{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Constructing a Transformation Matrix}{24}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Determinants}{25}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Properties of Determinants}{25}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Matrix Minors}{25}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Matrix Cofactors}{25}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}The Determinant of a Matrix}{25}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}The Cofactor Matrix}{26}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}The Adjugate of a Matrix}{26}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}The Inverse of a Matrix}{26}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Invariant Subspaces}{27}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Trivial Invariant Subspaces}{27}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Eigenspaces}{27}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}The Eigenvalue Problem}{27}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Properties of Eigenvalues}{28}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Eigen Decomposition}{29}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Similarity Transformations}{29}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Matrix Diagonalisation}{29}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Powers of a Matrix}{30}{subsection.11.3}%
+\contentsline {section}{\numberline {12}System of Differential Equations}{31}{section.12}%
+\contentsline {subsection}{\numberline {12.1}First-Order Differential Equations}{31}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}First-Order System of Differential Equations}{31}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Solution using Diagonalisation}{31}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Principle of Superposition}{32}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Higher-Order Differential Equations}{32}{subsection.12.5}%
+\contentsline {section}{List of Figures}{33}{section*.2}%
+\contentsline {section}{References}{34}{section*.3}%

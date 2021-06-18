@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Linear Algebra.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainurl.bst
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Linear_Algebra.bib
+You've used 14 entries,
+            2882 wiz_defined-function locations,
+            704 strings with 7580 characters,
+and the built_in function-call counts, 4849 in all, are:
+= -- 486
+> -- 134
+< -- 0
++ -- 50
+- -- 36
+* -- 156
+:= -- 661
+add.period$ -- 49
+call.type$ -- 14
+change.case$ -- 60
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 129
+empty$ -- 574
+format.name$ -- 36
+if$ -- 1355
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 2
+newline$ -- 80
+num.names$ -- 28
+pop$ -- 205
+preamble$ -- 1
+purify$ -- 46
+quote$ -- 0
+skip$ -- 385
+stack$ -- 0
+substring$ -- 70
+swap$ -- 14
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 54
+warning$ -- 0
+while$ -- 28
+width$ -- 16
+write$ -- 152

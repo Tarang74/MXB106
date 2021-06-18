@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{physics}
+
+\usepackage[warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
+\setmathfont{Latin Modern Math}
+\setmathfont{TeX Gyre Pagella Math}[range={bb,bbit}, Scale=MatchUppercase]
+
+\pgfplotsset{compat=newest}
+
+\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{colormaps}
+
+\DeclareMathOperator{\proj}{proj}
+
+\begin{document}
+\begin{tikzpicture}
+	\draw [<->] (0,5) -- (0,0) -- (5,0); % Axes
+	% a
+	\draw [->, thin, opacity=0.65] (0,0) -- (4.5,3.9); 
+	\node [below right] at (4.5,3.9) {$\symbfit{a}$};
+	% b
+	\draw [->, thick] (0,0) -- (0.8,4);
+	\node [left] at (0.7,4) {$\symbfit{b}$};
+	% p
+	\draw [->, thick] (0,0) -- (2.43655,2.11168);
+	\node [right] at ({2.43655 / 2 + 0.25},{2.11168/2}) {$\symbfit{p}=\proj_{\symbfit{a}}\symbfit{b}=\symbfit{a}x$};
+	% e
+	\draw [->, thick, dashed, opacity=0.65] (2.43655,2.11168) -- (0.8,4);
+	\node [above right] at (1.61827,3.05584) {$\symbfit{e}=\symbfit{b}-\symbfit{p}$};
+	% Right angle
+	\draw[-, very thin] (2.27282,2.3006) -- (2.08389,2.13686) -- (2.24763,1.94794);
+\end{tikzpicture}
+\end{document}
