@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{template}
 
+\usepackage{changepage} % Modify page width
 \usepackage{chngcntr} % Reset counter within sections
 
 \counterwithin*{equation}{section}
@@ -21,34 +22,44 @@
 \newcommand{\authorStudentNumber}{n11032201}
 \newcommand{\classCode}{MXB106}
 
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+    imagewidth={5em},
+]{doclicense}
+
 %
 % Title Page
 %
 
 \title{
     \vspace{2in}
-    \textmd{\textbf{\className}} \\
+    \textmd{\textbf{\className}} \texorpdfstring{\\}{ }
 	\vspace{0.1in}
-	\textnormal{\uniTitle} \\
+	\textnormal{\uniTitle} \texorpdfstring{\\}{ }
     \vspace{0.1in}
-	\large{\textit{\classInstructorName}} \\
+	\large{\textit{\classInstructorName}} \texorpdfstring{\\}{ }
 	\vspace{0.1in}
 	\classTime
-    \vspace{2in}
 }
 
 \author{\textbf{\authorName}}
-\date{\today}
+\date{}
 
 \begin{document}
-
-\maketitle
-
-\pagebreak
+\begin{titlepage}
+	\maketitle
+	\vfill
+	\begin{adjustwidth}{3cm}{3cm}
+		\doclicenseThis
+	\end{adjustwidth}
+	\thispagestyle{empty}
+\end{titlepage}
+\newpage
 
 \tableofcontents 
-
-\pagebreak
+\newpage
 \section{Euclidean Vector Spaces}
 	\subsection{Vectors}
 	\begin{definition}
@@ -143,7 +154,7 @@
 			\end{align*}
 			where $\symbfit{\hat{n}}$ is the normal vector given by the right-hand rule.
 		\end{definition}
-	\pagebreak
+	\newpage
 \section{Vector Identities}
 	\begin{theorem}
 		Commutativity of vector addition.
@@ -213,7 +224,7 @@
 			\symbfit{a} \cross \left(\symbfit{b}\cross\symbfit{c}\right) = \symbfit{b} \left(\symbfit{a}\vdot\symbfit{c}\right) - \symbfit{c}\left(\symbfit{a}\vdot\symbfit{b}\right)
 		\end{equation*}
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Linear System of Equations}
 	\subsection{Linear Equations}
 	\begin{definition}
@@ -339,7 +350,7 @@
 	\begin{definition}
 		A \textbf{consistent system} of equations has at least one solution, and an \linebreak \textbf{inconsistent system} has no solution. 
 	\end{definition}
-	\pagebreak
+	\newpage
 \section{Matrices}
 	\begin{definition}
 		A \textbf{matrix} is an array of numbers arranged into \textit{rows} and \textit{columns}, and can be used to represent a linear transformation.
@@ -463,7 +474,7 @@
 			\tr{\left( \symbfit{A} \right)} = \sum_{i=1}^n a_{ii}
 		\end{equation*}
 	\end{definition}
-	\pagebreak
+	\newpage
 \section{General Vector Spaces}
 	\subsection{Real Vector Spaces}
 	\begin{definition}
@@ -614,7 +625,7 @@
 	\begin{theorem}
 		The zero vector space is defined to have dimension zero.
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Fundamental Subspaces}
 	\begin{figure}[H]
 		\centering
@@ -656,7 +667,7 @@
 	\begin{definition}
 		The \textbf{nullity} of a matrix, denoted by $\vnull{\left( \symbfit{A} \right)}$, is given by $\dim{\left( \nullspace{A} \right)}$.
 	\end{definition}
-	\pagebreak
+	\newpage
 \section{Orthogonality}
 	\begin{definition}
 		Two vectors are \textbf{orthogonal} if the following holds.
@@ -790,7 +801,7 @@
 	\begin{theorem}
 		Suppose $\symbfit{A}\symbfit{x}=\symbfit{b}$ is an \underline{inconsistent} linear system. The \textbf{least squares} solution of $\symbfit{A}\symbfit{x}=\symbfit{b}$ is given by the orthogonal projection $\proj_{\columnspace{A}}\symbfit{b}$.
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Linear Maps}
 	\subsection{Matrix Transformations}
 	\begin{definition}
@@ -852,7 +863,7 @@
 		\end{equation*}
 		are the \textbf{standard basis vectors} for $\mathbb{R}^n$.
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Determinants}
 	\subsection{Properties of Determinants}
 	\begin{enumerate}
@@ -916,7 +927,7 @@
 			\symbfit{A}^{-1}=\frac{1}{\det{\symbfit{A}}} \adj{\left( \symbfit{A} \right)}
 		\end{equation*}
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Invariant Subspaces}
 	\begin{definition}
 		Consider the subspace $\mathcal{V}$ of the linear mapping $T:V\rightarrow V$ from a vector space $V$ to itself, then $\mathcal{V}$ is an \textbf{invariant subspace} of $T$ if
@@ -982,7 +993,7 @@
 			\det{\left( \symbfit{A} \right)} = \prod_{i=1}^n \lambda_i
 		\end{equation*}
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{Eigen Decomposition}
 	\subsection{Similarity Transformations}
 	\begin{definition}
@@ -1064,7 +1075,7 @@
 	\begin{theorem}
 		The eigenvectors of $\symbfit{A}$ are equal to the eigenvectors of $\symbfit{A}^k$.
 	\end{theorem}
-	\pagebreak
+	\newpage
 \section{System of Differential Equations}
 	\subsection{First-Order Differential Equations}
 	\begin{definition}
@@ -1177,11 +1188,11 @@
 			]
 		\end{equation*}
 	\end{theorem}
-\pagebreak
+\newpage
 
 \listoffigures 
 
-\pagebreak
+\newpage
 
 \nocite{*}
 

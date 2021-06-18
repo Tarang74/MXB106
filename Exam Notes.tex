@@ -1,11 +1,55 @@
 \documentclass{article}
 \usepackage{template}
+\usepackage{changepage} % Modify page width
 \geometry{
 	a4paper,
 	margin = 10mm
 }
 
+\newcommand{\uniTitle}{Queensland University of Technology}
+\newcommand{\className}{Linear Algebra Exam Notes}
+\newcommand{\classTime}{Semester 1, 2021}
+\newcommand{\classInstructorName}{Dr Ravindra Pethiyagoda}
+\newcommand{\authorName}{Tarang Janawalkar}
+\newcommand{\authorStudentNumber}{n11032201}
+\newcommand{\classCode}{MXB106}
+
+\usepackage[
+    type={CC},
+    modifier={by-nc},
+    version={4.0},
+    imagewidth={5em},
+]{doclicense}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\className}} \texorpdfstring{\\}{ }
+	\vspace{0.1in}
+	\textnormal{\uniTitle} \texorpdfstring{\\}{ }
+    \vspace{0.1in}
+	\large{\textit{\classInstructorName}} \texorpdfstring{\\}{ }
+	\vspace{0.1in}
+	\classTime
+}
+
+\author{\textbf{\authorName}}
+\date{}
+
 \begin{document}
+\begin{titlepage}
+	\maketitle
+	\vfill
+	\begin{adjustwidth}{4cm}{4cm}
+		\doclicenseThis
+	\end{adjustwidth}
+	\thispagestyle{empty}
+\end{titlepage}
+\newpage
+
 \noindent A \textbf{vector space} $V$ is closed under vector addition and scalar multiplication: $\symbfit{u}+\symbfit{v} \in V$ and $k\symbfit{u} \in V$.
 
 \noindent A \textit{subset} $W$ of a vector space $V$ is called a \textbf{subspace} of $V$ if $W$ is itself a vector space. The intersection of subspaces is also a subspace of $V$.
