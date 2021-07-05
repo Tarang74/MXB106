@@ -1,7 +1,6 @@
 \documentclass{article}
 \usepackage{template}
 
-\usepackage{changepage} % Modify page width
 \usepackage{chngcntr} % Reset counter within sections
 
 \counterwithin*{equation}{section}
@@ -29,32 +28,29 @@
     imagewidth={5em},
 ]{doclicense}
 
-%
-% Title Page
-%
-
-\title{
-    \vspace{2in}
-    \textmd{\textbf{\className}} \texorpdfstring{\\}{ }
-	\vspace{0.1in}
-	\textnormal{\uniTitle} \texorpdfstring{\\}{ }
-    \vspace{0.1in}
-	\large{\textit{\classInstructorName}} \texorpdfstring{\\}{ }
-	\vspace{0.1in}
-	\classTime
-}
-
 \author{\textbf{\authorName}}
 \date{}
 
 \begin{document}
 \begin{titlepage}
-	\maketitle
-	\vfill
-	\begin{adjustwidth}{3cm}{3cm}
-		\doclicenseThis
-	\end{adjustwidth}
-	\thispagestyle{empty}
+    \vspace*{\fill}
+	\begin{center}
+        \LARGE
+        \textbf{\className}
+        \texorpdfstring{\\}{ }
+        \uniTitle
+        \texorpdfstring{\\}{ }
+        \texorpdfstring{\vspace{0.3in}}{ }
+        \normalsize\textit{\classInstructorName}
+        \texorpdfstring{\\}{ }
+        \classTime
+    \end{center}
+    \begin{center}
+        \textbf{\authorName}
+    \end{center}
+    \vspace*{\fill}
+    \doclicenseThis
+    \thispagestyle{empty}
 \end{titlepage}
 \newpage
 
