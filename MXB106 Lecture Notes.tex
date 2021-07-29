@@ -67,13 +67,13 @@
 	\begin{theorem}
 		$\mathbb{R}^n$ is the set of all ordered $n$-tuples of real numbers.
 		\begin{equation*}
-			\mathbb{R}^n = \bigl\{\left(v_1, v_2, \ldots, v_n\right): v_1, v_2, \ldots, v_n \in \mathbb{R}: n \in \mathbb{N}\bigr\}
+			\mathbb{R}^n = \bigl\{\left(v_1,\: v_2,\: \ldots,\: v_n\right): v_1,\: v_2,\: \ldots,\: v_n \in \mathbb{R}: n \in \mathbb{N}\bigr\}
 		\end{equation*}
 	\end{theorem}
 	\underline{Notation:}
 
 	\begin{enumerate}
-		\item Component form: $\symbfit{v} = \left\langle{v_1,v_2}\right\rangle = \left(v_1,v_2\right) = \mqty(v_1 \\ v_2) = \mqty[v_1 \\ v_2]$
+		\item Component form: $\symbfit{v} = \left\langle{v_1,\: v_2}\right\rangle = \left(v_1,\: v_2\right) = \mqty(v_1 \\ v_2) = \mqty[v_1 \\ v_2]$
 		\item Unit vector form: $\symbfit{v} = v_1\symbfit{\hat{i}} + v_2\symbfit{\hat{j}}$, where $\symbfit{\hat{i}}$ and $\symbfit{\hat{j}}$ are basis vectors along the $x$ and $y$ axes respectively.
 		\item Denotation: $\symbfit{v} = \underset{\sim}{v} = \vec{v}$
 	\end{enumerate}
@@ -126,7 +126,7 @@
 		\end{definition}
 	\subsection{The Dot Product}
 		\begin{definition}
-			The \textbf{dot product} is a function that associates each pair of vectors $\symbfit{v},\symbfit{w} \in \mathbb{R}^n$ a real number $\symbfit{v}\vdot\symbfit{w}$.
+			The \textbf{dot product} is a function that associates each pair of vectors $\symbfit{v},\: \symbfit{w} \in \mathbb{R}^n$ a real number $\symbfit{v}\vdot\symbfit{w}$.
 			\begin{align*}
 				\symbfit{v}\vdot\symbfit{w} &= v_1 w_1 + v_2 w_2 + \cdots + v_n w_n \\
 									&= \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}
@@ -138,7 +138,7 @@
 		\end{theorem} 
 	\subsection{The Cross Product}
 		\begin{definition}
-			The \textbf{cross product} is a function that associates each ordered pair of vectors $\symbfit{v},\symbfit{w}\in \mathbb{R}^3$ a vector $\symbfit{v}\cross\symbfit{w}\in \mathbb{R}^3$.
+			The \textbf{cross product} is a function that associates each ordered pair of vectors $\symbfit{v},\: \symbfit{w}\in \mathbb{R}^3$ a vector $\symbfit{v}\cross\symbfit{w}\in \mathbb{R}^3$.
 			\begin{align*}
 				\symbfit{v}\cross\symbfit{w} &= 
 				\mqty|
@@ -224,11 +224,11 @@
 \section{Linear System of Equations}
 	\subsection{Linear Equations}
 	\begin{definition}
-		A \textbf{linear equation} in $n$ variables $x_1, x_2, \dots, x_n$ can be expressed in the form
+		A \textbf{linear equation} in $n$ variables $x_1,\: x_2,\: \dots, x_n$ can be expressed in the form
 		\begin{equation*}
 			a_{1}x_1 + a_{2}x_2 + \dots + a_{n}x_n = b
 		\end{equation*}
-		where the \textit{coefficients} $a_1, a_2, \dots, a_n$ and the \textit{constant term} $b$ are constants.
+		where the \textit{coefficients} $a_1,\: a_2,\: \dots, a_n$ and the \textit{constant term} $b$ are constants.
 	\end{definition}
 	\subsection{Homogeneous Linear Equations}
 	\begin{definition}
@@ -248,7 +248,7 @@
 			\end{array}
 			\right.
 		\end{equation*}
-		A \textbf{solution} to the system is an $n$-tuple $\left\langle x_1,x_2,\dots,x_n\right\rangle$ that satisfies each equation.
+		A \textbf{solution} to the system is an $n$-tuple $\left\langle x_1,\: x_2,\:\dots,\:x_n\right\rangle$ that satisfies each equation.
 	\end{definition}
 	\subsection{Coefficient Matrices}
 	\begin{definition}
@@ -448,7 +448,7 @@
 	\end{theorem}
 	\subsection{The Diagonal Matrix}
 	\begin{definition}
-		A \textbf{diagonal} matrix, denoted $\diag{\left( d_{11}, d_{22}, \ldots, d_{nn} \right)}$, is an $n \times n$ matrix $\symbfit{D}$ in which entries outside the main diagonal are all zero. 
+		A \textbf{diagonal} matrix, denoted $\diag{\left( d_{11},\: d_{22},\: \ldots,\: d_{nn} \right)}$, is an $n \times n$ matrix $\symbfit{D}$ in which entries outside the main diagonal are all zero. 
 		\begin{equation*}
 			\symbfit{D} = \diag{\left( d_{11}, d_{22}, \ldots, d_{nn} \right)}
 			=\mqty[
@@ -477,7 +477,7 @@
 		A \textbf{vector space} is a set that is closed under vector addition and scalar \linebreak multiplication.
 	\end{definition}
 	\begin{theorem}
-		If the following axioms are satisfied by all objects $\symbfit{u},\symbfit{v},\symbfit{w} \in V$, and all scalars $k$ and $m$, then $V$ is a \textbf{vector space}, and the objects in $V$ are vectors.
+		If the following axioms are satisfied by all objects $\symbfit{u},\: \symbfit{v},\: \symbfit{w} \in V$, and all scalars $k$ and $m$, then $V$ is a \textbf{vector space}, and the objects in $V$ are vectors.
 	\end{theorem}
 	\begin{axiom}[Closure under addition] 
 		\begin{equation*} \label{axiom:5_1_1}
@@ -587,13 +587,13 @@
 	\end{theorem}
 	\subsection{Spanning Sets}
 	\begin{definition}
-		If the vector $\symbfit{w}$ is in a vector space $V$, then $\symbfit{w}$ is a \textbf{linear combination} of the vectors $\symbfit{v}_1, \symbfit{v}_2, \dots, \symbfit{v}_n \in V$, if $\symbfit{w}$ can be expressed in the form
+		If the vector $\symbfit{w}$ is in a vector space $V$, then $\symbfit{w}$ is a \textbf{linear combination} of the vectors $\symbfit{v}_1,\: \symbfit{v}_2,\: \dots,\: \symbfit{v}_n \in V$, if $\symbfit{w}$ can be expressed in the form
 		\begin{equation*}
 			\symbfit{w} = k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n
 		\end{equation*}
 	\end{definition}
 	\begin{theorem}
-		If $S=\left\{ \symbfit{w}_1, \symbfit{w}_2, \dots, \symbfit{w}_n \right\}$ is a nonempty set of vectors in a vector space $V$, then the set $W$ of all possible linear combinations of the vectors in $S$ is a subspace of $V$. The subspace $W$ is called the subspace of $V$ \textbf{spanned} by $S$ and the vectors in $S$ \textbf{span} $W$. If a vector in $S$ can be expressed as the linear combination of any vectors in $S$ then the set is \textbf{linearly dependent}.
+		If $S=\left\{ \symbfit{w}_1,\: \symbfit{w}_2,\: \dots,\: \symbfit{w}_n \right\}$ is a nonempty set of vectors in a vector space $V$, then the set $W$ of all possible linear combinations of the vectors in $S$ is a subspace of $V$. The subspace $W$ is called the subspace of $V$ \textbf{spanned} by $S$ and the vectors in $S$ \textbf{span} $W$. If a vector in $S$ can be expressed as the linear combination of any vectors in $S$ then the set is \textbf{linearly dependent}.
  	\end{theorem}
 	\subsection{Linear Independence}
 	\begin{definition}
@@ -1007,7 +1007,7 @@
 		\end{equation*}
 	\end{definition}
 	\begin{theorem}
-		Let $\symbfit{A}$ be an $n \times n$ matrix with $n$ linearly independent eigenvectors, then $\symbfit{A}$ is diagonalisable if $\symbfit{\Lambda}=\diag{\left( \lambda_1, \lambda_2, \dots, \lambda_n \right)}$ and $\symbfit{Q}$ is a matrix composed of the eigenvectors of $\symbfit{A}$. Explicitly,
+		Let $\symbfit{A}$ be an $n \times n$ matrix with $n$ linearly independent eigenvectors, then $\symbfit{A}$ is diagonalisable if $\symbfit{\Lambda}=\diag{\left( \lambda_1,\: \lambda_2,\: \dots,\: \lambda_n \right)}$ and $\symbfit{Q}$ is a matrix composed of the eigenvectors of $\symbfit{A}$. Explicitly,
 		\begin{equation*}
 			\symbfit{\Lambda} = 
 			\mqty[
@@ -1023,10 +1023,10 @@
 				\vertbar & \vertbar & & \vertbar
 			]
 		\end{equation*}
-		where $\symbfit{q}_1, \symbfit{q}_2, \dots, \symbfit{q}_n$ are the eigenvectors of $\symbfit{A}$.
+		where $\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n$ are the eigenvectors of $\symbfit{A}$.
 	\end{theorem}
 	\begin{solution}[Proof]
-		Let $\symbfit{q}_1, \symbfit{q}_2, \dots, \symbfit{q}_n,$ be linearly independent eigenvectors of $\symbfit{A}$, and $\lambda_1, \lambda_2, \dots, \lambda_n$, the associated eigenvalues. By definition of an eigenspace, we have
+		Let $\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n,$ be linearly independent eigenvectors of $\symbfit{A}$, and $\lambda_1,\: \lambda_2,\: \dots,\: \lambda_n$, the associated eigenvalues. By definition of an eigenspace, we have
 		\begin{equation*}
 			\left\{
 			\setlength\arraycolsep{0pt}
@@ -1066,7 +1066,7 @@
 		\end{align*}
 	\end{solutionF}
 	\begin{theorem}
-		The eigenvalues of $\symbfit{A}^k$, $\forall k \in \mathbb{N}$ are $\lambda_1^k, \lambda_2^k, \dots, \lambda_n^k$.
+		The eigenvalues of $\symbfit{A}^k$, $\forall k \in \mathbb{N}$ are $\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k$.
 	\end{theorem}
 	\begin{theorem}
 		The eigenvectors of $\symbfit{A}$ are equal to the eigenvectors of $\symbfit{A}^k$.
@@ -1083,9 +1083,9 @@
 	\begin{theorem}
 		The general solution to a first-order linear differential equation is of the form
 		\begin{equation*}
-			\func{x}{t} = \mathbb{c}_1 \e^{a t}
+			\func{x}{t} = c_1 \e^{a t}
 		\end{equation*}
-		where $\mathbb{c}_1$ is an arbitrary constant.
+		where $c_1$ is an arbitrary constant.
 	\end{theorem}
 	\subsection{First-Order System of Differential Equations}
 	\begin{definition}
@@ -1101,7 +1101,7 @@
 			\end{array}
 			\right.
 		\end{equation*}
-		where $x_1=\func{x_1}{t}, x_2=\func{x_2}{t}, \dots, x_n=\func{x_n}{t}$ are the functions to be determined. In matrix form, the system can be written as
+		where $x_1=\func{x_1}{t},\: x_2=\func{x_2}{t},\: \dots,\: x_n=\func{x_n}{t}$ are the functions to be determined. In matrix form, the system can be written as
 		\begin{align*}
 			\dv{t}\mqty[x_1 \\ x_2 \\ \vdots \\ x_n] &= \mqty[
 				a_{11} & a_{12} & \cdots & a_{1n} \\
@@ -1139,14 +1139,14 @@
 	\begin{theorem}
 		If $\symbfit{A}$ is a diagonalisable matrix, then the general solution of $\symbfit{x}' = \symbfit{A} \symbfit{x}$ can be expressed as
 		\begin{equation*}
-			\func{\symbfit{x}}{t} = \mathbb{c}_1 \e^{\lambda_1 t} \symbfit{q}_1 + \mathbb{c}_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + \mathbb{c}_n \e^{\lambda_n t} \symbfit{q}_n
+			\func{\symbfit{x}}{t} = c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n \e^{\lambda_n t} \symbfit{q}_n
 		\end{equation*}
 	\end{theorem}
 	\subsection{Principle of Superposition}
 	\begin{theorem}
 		If $x_1$ and $x_2$ are two solutions to a linear differential equation, then
 		\begin{equation*}
-			x = \mathbb{c}_1 x_1 + \mathbb{c}_2 x_2
+			x = c_1 x_1 + c_2 x_2
 		\end{equation*}
 		is also a solution to the differential equation.
 	\end{theorem}
@@ -1193,6 +1193,6 @@
 \nocite{*}
 
 \bibliographystyle{plainurl}
-\bibliography{Linear_Algebra.bib}
+\bibliography{MXB106_Lecture_Notes.bib}
 
 \end{document}

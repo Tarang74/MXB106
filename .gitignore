@@ -5,9 +5,9 @@
 *.fls
 *.lof
 *.log
-*.pdf
+*.synctex(busy)
 *.synctex.gz
-*.syntex(busy)
 *.toc
+*.vscode
 *.xdv
 *.zip

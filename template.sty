@@ -9,23 +9,14 @@
 %% Sybmols 
 
 \usepackage{amssymb} % Extended symbol collection - also loads amsfonts
-\usepackage{physics} % Vectors/derivatives/operators
-\usepackage{stmaryrd} % Extra symbols
-
-%% Fonts
-
-\usepackage{mathrsfs}
 
 %% Environments 
 
 \usepackage{amsthm} % Use theorems
-% \usepackage{framed} % Frame environments
-% \usepackage[many]{tcolorbox} % Box around environments
 
 %% Tables and arrays
 
 \usepackage{booktabs} % Top and bottom rule for tabular
-% \usepackage{longtable} % Allow tables to flow over page boundaries 
 \usepackage{tabularx} % Advanced Tables
 
 %% Lists
@@ -37,49 +28,42 @@
 \usepackage{fancyhdr} % Page headers and footers
 \usepackage{float} % Float objects such as figures and tables
 \usepackage{geometry} % Page layout customisation
-\usepackage{marginnote} % Add text in margins
-% \usepackage{showframe} % Show page boundaries
 
 %% Text enchancements
 
 \usepackage[none]{hyphenat} % Disable hyphenation of long text
-% \usepackage{textgreek} % Text symbols for Greek alphabet
 \usepackage{ragged2e} % Text alignment options
 
 %% Referencing
 
 \usepackage{tocbibind} % Adds bibliography to the Table of Contents
 \usepackage{url} % Define urls
-\usepackage[hidelinks]{hyperref} % Handle cross-referencing
-\usepackage{bookmark} % New bookmark organisation for hyperref
 
 %% Graphics
 
 \usepackage{graphicx} % Extension to graphics 
 \graphicspath{ {./figures/} }
-% \usepackage{tikz} % Create graphic elements
-% \usetikzlibrary{arrows.meta}
-% \usepackage{pgfplots} % Create plots
-% \pgfplotsset{compat=1.9}
 
 %% Miscellaneous
 
-% \usepackage{listings} % Typeset programming code 
-\usepackage{siunitx} % SI units package
-% \usepackage[dvipsnames]{xcolor} % Extension to color package
+\usepackage{physics} % Vectors/derivatives/operators
 \usepackage{pdfpages} % Import PDFs into document
+
+\usepackage[hidelinks]{hyperref} % Handle cross-referencing
+\usepackage{bookmark} % New bookmark organisation for hyperref
 
 %% Unicode setup
 
 \usepackage[warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
 \setmathfont{Latin Modern Math}
 \setmathfont{TeX Gyre Pagella Math}[range={bb,bbit}, Scale=MatchUppercase]
+\setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
 
 %%% Preamble 
 
 %% Misc Commands
 
-\newcommand{\e}{\mathbf{e}}
+\newcommand{\e}{\mathrm{e}}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
@@ -149,6 +133,11 @@
 
 \newcommand{\laplace}[2]{\mathcal{L} \left\{{#1}\right\} \left({#2}\right)}
 \newcommand{\invlaplace}[2]{\mathcal{L}^{-1} \left\{{#1}\right\} \left({#2}\right)}
+
+%% Fourier Transform
+
+\newcommand{\fourier}[2]{\mathcal{F} \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\invfourier}[2]{\mathcal{F}^{-1} \left\{{#1}\right\} \left({#2}\right)}
 
 %% Theorems
 
