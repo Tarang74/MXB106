@@ -80,7 +80,7 @@ SET /A numP=0
 :: Open PDF
 :openPDF
     ECHO -- Opening PDF --
-    figures/%tex%.pdf
+    figures\%tex%.pdf
     EXIT /B
 
 :: Help
