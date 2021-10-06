@@ -1,40 +1,89 @@
 \documentclass{article}
 \usepackage{template}
 \usepackage{changepage} % Modify page width
+
 \geometry{
 	a4paper,
 	margin = 10mm
 }
 
+\pagenumbering{gobble}
+
 \begin{document}
-\noindent A \textbf{vector space} $V$ is closed under vector addition and scalar multiplication: $\symbfit{u}+\symbfit{v} \in V$ and $k\symbfit{u} \in V$.
+\noindent A \textbf{vector space} $V$ is closed under vector addition 
+and scalar multiplication: $\symbfit{u}+\symbfit{v} \in V$ and 
+$k\symbfit{u} \in V$.
 
-\noindent A \textit{subset} $W$ of a vector space $V$ is called a \textbf{subspace} of $V$ if $W$ is itself a vector space. The intersection of subspaces is also a subspace of $V$.
+\noindent A \textit{subset} $W$ of a vector space $V$ is called a 
+\textbf{subspace} of $V$ if $W$ is itself a vector space. The 
+intersection of subspaces is also a subspace of $V$.
 
-\noindent $S$ is \textbf{linearly independent (LI)} if $k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n = \symbfup{0}$ has $k_i=0$. $S$ forms a \textbf{basis} for $V$ if $S$ spans $V$ and $S$ is LI.
+\noindent $S$ is \textbf{linearly independent (LI)} if 
+$k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n = \symbfup{0}$ 
+has $k_i=0$. $S$ forms a \textbf{basis} for $V$ if $S$ spans $V$ and 
+$S$ is LI.
 
-\noindent For $\symbfit{A}\in\mathbb{R}^{m \times n}$: $r=\rank{\symbfit{A}}=\rank{\symbfit{A}^\top}=\dim{\left( \columnspace{A} \right)}=\dim{\left( \rowspace{A} \right)}$. $\vnull{\left( \symbfit{A} \right)}=\dim{\left( \nullspace{A} \right)}=n-r$ and $\vnull{\left( \symbfit{A}^\top \right)}=\dim{\left( \leftnullspace{A} \right)}=m-r$.
+\noindent For $\symbfit{A}\in\mathbb{R}^{m \times n}$: 
+$r = \rank{\symbfit{A}} = \rank{\symbfit{A}^\top} = \dim{\left( \columnspace{A} \right)} = \dim{\left( \rowspace{A} \right)}$. 
+$\vnull{\left( \symbfit{A} \right)} = \dim{\left( \nullspace{A} \right)} = n-r$ 
+and $\vnull{\left( \symbfit{A}^\top \right)} = \dim{\left( \leftnullspace{A} \right)} = m-r$.
 
-\noindent The \textbf{four fundamental subspaces}: $\left( \columnspace{A} \right)^\perp = \leftnullspace{A}$ and $\left( \rowspace{A} \right)^\perp = \nullspace{A}$.
+\noindent The \textbf{four fundamental subspaces}: 
+$\left( \columnspace{A} \right)^\perp = \leftnullspace{A}$ and 
+$\left( \rowspace{A} \right)^\perp = \nullspace{A}$.
 
-\noindent \textbf{Row equivalent} matrices have the same \underline{row space} and \underline{null space}. 
+\noindent \textbf{Row equivalent} matrices have the same 
+\underline{row space} and \underline{null space}. 
 
-\noindent The subspaces $U$ and $W$ of a vector space $V$ are \textbf{orthogonal subspaces} iff $\forall \symbfit{u}\in U:\forall \symbfit{w}\in W:\symbfit{u}^{\top}\symbfit{w}=0$. $\symbfit{v}^\top \symbfit{v}=\norm{\symbfit{v}}^2$. 
+\noindent The subspaces $U$ and $W$ of a vector space $V$ are 
+\textbf{orthogonal subspaces} iff 
+$\forall \symbfit{u}\in U:\forall \symbfit{w}\in W:\symbfit{u}^{\top}\symbfit{w} = 0$. 
+$\symbfit{v}^\top \symbfit{v}=\norm{\symbfit{v}}^2$. 
 
-\noindent The \textbf{orthogonal complement} of $U$: $U^{\perp} = \left\{ \forall \symbfit{u}\in U:\symbfit{v}\in V: \symbfit{v}^{\top}\symbfit{u}=0 \right\}$ and $\left( U^{\perp} \right)^{\perp}=U$. $\dim{U} + \dim{U^{\perp}} = \dim{V}$.
+\noindent The \textbf{orthogonal complement} of 
+$U$: $U^{\perp} = \left\{ \forall \symbfit{u}\in U:\symbfit{v}\in V: 
+\symbfit{v}^{\top}\symbfit{u}=0 \right\}$ and 
+$\left( U^{\perp} \right)^{\perp} = U$. 
+$\dim{U} + \dim{U^{\perp}} = \dim{V}$.
 
-\noindent \textbf{Projections}: $\proj_{\symbfit{a}}\symbfit{b} = \symbfit{a} x = \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}}$. $\forall \symbfit{w}\in W:\symbfit{w}\neq \symbfit{p}:\proj_{W}\symbfit{b} = \symbfit{A}\symbfit{\hat{x}} = \symbfit{A}\left( \symbfit{A}^\top \symbfit{A} \right)^{-1}\symbfit{A}^\top \symbfit{b}:\norm{\symbfit{b}-\symbfit{p}}<\norm{\symbfit{b}-\symbfit{w}}$.
+\noindent \textbf{Projections}: $\proj_{\symbfit{a}}\symbfit{b} 
+= \symbfit{a} x 
+= \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}}$. 
+$\forall \symbfit{w}\in W:\symbfit{w}\neq \symbfit{p}:\proj_{W}\symbfit{b} 
+= \symbfit{A}\symbfit{\hat{x}} 
+= \symbfit{A}\left( \symbfit{A}^\top \symbfit{A} \right)^{-1}\symbfit{A}^\top \symbfit{b}
+:\norm{\symbfit{b}-\symbfit{p}}<\norm{\symbfit{b}-\symbfit{w}}$.
 
-\noindent $\det{\left( \symbfit{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}$, where $C_{ij}=\left( -1 \right)^{i+j}M_{ij}$. $\symbfit{A}^{-1}=\frac{1}{\det{\symbfit{A}}} \adj{\left( \symbfit{A} \right)}$, where $\adj{\left( \symbfit{A} \right)}=C^\top$.
+\noindent $\det{\left( \symbfit{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}$, 
+where $C_{ij}=\left( -1 \right)^{i+j}M_{ij}$. 
+$\symbfit{A}^{-1}=\frac{1}{\det{\symbfit{A}}} \adj{\left( \symbfit{A} \right)}$, 
+where $\adj{\left( \symbfit{A} \right)}=C^\top$.
 
-\noindent \textbf{Linear transformations}: $T:V\rightarrow W \iff \forall \symbfit{u},\: \symbfit{v} \in V:\forall k \in \mathbb{R}:\func{T}{\symbfit{u}+\symbfit{v}}=\func{T}{\symbfit{u}} + \func{T}{\symbfit{v}} \wedge \func{T}{k\symbfit{u}} = k\func{T}{\symbfit{u}}$. 
+\noindent \textbf{Linear transformations}: 
+$T:V\rightarrow W \iff \forall \symbfit{u},\: \symbfit{v} \in V:\forall k \in \mathbb{R}:T\left(\symbfit{u}+\symbfit{v}\right) = T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right) \wedge T\left(k\symbfit{u}\right) = kT\left(\symbfit{u}\right)$. 
 
-\noindent \textbf{Rotations}: $\symbfit{R}_x=\mqty[1 & 0 & 0 \\ 0 & \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ 0 & \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]$. $\symbfit{R}_y=\mqty[\cos{\left( \theta \right)} & 0 & \sin{\left( \theta \right)} \\ 0 & 1 & 0 \\ -\sin{\left( \theta \right)} & 0 & \cos{\left( \theta \right)}]$. $\symbfit{R}_z=\mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} & 0 \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)} & 0 \\ 0 & 0 & 1]$. Anticlockwise rotations looking down from the positive direction of the axis of rotation.
-In 2-d: $\symbfit{R}=\mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]$.
+\noindent \textbf{Rotations}: 
+$\symbfit{R}_x = \mqty[1 & 0 & 0 \\ 0 & \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ 0 & \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]$. 
+$\symbfit{R}_y = \mqty[\cos{\left( \theta \right)} & 0 & \sin{\left( \theta \right)} \\ 0 & 1 & 0 \\ -\sin{\left( \theta \right)} & 0 & \cos{\left( \theta \right)}]$. 
+$\symbfit{R}_z = \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} & 0 \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)} & 0 \\ 0 & 0 & 1]$. 
+Anticlockwise rotations looking down from the positive direction of the 
+axis of rotation.
+In 2-d: 
+$\symbfit{R} = \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]$.
 		
-\noindent \textbf{Shears}: $\symbfit{S}_x=\mqty[1 & a & b \\ 0 & 1 & 0 \\ 0 & 0 & 1]$. $\symbfit{S}_y=\mqty[1 & 0 & 0 \\ a & 1 & b \\ 0 & 0 & 1]$. $\symbfit{S}_z=\mqty[1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1]$. Where the standard basis vector in the subscripted axis maps to itself. Think about where the standard basis vectors maps.
+\noindent \textbf{Shears}: 
+$\symbfit{S}_x = \mqty[1 & a & b \\ 0 & 1 & 0 \\ 0 & 0 & 1]$. 
+$\symbfit{S}_y=\mqty[1 & 0 & 0 \\ a & 1 & b \\ 0 & 0 & 1]$. 
+$\symbfit{S}_z=\mqty[1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1]$. 
+Where the standard basis vector in the subscripted axis maps to itself. 
+Think about where the standard basis vectors maps.
 
-\noindent \textbf{Reflections}: $\symbfit{M}_{xy}=\mqty[1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1]$. $\symbfit{M}_{xz}=\mqty[1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1]$. $\symbfit{M}_{yz}=\mqty[-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1]$. Where vectors are reflected across the plane formed by the subscripts of $\symbfit{M}$.
+\noindent \textbf{Reflections}: 
+$\symbfit{M}_{xy}=\mqty[1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1]$. 
+$\symbfit{M}_{xz}=\mqty[1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1]$. 
+$\symbfit{M}_{yz}=\mqty[-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1]$. 
+Where vectors are reflected across the plane formed by the subscripts of 
+$\symbfit{M}$.
 
 \noindent \textbf{2-d Reflections} about $y=mx + c$, where $\theta=\arctan{\left( m \right)}$:
 \begin{align*}
@@ -43,16 +92,49 @@ In 2-d: $\symbfit{R}=\mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \ri
 	&= \frac{1}{1+m^2}\mqty[1-m^2 & 2m \\ 2m & m^2-1] \left( \symbfit{v} - \mqty[0 \\ c] \right) + \mqty[0 \\ c]
 \end{align*}
 
-\noindent \textbf{Invariant (IV) subspaces}: For $T:V\rightarrow V$. $\mathcal{V}$ is IV if $\func{T}{\mathcal{V}}\subseteq \mathcal{V}\iff\forall \symbfit{v}\in \mathcal{V}\implies \func{T}{\symbfit{v}}\in \mathcal{V}$. \textbf{Trivial IV subspaces}: $V$, $\vim{\left( T \right)} = \func{T}{V} = \left\{ \func{T}{\symbfit{v}} : \symbfit{v}\in V \right\} \subset W$, $\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : \func{T}{\symbfit{v}}=\symbfup{0} \right\}$, $\left\{ \symbfup{0} \right\}$, and any linear combination of IVs.
+\noindent \textbf{Invariant (IV) subspaces}: 
+For $T:V\rightarrow V$. $\mathcal{V}$ is IV if 
+$T\left(\mathcal{V}\right)\subseteq \mathcal{V}\iff\forall \symbfit{v}
+\in \mathcal{V}\implies T\left(\symbfit{v}\right)\in \mathcal{V}$. 
+\textbf{Trivial IV subspaces}: $V$, 
+$\vim{\left( T \right)} = T(V) = \left\{ T\left(\symbfit{v}\right) : 
+\symbfit{v}\in V \right\} \subset W$, 
+$\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : 
+T\left(\symbfit{v}\right) = \symbfup{0} \right\}$, 
+$\left\{ \symbfup{0} \right\}$, and any linear combination of IVs.
 
-\noindent \textbf{Eigenspace} (1-d IV subspace): $\mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists \lambda \in \mathbb{C}:\func{T}{\symbfit{q}}=\lambda \symbfit{q} \right\}$ where $\lambda_i$ are the eigenvalues of $\symbfit{A}$ and $\symbfit{q}_i$ are the eigenvectors of $\symbfit{A}$. $\left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q}=\symbfup{0}$. If $\symbfit{A}$ is invertible: $\det{\left( \symbfit{A} - \lambda\mathbb{1} \right)}=\symbfup{0}$. \textbf{Characteristic polynomial}: $\func{p_n}{\lambda} = \det{\left( \symbfit{A}_n - \lambda\mathbb{1}_n \right)}$; in 2-d: $\func{p_2}{\lambda}=\lambda^2-\tr{\left( \symbfit{A} \right)}\lambda + \det{\left( \symbfit{A} \right)}$. $\tr{\left( \symbfit{A} \right)} = \sum_{i=1}^n \lambda_i$ and $\det{\left( \symbfit{A} \right)} = \prod_{i=1}^n \lambda_i$. 
+\noindent \textbf{Eigenspace} (1-d IV subspace): 
+$\mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists 
+\lambda \in \mathbb{C}:T\left(\symbfit{q}\right) = \lambda \symbfit{q} \right\}$ 
+where $\lambda_i$ are the eigenvalues of $\symbfit{A}$ and 
+$\symbfit{q}_i$ are the eigenvectors of $\symbfit{A}$. 
+$\left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q}=\symbfup{0}$. 
+If $\symbfit{A}$ is invertible: 
+$\det{\left( \symbfit{A} - \lambda\mathbb{1} \right)} = \symbfup{0}$. 
+\textbf{Characteristic polynomial}: 
+$p_n\left(\lambda\right) = \det{\left( \symbfit{A}_n - \lambda\mathbb{1}_n \right)}$; 
+in 2-d: $p_2\left(\lambda\right) = \lambda^2-\tr{\left( \symbfit{A} \right)}\lambda + \det{\left( \symbfit{A} \right)}$. 
+$\tr{\left( \symbfit{A} \right)} = \sum_{i=1}^n \lambda_i$ and 
+$\det{\left( \symbfit{A} \right)} = \prod_{i=1}^n \lambda_i$. 
 
-\noindent \textbf{Similarity transformation}: $\symbfit{A}\rightarrow \symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}$. If $\symbfit{q}_i$ is LI, then $\symbfit{A}$ is \textbf{diagonalisable}: $\symbfit{\Lambda}=\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}$. \\
-Where $\symbfit{\Lambda}=\mqty[\dmat{\lambda_1,\: \lambda_2,\: \ddots,\: \lambda_n}]$ and $\symbfit{Q}=\mqty[\vertbar & \vertbar & & \vertbar \\ \symbfit{q}_1 & \symbfit{q}_2 & \cdots & \symbfit{q}_n \\ \vertbar & \vertbar & & \vertbar]$.
+\noindent \textbf{Similarity transformation}: 
+$\symbfit{A}\rightarrow \symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}$. If 
+$\symbfit{q}_i$ is LI, then $\symbfit{A}$ is 
+\textbf{diagonalisable}: $\symbfit{\Lambda}=\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}$. \\
+Where $\symbfit{\Lambda}=\mqty[\dmat{\lambda_1,\: \lambda_2,\: \ddots,\: \lambda_n}]$ 
+and 
+$\symbfit{Q}=\mqty[\vertbar & \vertbar & & \vertbar \\ \symbfit{q}_1 & 
+\symbfit{q}_2 & \cdots & \symbfit{q}_n \\ \vertbar & \vertbar & & \vertbar]$.
 
-\noindent If $\symbfit{A}$ is diagonalisable, $\forall k \in \mathbb{N}_0:\symbfit{A}^k = \symbfit{Q} \symbfit{\Lambda}^k \symbfit{Q}^{-1}$. The eigenvalues of $\symbfit{A}^k$ are the eigenvalues of $\symbfit{A}$ to the $k$-th power: $\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k$. The eigenvectors of $\symbfit{A}^k$ equal the eigenvectors of $\symbfit{A}$.
+\noindent If $\symbfit{A}$ is diagonalisable, 
+$\forall k \in \mathbb{N}_0:\symbfit{A}^k = \symbfit{Q} \symbfit{\Lambda}^k \symbfit{Q}^{-1}$. 
+The eigenvalues of $\symbfit{A}^k$ are the eigenvalues of $\symbfit{A}$ 
+to the $k$-th power: $\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k$. 
+The eigenvectors of $\symbfit{A}^k$ equal the eigenvectors of $\symbfit{A}$.
 
-\noindent The \textbf{ordinary differential equation (ODE)}: $x' = a x$, has the solution: $\func{x}{t} = c_1 \e^{a t}$. $c_1$ is determined through initial conditions.
+\noindent The \textbf{ordinary differential equation (ODE)}: $x' = a x$, 
+has the solution: $x(t) = c_1 \e^{a t}$. $c_1$ is determined through 
+initial conditions.
 
 \noindent The \textbf{system of differential equations}: $
 \left\{
@@ -69,11 +151,24 @@ Where $\symbfit{\Lambda}=\mqty[\dmat{\lambda_1,\: \lambda_2,\: \ddots,\: \lambda
 	a_{21} & a_{22} & \cdots & a_{2n} \\
 	\vdots & \vdots &        & \vdots \\
 	a_{n1} & a_{n2} & \cdots & a_{nn}
-] \mqty[x_1 \\ x_2 \\ \vdots \\ x_n]$ $\iff \symbfit{x}' = \symbfit{A} \symbfit{x}$ can be solved using $\symbfit{x}=\symbfit{Q}\symbfit{u}$, where $\symbfit{Q}$ is the matrix that diagonalises $\symbfit{A}$, and $\symbfit{u}$ is the solution to $\symbfit{u}' = \symbfit{\Lambda} \symbfit{u}$, where $\symbfit{\Lambda}$ is the diagonal similarity transformation of $\symbfit{A}$.
+] \mqty[x_1 \\ x_2 \\ \vdots \\ x_n]$ $\iff \symbfit{x}' = \symbfit{A} \symbfit{x}$ 
+can be solved using $\symbfit{x}=\symbfit{Q}\symbfit{u}$, where 
+$\symbfit{Q}$ is the matrix that diagonalises $\symbfit{A}$, and 
+$\symbfit{u}$ is the solution to 
+$\symbfit{u}' = \symbfit{\Lambda} \symbfit{u}$, where 
+$\symbfit{\Lambda}$ is the diagonal similarity transformation of 
+$\symbfit{A}$.
 
-\noindent If $\symbfit{A}$ is diagonalisable, then for $\symbfit{x}' = \symbfit{A} \symbfit{x}$: $\func{\symbfit{x}}{t} = c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n \e^{\lambda_n t} \symbfit{q}_n$.
+\noindent If $\symbfit{A}$ is diagonalisable, then for 
+$\symbfit{x}' = \symbfit{A} \symbfit{x}$: $\symbfit{x}(t) 
+= c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + 
+\cdots + c_n \e^{\lambda_n t} \symbfit{q}_n$.
 	
-\noindent For the \textbf{higher-order linear differential equation} $x^{\left( n \right)} + a_1 x^{\left( n-1 \right)} + \cdots + a_{n-1} x' + a_n x = 0$, define: $x_1 = x,\, x_2 = x',\, \dots,\, x_n = x^{\left( n-1 \right)}$, and let: $\symbfit{x}=\mqty[x_1 \\ x_2 \\ \cdots \\ x_n]$. Then solve the ODE: 
+\noindent For the \textbf{higher-order linear differential equation} 
+$x^{\left( n \right)} + a_1 x^{\left( n-1 \right)} + \cdots + a_{n-1} x' + a_n x = 0$, 
+define: $x_1 = x,\, x_2 = x',\, \dots,\, x_n = x^{\left( n-1 \right)}$, 
+and let: $\symbfit{x}=\mqty[x_1 \\ x_2 \\ \cdots \\ x_n]$. Then solve 
+the ODE: 
 $\dv{t}\mqty[
 	x_1 \\
 	x_2 \\
@@ -91,17 +186,20 @@ $\dv{t}\mqty[
 	\vdotswithin{x_3} \\
 	x_n	
 ]$ using diagonalisation.
-\thispagestyle{empty}
-\pagebreak
+\newpage
 
-\noindent\textbf{Norm of a vector}: $\norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\dots+v_n^2}$.
+\noindent\textbf{Norm of a vector}: 
+$\norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\dots+v_n^2}$.
 
-\noindent\textbf{Unit vector}: $\symbfit{\hat{v}} = \frac{\symbfit{v}}{\norm{\symbfit{v}}}$.
+\noindent\textbf{Unit vector}: 
+$\symbfit{\hat{v}} = \frac{\symbfit{v}}{\norm{\symbfit{v}}}$.
 
-\noindent\textbf{Dot product}: $\symbfit{v}\vdot\symbfit{w}= v_1 w_1 + v_2 w_2 + \cdots + v_n w_n = \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}$.
+\noindent\textbf{Dot product}: 
+$\symbfit{v}\cdot\symbfit{w}= v_1 w_1 + v_2 w_2 + \cdots + v_n w_n 
+= \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}$.
 
 \noindent\textbf{Cross product}: $
-\symbfit{v}\cross\symbfit{w} = 
+\symbfit{v}\times\symbfit{w} = 
 \mqty|
 	\symbfit{\hat{i}} & \symbfit{\hat{j}} & \symbfit{\hat{k}} \\
 	v_1 & v_2 & v_3 \\
@@ -114,67 +212,88 @@ $.
 
 \noindent\textbf{Vector space axioms}:
 
-\noindent\textbf{Closure under addition}: $\symbfit{u}+\symbfit{v} \in V$ 
+\indent\textbf{Closure under addition}: 
+$\symbfit{u}+\symbfit{v} \in V$ 
 
-\noindent\textbf{Commutativity of vector addition}: $\symbfit{u} + \symbfit{v} = \symbfit{v} + \symbfit{u}$
+\indent\textbf{Commutativity of vector addition}: 
+$\symbfit{u} + \symbfit{v} = \symbfit{v} + \symbfit{u}$
 
-\noindent\textbf{Associativity of vector addition}: $\symbfit{u} + \left(\symbfit{v} + \symbfit{w}\right) = \left(\symbfit{u} + \symbfit{v}\right) + \symbfit{w}$
+\indent\textbf{Associativity of vector addition}: 
+$\symbfit{u} + \left(\symbfit{v} + \symbfit{w}\right) = 
+\left(\symbfit{u} + \symbfit{v}\right) + \symbfit{w}$
 
-\noindent\textbf{Additive identity}: $\symbfit{u} + \symbfup{0} = \symbfit{u}$
+\indent\textbf{Additive identity}: 
+$\symbfit{u} + \symbfup{0} = \symbfit{u}$
 
-\noindent\textbf{Additive inverse}: $\symbfit{u} + \left(-\symbfit{u}\right) = \symbfup{0}$
+\indent\textbf{Additive inverse}: 
+$\symbfit{u} + \left(-\symbfit{u}\right) = \symbfup{0}$
 
-\noindent\textbf{Closure under scalar multiplication}: $k\symbfit{u} \in V$
+\indent\textbf{Closure under scalar multiplication}: 
+$k\symbfit{u} \in V$
 
-\noindent\textbf{Distributivity of vector addition}: $k \left(\symbfit{u} + \symbfit{v}\right) = k\symbfit{u} + k\symbfit{v}$
+\indent\textbf{Distributivity of vector addition}: 
+$k \left(\symbfit{u} + \symbfit{v}\right) = k\symbfit{u} + k\symbfit{v}$
 
-\noindent\textbf{Distributivity of scalar addition}: $\left(k+m\right)\symbfit{u} = k\symbfit{u} + m\symbfit{u}$
+\indent\textbf{Distributivity of scalar addition}: 
+$\left(k+m\right)\symbfit{u} = k\symbfit{u} + m\symbfit{u}$
 
-\noindent\textbf{Associativity of scalar multiplication}: $k\left(m\symbfit{u}\right)=\left(km\right)\symbfit{u}$
+\indent\textbf{Associativity of scalar multiplication}: 
+$k\left(m\symbfit{u}\right)=\left(km\right)\symbfit{u}$
 
-\noindent\textbf{Scalar multiplication identity}: $1 \symbfit{u}=\symbfit{u}$
+\indent\textbf{Scalar multiplication identity}: 
+$1 \symbfit{u}=\symbfit{u}$
 
-\noindent Subspaces of $\mathbb{R}^2$: $\left\{ \symbfup{0} \right\}$, lines through the origin, and $\mathbb{R}^2$.
+\noindent Subspaces of $\mathbb{R}^2$: $\left\{ \symbfup{0} \right\}$, 
+lines through the origin, and $\mathbb{R}^2$.
 
-\noindent Subspaces of $\mathbb{R}^3$: $\left\{ \symbfup{0} \right\}$, lines through the origin, planes through the origin, and $\mathbb{R}^3$.
+\noindent Subspaces of $\mathbb{R}^3$: $\left\{ \symbfup{0} \right\}$, 
+lines through the origin, planes through the origin, and $\mathbb{R}^3$.
 
-\noindent Subspaces of $\symbfit{M}_{nn}$: Upper triangular matrices, lower triangular matrices, diagonal matrices, and $\symbfit{M}_{nn}$.
+\noindent Subspaces of $\symbfit{M}_{nn}$: Upper triangular matrices, 
+lower triangular matrices, diagonal matrices, and $\symbfit{M}_{nn}$.
 
 \noindent\textbf{Determinant properties}:
 
-\noindent$\det{\left( \mathbb{1} \right)}=1$. 
+\indent$\det{\left( \mathbb{1} \right)}=1$. 
 
-\noindent Exchanging two rows of a matrix reverses the sign of its determinant. 
+\indent Exchanging two rows of a matrix reverses the sign of its 
+determinant. 
 
-\noindent Determinants are multilinear, so that $\mdet{a+a' & b+b' \\ c & d} = \mdet{a & b \\ c & d}+\mdet{a' & b' \\ c & d}$ and $\mdet{ta & tb \\ c & d}=t\mdet{a & b \\ c & d}$. 
+\indent Determinants are multilinear, so that 
+$\mdet{a+a' & b+b' \\ c & d} 
+= \mdet{a & b \\ c & d}+\mdet{a' & b' \\ c & d}$ and 
+$\mdet{ta & tb \\ c & d}=t\mdet{a & b \\ c & d}$. 
 
-\noindent If $\symbfit{A}$ has two equal rows, then $\det{\left( \symbfit{A} \right)}=0$. 
+\indent If $\symbfit{A}$ has two equal rows, then 
+$\det{\left( \symbfit{A} \right)}=0$. 
 
-\noindent Adding a scalar multiple of one row to another does not change the determinant of a matrix. 
+\indent Adding a scalar multiple of one row to another does not change 
+the determinant of a matrix. 
 
-\noindent If $\symbfit{A}$ has a row of zeros, then $\det{\left( \symbfit{A} \right)}=0$. 
+\indent If $\symbfit{A}$ has a row of zeros, then 
+$\det{\left( \symbfit{A} \right)}=0$. 
 
-\noindent If $\symbfit{A}$ is triangular, then $\det{\left( \symbfit{A} \right)}=\prod_{i=1}^{n} a_{ii}$. 
+\indent If $\symbfit{A}$ is triangular, then 
+$\det{\left( \symbfit{A} \right)}=\prod_{i=1}^{n} a_{ii}$. 
 
-\noindent If $\symbfit{A}$ is singular, then $\det{\left( \symbfit{A} \right)}=0$. 
+\indent If $\symbfit{A}$ is singular, then 
+$\det{\left( \symbfit{A} \right)}=0$. 
 
-\noindent$\det{\left( \symbfit{A}\symbfit{B} \right)}=\det{\left( \symbfit{A} \right)}\det{\left( \symbfit{B} \right)}$. 
+\indent$\det{\left( \symbfit{A}\symbfit{B} \right)} = \det{\left( \symbfit{A} \right)}\det{\left( \symbfit{B} \right)}$. 
 
-\noindent$\det{\left( \symbfit{A}^\top \right)}=\det{\left( \symbfit{A} \right)}$ 
+\indent$\det{\left( \symbfit{A}^\top \right)} = \det{\left( \symbfit{A} \right)}$ 
 
 \noindent\textbf{Matrix Identities}:
 
-\noindent$\symbfit{A}\left( \symbfit{B}\symbfit{C} \right) = \symbfit{A}\symbfit{B}+\symbfit{A}\symbfit{C}$
+\indent$\symbfit{A}\left( \symbfit{B}\symbfit{C} \right) = \symbfit{A}\symbfit{B}+\symbfit{A}\symbfit{C}$
 
-\noindent$\left( \symbfit{A}+\symbfit{B} \right)^\top = \symbfit{A}^\top + \symbfit{B}^\top$
+\indent$\left( \symbfit{A}+\symbfit{B} \right)^\top = \symbfit{A}^\top + \symbfit{B}^\top$
 
-\noindent$\left( \symbfit{A}\symbfit{B} \right)^\top = \symbfit{B}^\top \symbfit{A}^\top$
+\indent$\left( \symbfit{A}\symbfit{B} \right)^\top = \symbfit{B}^\top \symbfit{A}^\top$
 
-\noindent If $\symbfit{A}$ and $\symbfit{B}$ are both invertible:
+\indent If $\symbfit{A}$ and $\symbfit{B}$ are both invertible:
 
-\noindent$\left( \symbfit{A}\symbfit{B} \right)^{-1} = \symbfit{B}^{-1}\symbfit{A}^{-1}$
+\indent$\left( \symbfit{A}\symbfit{B} \right)^{-1} = \symbfit{B}^{-1}\symbfit{A}^{-1}$
 
-\noindent$\left( \symbfit{A}^{-1} \right)^\top = \left( \symbfit{A}^\top \right)^{-1}$
-
-\thispagestyle{empty}
+\indent$\left( \symbfit{A}^{-1} \right)^\top = \left( \symbfit{A}^\top \right)^{-1}$
 \end{document}

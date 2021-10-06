@@ -10,12 +10,10 @@
 \setmathfont{Latin Modern Math}
 \setmathfont{TeX Gyre Pagella Math}[range={bb,bbit}, Scale=MatchUppercase]
 
-\newcommand{\func}[2]{{#1}\left({#2}\right)}
-
-\newcommand{\columnspace}[1]{\func{\mathcal{C}}{\symbfit{#1}}}
-\newcommand{\rowspace}[1]{\func{\mathcal{C}}{\symbfit{#1}^{\top}}}
-\newcommand{\nullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}}}
-\newcommand{\leftnullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}^{\top}}}
+\newcommand{\columnspace}[1]{\mathcal{C}\left(\symbfit{#1}\right)}
+\newcommand{\rowspace}[1]{\mathcal{C}\left(\symbfit{#1}^{\top}\right)}
+\newcommand{\nullspace}[1]{\mathcal{N}\left(\symbfit{#1}\right)}
+\newcommand{\leftnullspace}[1]{\mathcal{N}\left(\symbfit{#1}^{\top}\right)}
 
 \pgfplotsset{compat=newest}
 

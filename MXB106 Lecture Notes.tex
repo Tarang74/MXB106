@@ -120,21 +120,21 @@
 		\end{definition}
 	\subsection{The Dot Product}
 		\begin{definition}
-			The \textbf{dot product} is a function that associates each pair of vectors $\symbfit{v},\: \symbfit{w} \in \mathbb{R}^n$ a real number $\symbfit{v}\vdot\symbfit{w}$.
+			The \textbf{dot product} is a function that associates each pair of vectors $\symbfit{v},\: \symbfit{w} \in \mathbb{R}^n$ a real number $\symbfit{v}\cdot\symbfit{w}$.
 			\begin{align*}
-				\symbfit{v}\vdot\symbfit{w} &= v_1 w_1 + v_2 w_2 + \cdots + v_n w_n \\
+				\symbfit{v}\cdot\symbfit{w} &= v_1 w_1 + v_2 w_2 + \cdots + v_n w_n \\
 									&= \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}
 			\end{align*}
 			where $\theta$ is the angle between $\symbfit{v}$ and $\symbfit{w}$.
 		\end{definition}
 		\begin{theorem}
-			If $\symbfit{v} \vdot \symbfit{w}=0$ then $\symbfit{v}$ and $\symbfit{w}$ are orthogonal. 
+			If $\symbfit{v} \cdot \symbfit{w}=0$ then $\symbfit{v}$ and $\symbfit{w}$ are orthogonal. 
 		\end{theorem} 
 	\subsection{The Cross Product}
 		\begin{definition}
-			The \textbf{cross product} is a function that associates each ordered pair of vectors $\symbfit{v},\: \symbfit{w}\in \mathbb{R}^3$ a vector $\symbfit{v}\cross\symbfit{w}\in \mathbb{R}^3$.
+			The \textbf{cross product} is a function that associates each ordered pair of vectors $\symbfit{v},\: \symbfit{w}\in \mathbb{R}^3$ a vector $\symbfit{v}\times\symbfit{w}\in \mathbb{R}^3$.
 			\begin{align*}
-				\symbfit{v}\cross\symbfit{w} &= 
+				\symbfit{v}\times\symbfit{w} &= 
 				\mqty|
 					\symbfit{\hat{i}} & \symbfit{\hat{j}} & \symbfit{\hat{k}} \\
 					v_1 & v_2 & v_3 \\
@@ -154,64 +154,64 @@
 	\end{theorem}
 	\begin{theorem}
 		\begin{equation*}
-			\symbfit{a}\vdot\symbfit{a}=\norm{\symbfit{a}}^2
+			\symbfit{a}\cdot\symbfit{a}=\norm{\symbfit{a}}^2
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Commutativity of dot products.
 		\begin{equation*}
-			\symbfit{a}\vdot \symbfit{b} = \symbfit{b}\vdot \symbfit{a}
+			\symbfit{a}\cdot \symbfit{b} = \symbfit{b}\cdot \symbfit{a}
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Distributivity of dot products over vector addition.
 		\begin{equation*}
-			\symbfit{a}\vdot \left(\symbfit{b}+\symbfit{c}\right) = \symbfit{a}\vdot\symbfit{b} + \symbfit{a}\vdot\symbfit{c}
+			\symbfit{a}\cdot \left(\symbfit{b}+\symbfit{c}\right) = \symbfit{a}\cdot\symbfit{b} + \symbfit{a}\cdot\symbfit{c}
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Associativity of dot products over scalar multiplication.
 		\begin{equation*}
-			\left(r\symbfit{a}\right)\vdot\symbfit{b} = r\left(\symbfit{a}\vdot\symbfit{b}\right)=\symbfit{a}\vdot\left(r\symbfit{b}\right)
+			\left(r\symbfit{a}\right)\cdot\symbfit{b} = r\left(\symbfit{a}\cdot\symbfit{b}\right)=\symbfit{a}\cdot\left(r\symbfit{b}\right)
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Bilinearity of dot products.
 		\begin{equation*}
-			\symbfit{a}\vdot\left(r\symbfit{b}+\symbfit{c}\right)=r\left(\symbfit{a}\vdot\symbfit{b}\right)+\left(\symbfit{a}\vdot\symbfit{c}\right)
+			\symbfit{a}\cdot\left(r\symbfit{b}+\symbfit{c}\right)=r\left(\symbfit{a}\cdot\symbfit{b}\right)+\left(\symbfit{a}\cdot\symbfit{c}\right)
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		\begin{equation*}
-			\symbfit{a}\cross \symbfit{a} = \symbfup{0}
+			\symbfit{a}\times \symbfit{a} = \symbfup{0}
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Anticommutativity of cross products.
 		\begin{equation*}
-			\symbfit{a}\cross \symbfit{b} = -\symbfit{b}\cross \symbfit{a}
+			\symbfit{a}\times \symbfit{b} = -\symbfit{b}\times \symbfit{a}
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Distributivity of cross products over vector addition.
 		\begin{equation*}
-			\symbfit{a}\cross\left( \symbfit{b}+\symbfit{c} \right) = \symbfit{a}\cross\symbfit{b} + \symbfit{a}\cross\symbfit{c}
+			\symbfit{a}\times\left( \symbfit{b}+\symbfit{c} \right) = \symbfit{a}\times\symbfit{b} + \symbfit{a}\times\symbfit{c}
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		Associativity of cross products over scalar multiplication.
 		\begin{equation*}
-			\left( r \symbfit{a}\right)\cross\symbfit{b} = \symbfit{a}\cross\left( r \symbfit{b} \right) = r\left(\symbfit{a}\cross\symbfit{b}\right)
+			\left( r \symbfit{a}\right)\times\symbfit{b} = \symbfit{a}\times\left( r \symbfit{b} \right) = r\left(\symbfit{a}\times\symbfit{b}\right)
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		\begin{equation*}
-			\symbfit{a} \vdot \left(\symbfit{b}\cross\symbfit{c}\right) = \symbfit{b} \vdot \left(\symbfit{c}\cross\symbfit{a}\right) = \symbfit{c} \vdot \left(\symbfit{a}\cross\symbfit{b}\right)
+			\symbfit{a} \cdot \left(\symbfit{b}\times\symbfit{c}\right) = \symbfit{b} \cdot \left(\symbfit{c}\times\symbfit{a}\right) = \symbfit{c} \cdot \left(\symbfit{a}\times\symbfit{b}\right)
 		\end{equation*}
 	\end{theorem}
 	\begin{theorem}
 		\begin{equation*}
-			\symbfit{a} \cross \left(\symbfit{b}\cross\symbfit{c}\right) = \symbfit{b} \left(\symbfit{a}\vdot\symbfit{c}\right) - \symbfit{c}\left(\symbfit{a}\vdot\symbfit{b}\right)
+			\symbfit{a} \times \left(\symbfit{b}\times\symbfit{c}\right) = \symbfit{b} \left(\symbfit{a}\cdot\symbfit{c}\right) - \symbfit{c}\left(\symbfit{a}\cdot\symbfit{b}\right)
 		\end{equation*}
 	\end{theorem}
 	\newpage
@@ -662,7 +662,7 @@
 	\begin{definition}
 		Two vectors are \textbf{orthogonal} if the following holds.
 		\begin{equation*}
-			\symbfit{v}\vdot \symbfit{w}=0 \iff \symbfit{v}^{\top}\symbfit{w}=0
+			\symbfit{v}\cdot \symbfit{w}=0 \iff \symbfit{v}^{\top}\symbfit{w}=0
 		\end{equation*}
 	\end{definition}
 	\begin{theorem}
@@ -721,7 +721,7 @@
 	\end{equation*}
 	alternatively
 	\begin{equation*}
-		\proj_{\symbfit{a}}\symbfit{b} = \symbfit{a} x = \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}} = \symbfit{a} \frac{\symbfit{a}\vdot\symbfit{b}}{\symbfit{a}\vdot\symbfit{a}}
+		\proj_{\symbfit{a}}\symbfit{b} = \symbfit{a} x = \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}} = \symbfit{a} \frac{\symbfit{a}\cdot\symbfit{b}}{\symbfit{a}\cdot\symbfit{a}}
 	\end{equation*}
 	\end{theorem}
 	\begin{solution}[Proof]
@@ -760,7 +760,7 @@
 				\mqty[
 					\hat{x}_1 \\ 
 					\hat{x}_2 \\ 
-					\vdots \\ 
+					\cdots \\ 
 					\hat{x}_n
 				] \\
 			&= \symbfit{A}\symbfit{\hat{x}}
@@ -797,20 +797,20 @@
 	\begin{definition}
 		A \textbf{matrix transformation} $T_{\symbfit{A}}:\mathbb{R}^n\rightarrow \mathbb{R}^m$ is a mapping of the form
 		\begin{equation*}
-			\func{T_{\symbfit{A}}}{\symbfit{x}} = \symbfit{A}\symbfit{x}
+			T_{\symbfit{A}}\left(\symbfit{x}\right) = \symbfit{A}\symbfit{x}
 		\end{equation*}
 		where $\symbfit{A}\in \mathbb{R}^{m \times n}$. As this transformation is linear, the following linearity properties hold.
 		\begin{enumerate}
-			\item $\func{T}{\symbfit{u}+\symbfit{v}}=\func{T}{\symbfit{u}} + \func{T}{\symbfit{v}}$
-			\item $\func{T}{k\symbfit{u}}= k\func{T}{\symbfit{u}}$
+			\item $T\left(\symbfit{u}+\symbfit{v}\right)=T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right)$
+			\item $T\left(k\symbfit{u}\right)= kT\left(\symbfit{u}\right)$
 		\end{enumerate}
 	\end{definition}
 	\subsection{General Linear Transformations}
 	\begin{theorem}
 		If $T: V \rightarrow W$ is a mapping between two vector spaces $V$ and $W$, then $T$ is the \textbf{linear transformation} from $V$ to $W$, and the following properties hold.
 		\begin{enumerate}
-			\item $\func{T}{\symbfit{u}+\symbfit{v}}=\func{T}{\symbfit{u}} + \func{T}{\symbfit{v}}$
-			\item $\func{T}{k\symbfit{u}}= k\func{T}{\symbfit{u}}$
+			\item $T\left(\symbfit{u}+\symbfit{v}\right)=T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right)$
+			\item $T\left(k\symbfit{u}\right) kT\left(\symbfit{u}\right)$
 		\end{enumerate}
 	\end{theorem}
 	\begin{theorem}
@@ -829,11 +829,11 @@
 			\item The vector space $W$ is the \textbf{codomain} of $T$.
 			\item The \textbf{image} (or \textbf{range}) of $T$ is the set of vectors the linear transformation maps to.
 			\begin{equation*}
-				\vim{\left( T \right)} = \func{T}{V} = \left\{ \func{T}{\symbfit{v}} : \symbfit{v}\in V \right\} \subset W
+				\vim{\left( T \right)} = T\left(V\right) = \left\{ T\left(\symbfit{v}\right) : \symbfit{v}\in V \right\} \subset W
 			\end{equation*}
 			\item The \textbf{kernel} of $T$ is the set of vectors that map to the zero vector.
 			\begin{equation*}
-				\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : \func{T}{\symbfit{v}}=\symbfup{0} \right\}
+				\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : T\left(\symbfit{v}\right)=\symbfup{0} \right\}
 			\end{equation*}
 		\end{enumerate}
 	\end{definition}
@@ -843,7 +843,7 @@
 		\begin{equation*}
 			\symbfit{A} = \mqty[
 				\vertbar & \vertbar & & \vertbar \\ 
-				\func{T}{\symbfit{e}_1} & \func{T}{\symbfit{e}_2} & \cdots & \func{T}{\symbfit{e}_n} \\ 
+				T\left(\symbfit{e}_1\right) & T\left(\symbfit{e}_2\right) & \cdots & T\left(\symbfit{e}_n\right) \\ 
 				\vertbar & \vertbar & & \vertbar
 			]
 		\end{equation*}
@@ -922,13 +922,13 @@
 	\begin{definition}
 		Consider the subspace $\mathcal{V}$ of the linear mapping $T:V\rightarrow V$ from a vector space $V$ to itself, then $\mathcal{V}$ is an \textbf{invariant subspace} of $T$ if
 		\begin{equation*}
-			\func{T}{\mathcal{V}}\subseteq \mathcal{V}
+			T\left(\mathcal{V}\right)\subseteq \mathcal{V}
 		\end{equation*}
 	\end{definition}
 	\begin{theorem}
 		If $\mathcal{V}$ is an invariant subspace of a linear mapping $T: V \rightarrow V$ from a vector space $V$ to itself, then
 		\begin{equation*}
-			\forall \symbfit{v}\in \mathcal{V}\implies \func{T}{\symbfit{v}}\in \mathcal{V}
+			\forall \symbfit{v}\in \mathcal{V}\implies T\left(\symbfit{v}\right)\in \mathcal{V}
 		\end{equation*}
 	\end{theorem}
 	\subsection{Trivial Invariant Subspaces}
@@ -946,7 +946,7 @@
 	\begin{theorem}
 		If $\mathcal{V}$ is an eigenspace of the linear mapping $T: V \rightarrow V$, then
 		\begin{equation*}
-			\mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists \lambda \in \mathbb{C}:\func{T}{\symbfit{q}}=\lambda \symbfit{q} \right\}
+			\mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists \lambda \in \mathbb{C}:T\left(\symbfit{q}\right)=\lambda \symbfit{q} \right\}
 		\end{equation*}
 		where $\lambda$ is the \textbf{eigenvalue} associated with the \textbf{eigenvector} $\symbfit{q}$.
 	\end{theorem}
@@ -1077,7 +1077,7 @@
 	\begin{theorem}
 		The general solution to a first-order linear differential equation is of the form
 		\begin{equation*}
-			\func{x}{t} = c_1 \e^{a t}
+			x(t) = c_1 \e^{a t}
 		\end{equation*}
 		where $c_1$ is an arbitrary constant.
 	\end{theorem}
@@ -1095,7 +1095,7 @@
 			\end{array}
 			\right.
 		\end{equation*}
-		where $x_1=\func{x_1}{t},\: x_2=\func{x_2}{t},\: \dots,\: x_n=\func{x_n}{t}$ are the functions to be determined. In matrix form, the system can be written as
+		where $x_1=x_1(t),\: x_2=x_2(t),\: \dots,\: x_n=x_n(t)$ are the functions to be determined. In matrix form, the system can be written as
 		\begin{align*}
 			\dv{t}\mqty[x_1 \\ x_2 \\ \vdots \\ x_n] &= \mqty[
 				a_{11} & a_{12} & \cdots & a_{1n} \\
@@ -1133,7 +1133,7 @@
 	\begin{theorem}
 		If $\symbfit{A}$ is a diagonalisable matrix, then the general solution of $\symbfit{x}' = \symbfit{A} \symbfit{x}$ can be expressed as
 		\begin{equation*}
-			\func{\symbfit{x}}{t} = c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n \e^{\lambda_n t} \symbfit{q}_n
+			\symbfit{x}(t) = c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n \e^{\lambda_n t} \symbfit{q}_n
 		\end{equation*}
 	\end{theorem}
 	\subsection{Principle of Superposition}

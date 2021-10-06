@@ -15,12 +15,10 @@
 \DeclareMathOperator{\vker}{ker}
 \DeclareMathOperator{\vcoker}{coker}
 
-\newcommand{\func}[2]{{#1}\left({#2}\right)}
-
-\newcommand{\columnspace}[1]{\func{\mathcal{C}}{\symbfit{#1}}}
-\newcommand{\rowspace}[1]{\func{\mathcal{C}}{\symbfit{#1}^{\top}}}
-\newcommand{\nullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}}}
-\newcommand{\leftnullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}^{\top}}}
+\newcommand{\columnspace}[1]{\mathcal{C}\left(\symbfit{#1}\right)}
+\newcommand{\rowspace}[1]{\mathcal{C}\left(\symbfit{#1}^{\top}\right)}
+\newcommand{\nullspace}[1]{\mathcal{N}\left(\symbfit{#1}\right)}
+\newcommand{\leftnullspace}[1]{\mathcal{N}\left(\symbfit{#1}^{\top}\right)}
 
 \pgfplotsset{compat=newest}
 
@@ -85,7 +83,7 @@
 	% Number set
 	\node[label={[label distance=40]180:{\scalebox{3}{$V$}}}] at (\pivotOneX,\pivotOneY) {};
 	\node[label={[label distance=40]0:{\scalebox{3}{$W$}}}] at (\pivotTwoX,\pivotTwoY) {};
-	%
+	% 
 	% Zeros
 	\draw [fill] (\pivotOneX, \pivotOneY) circle [radius=0.05];
 	\node[label={[label distance=0.25]90:{\scalebox{1.25}{$\symbfup{0}$}}}] at (\pivotOneX, \pivotOneY) {};
@@ -100,7 +98,7 @@
 	\node[label={[label distance=0.25]180:{\scalebox{1.25}{$\symbfit{v}$}}}] at \rotateXY{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne} {};
 	% Transformed vector
 	\draw [fill] \rotateXY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} circle [radius=0.05];
-	\node[label={[label distance=0.25]0:{\scalebox{1.25}{$\func{T}{\symbfit{v}}$}}}] at \rotateXY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} {};
+	\node[label={[label distance=0.25]0:{\scalebox{1.25}{$T\left(\symbfit{v}\right)$}}}] at \rotateXY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} {};
 	%
 	% Kernel Equation 
 	\draw [thick] \rotateXY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne} -- (\pivotTwoX, \pivotTwoY);
@@ -113,11 +111,11 @@
 	\draw [->, thick] (\pivotOneX , \pivotOneY) -- ({(\pivotOneX + \pivotTwoX) / 2}, {(\pivotOneY + \pivotTwoY) / 2});
 	%
 	% Transformation Equation Label
-	\node[label={[label distance=0.25]90:{\scalebox{1.25}{$\func{T}{\symbfit{v}}=\symbfit{A}\symbfit{v}$}}}] at ({(\rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateX{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateY{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
+	\node[label={[label distance=0.25]90:{\scalebox{1.25}{$T\left(\symbfit{v}\right)=\symbfit{A}\symbfit{v}$}}}] at ({(\rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateX{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateY{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
 	% Transformation of 0 Equation Label
-	\node[label={[label distance=0.25]90:{\scalebox{1.25}{$\func{T}{\symbfup{0}}=\symbfup{0}$}}}] at ({(\pivotOneX + \pivotTwoX) / 2}, {(\pivotOneY + \pivotTwoY) / 2}) {};
+	\node[label={[label distance=0.25]90:{\scalebox{1.25}{$T\left(\symbfup{0}\right)=\symbfup{0}$}}}] at ({(\pivotOneX + \pivotTwoX) / 2}, {(\pivotOneY + \pivotTwoY) / 2}) {};
 	% Kernel Equation Label
-	\node[label={[label distance=0.25]325:{\scalebox{1.25}{$\func{T}{\symbfit{v}}=\symbfup{0}$}}}] at ({(\pivotTwoX + \rotateX{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\pivotTwoY + \rotateY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
+	\node[label={[label distance=0.25]325:{\scalebox{1.25}{$T\left(\symbfit{v}\right)=\symbfup{0}$}}}] at ({(\pivotTwoX + \rotateX{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\pivotTwoY + \rotateY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
 	% 
 	% Rank definition
 	\node at (0,6.5) {\scalebox{1.75}{$r=\rank{\left( T \right)}$}};
