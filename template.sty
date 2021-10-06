@@ -10,6 +10,10 @@
 
 \usepackage{amssymb} % Extended symbol collection - also loads amsfonts
 
+%% Fonts
+
+\usepackage{mathrsfs}
+
 %% Environments 
 
 \usepackage{amsthm} % Use theorems
@@ -28,6 +32,7 @@
 \usepackage{fancyhdr} % Page headers and footers
 \usepackage{float} % Float objects such as figures and tables
 \usepackage{geometry} % Page layout customisation
+\usepackage{marginnote} % Add text in margins
 
 %% Text enchancements
 
@@ -46,7 +51,10 @@
 
 %% Miscellaneous
 
+\usepackage{listings} % Typeset programming code 
+\usepackage{siunitx} % SI units package
 \usepackage{physics} % Vectors/derivatives/operators
+% \usepackage[dvipsnames]{xcolor} % Extension to color package
 \usepackage{pdfpages} % Import PDFs into document
 
 \usepackage[hidelinks]{hyperref} % Handle cross-referencing
@@ -108,36 +116,15 @@
 \newcommand{\nullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}}}
 \newcommand{\leftnullspace}[1]{\func{\mathcal{N}}{\symbfit{#1}^{\top}}}
 
-%% Integrals
-
-\newcommand{\dintegral}[4]{\int_{#3}^{#4} #1 \dd{#2}}
-\newcommand{\integral}[2]{\int #1 \dd{#2}}
-\newcommand{\iintegral}[4]{\iint_{#4} #1 \dd{#2} \dd{#3}}
-\newcommand{\iiintegral}[5]{\iiint_{#5} #1 \dd{#2} \dd{#3}  \dd{#4}}
-\newcommand{\iiiintegral}[6]{\iiiint_{#6} #1 \dd{#2} \dd{#3} \dd{#4} \dd{#5}}
-
-%% Functions
-
-\newcommand{\func}[2]{{#1}\left({#2}\right)}
-\newcommand{\ffunc}[3]{{#1}\left({#2}, {#3} \right)}
-\newcommand{\fffunc}[4]{{#1}\left({#2}, {#3}, {#4} \right)}
-\newcommand{\nfunc}[3]{{#1}\left({#2}_1, \ldots , {#2}_{#3} \right)}
-
-\newcommand{\vfunc}[4]{\func{\vb*{{#1}}}{{#2}} = \left\langle \func{{#3}}{{#2}}, \func{{#4}}{{#2}} \right\rangle}
-\newcommand{\vffunc}[5]{\func{\vb*{{#1}}}{{#2}} = \left\langle \func{{#3}}{{#2}}, \func{{#4}}{{#2}}, \func{{#5}}{{#2}} \right\rangle}
-\newcommand{\vnfunc}[3]{\func{\vb*{{#1}}}{{#2}} = \left\langle \func{{#1}_{1}}{{#2}}, \ldots, \func{{#1}_{#3}}{{#2}} \right\rangle}
-
-\newcommand{\mvnfunc}[4]{\nfunc{\vb*{{#1}}}{{#2}}{{#3}} = \left\langle \nfunc{{#1}_{1}}{{#2}}{{#3}}, \ldots , \nfunc{{#1}_{#4}}{{#2}}{{#3}} \right\rangle}
-
 %% Laplace Transform
 
-\newcommand{\laplace}[2]{\mathcal{L} \left\{{#1}\right\} \left({#2}\right)}
-\newcommand{\invlaplace}[2]{\mathcal{L}^{-1} \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\laplace}[2]{\char"2112 \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\invlaplace}[2]{\char"2112^{-1} \left\{{#1}\right\} \left({#2}\right)}
 
 %% Fourier Transform
 
-\newcommand{\fourier}[2]{\mathcal{F} \left\{{#1}\right\} \left({#2}\right)}
-\newcommand{\invfourier}[2]{\mathcal{F}^{-1} \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\fourier}[2]{\char"2131 \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\invfourier}[2]{\char"2131^{-1} \left\{{#1}\right\} \left({#2}\right)}
 
 %% Theorems
 
@@ -146,8 +133,10 @@
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{corollary}{Corollary}[theorem]
 
 \newtheorem{axiom}{Axiom}
+\newtheorem*{remark}{Remark}
 
 \newenvironment{solution}[1][Solution]{\proof[#1]\mbox{}\\*}{\endproof}
 \newenvironment{solutionF}[1][Solution]{\proof[#1]\mbox{}}{\endproof}
