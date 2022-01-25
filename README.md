@@ -6,9 +6,9 @@
 
 ---
 
-This repository provides **lecture notes** and **exam notes**.
+This repository provides **lecture notes** and **exam notes** for **MXB106 - Linear Algebra**.
 
-*The contents of the lecture notes are shown below.*
+*The contents of the lecture notes are described below.*
 
 ---
 
