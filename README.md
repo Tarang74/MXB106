@@ -4,7 +4,13 @@
 
 #### Semester 1, 2021
 
-----
+---
+
+This repository provides **lecture notes** and **exam notes**.
+
+*The contents of the lecture notes are shown below.*
+
+---
 
 ## Contents
 
@@ -15,7 +21,7 @@
 5. General Vector Spaces
 6. Fundamental Subspaces
 7. Orthogonality
-8. Linear Maps
+8. Linear Maps  
 9. Determinants
 10. Invariant Subspaces
 11. Eigen Decomposition
