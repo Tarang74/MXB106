@@ -13,6 +13,9 @@
 	margin = 10mm
 }
 
+%% Hide horizontal rule 
+\renewcommand{\headrulewidth}{0pt}
+
 % Hide page numbers
 \pagenumbering{gobble}
 
@@ -206,13 +209,11 @@
 
     The eigenvectors of $\symbfit{A}^k$ equal the eigenvectors of $\symbfit{A}$.
 \end{minipage}
+\section*{Differential Equations}
+The \textbf{ordinary differential equation (ODE)}: $x' = a x$,
+has the solution: $x(t) = c_1 \e^{a t}$. $c_1$ is determined through
+initial conditions.
 \begin{multicols*}{2}
-
-    \section*{Differential Equations}
-    The \textbf{ordinary differential equation (ODE)}: $x' = a x$,
-    has the solution: $x(t) = c_1 \e^{a t}$. $c_1$ is determined through
-    initial conditions.
-
     The \textbf{system of differential equations}:
     \begin{align*}
                & \left\{
