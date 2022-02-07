@@ -2,22 +2,19 @@
 \documentclass{article}
 \usepackage{LaTeX-Submodule/template}
 
-\usepackage{chngcntr} % Reset counter within sections
+% Additional packages & macros
 
-\counterwithin*{equation}{section}
-\counterwithin*{equation}{subsection}
-
-\pagestyle{fancy}
-\setlength\headheight{24pt}
-
-\lhead{\className}
-\rhead{\leftmark}
-\cfoot{\thepage}
-
+% Header and footer
 \newcommand{\className}{Linear Algebra}
 \newcommand{\classTime}{Semester 1, 2021}
 \newcommand{\classInstructorName}{Dr Ravindra Pethiyagoda}
 
+\fancyhf{}
+\fancyhead[L]{\className}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% Copyright
 \usepackage[
     type={CC},
     modifier={by-nc-sa},
@@ -29,6 +26,7 @@
 \date{}
 
 \begin{document}
+%
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
@@ -48,9 +46,10 @@
     \thispagestyle{empty}
 \end{titlepage}
 \newpage
-
+%
 \tableofcontents 
 \newpage
+%
 \section{Euclidean Vector Spaces}
 	\subsection{Vectors}
 	\begin{definition}
