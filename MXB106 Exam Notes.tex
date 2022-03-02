@@ -40,51 +40,51 @@
 %
 \begin{minipage}[t]{62.39259259mm}
     \section*{Vector Spaces}
-    A \textbf{vector space} $V$ is closed under vector addition
+    A \textbf{vector space} \(V\) is closed under vector addition
     and scalar multiplication:
     \begin{equation*}
         \symbfit{u}+\symbfit{v} \in V \ \text{and} \ k\symbfit{u} \in V.
     \end{equation*}
-    A \textit{subset} $W$ of a vector space $V$ is called a
-    \textbf{subspace} of $V$ if $W$ is itself a vector space. The
-    intersection of subspaces is also a subspace of $V$.
+    A \textit{subset} \(W\) of a vector space \(V\) is called a
+    \textbf{subspace} of \(V\) if \(W\) is itself a vector space. The
+    intersection of subspaces is also a subspace of \(V\).
 
-    $S$ is \textbf{linearly independent (LI)} if
+    \(S\) is \textbf{linearly independent (LI)} if
     \begin{equation*}
         k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n = \symbfup{0}
     \end{equation*}
-    has $k_i=0$.
+    has \(k_i=0\).
 
-    $S$ forms a \textbf{basis} for $V$ if $S$ spans $V$ and
-    $S$ is LI.
+    \(S\) forms a \textbf{basis} for \(V\) if \(S\) spans \(V\) and
+    \(S\) is LI.
     \section*{Fundamental Subspaces}
-    For $\symbfit{A}\in\mathbb{R}^{m \times n}$:
+    For \(\symbfit{A}\in\mathbb{R}^{m \times n}\):
     \begin{itemize}
-        \item $r = \rank{\left( \symbfit{A} \right)} = \dim{\left( \columnspace{A} \right)}$
-        \item $r = \rank{\left( \symbfit{A}^\top \right)} = \dim{\left( \rowspace{A} \right)}$
-        \item $n - r = \vnull{\left( \symbfit{A} \right)}      = \dim{\left( \nullspace{A} \right)}$
-        \item $m - r = \vnull{\left( \symbfit{A}^\top \right)} = \dim{\left( \leftnullspace{A} \right)}$
+        \item \(r = \rank{\left( \symbfit{A} \right)} = \dim{\left( \columnspace{A} \right)}\)
+        \item \(r = \rank{\left( \symbfit{A}^\top \right)} = \dim{\left( \rowspace{A} \right)}\)
+        \item \(n - r = \vnull{\left( \symbfit{A} \right)}      = \dim{\left( \nullspace{A} \right)}\)
+        \item \(m - r = \vnull{\left( \symbfit{A}^\top \right)} = \dim{\left( \leftnullspace{A} \right)}\)
     \end{itemize}
     \textbf{Row equivalent} matrices have the same
     \underline{row space} and \underline{null space}.
     \section*{Orthogonality}
-    The subspaces $U$ and $W$ of a vector space $V$ are
+    The subspaces \(U\) and \(W\) of a vector space \(V\) are
     \textbf{orthogonal subspaces} iff
     \begin{equation*}
         \forall \symbfit{u}\in U:\forall \symbfit{w}\in W:\symbfit{u}^{\top}\symbfit{w} = 0.
     \end{equation*}
     \begin{itemize}
-        \item $\symbfit{v}^\top \symbfit{v}=\norm{\symbfit{v}}^2$
+        \item \(\symbfit{v}^\top \symbfit{v}=\norm{\symbfit{v}}^2\)
     \end{itemize}
-    The \textbf{orthogonal complement} of $U$:
+    The \textbf{orthogonal complement} of \(U\):
     \begin{equation*}
         U^{\perp} = \left\{ \forall \symbfit{u}\in U:\symbfit{v}\in V: \symbfit{v}^{\top}\symbfit{u}=0 \right\}
     \end{equation*}
     \begin{itemize}
-        \item $\left( U^{\perp} \right)^{\perp} = U$
-        \item $\dim{U} + \dim{U^{\perp}} = \dim{V}$
-        \item $\left( \columnspace{A} \right)^\perp = \leftnullspace{A}$
-        \item $\left( \rowspace{A} \right)^\perp = \nullspace{A}$
+        \item \(\left( U^{\perp} \right)^{\perp} = U\)
+        \item \(\dim{U} + \dim{U^{\perp}} = \dim{V}\)
+        \item \(\left( \columnspace{A} \right)^\perp = \leftnullspace{A}\)
+        \item \(\left( \rowspace{A} \right)^\perp = \nullspace{A}\)
     \end{itemize}
     \textbf{Projections}:
     \begin{equation*}
@@ -101,11 +101,11 @@
     \begin{equation*}
         \det{\left( \symbfit{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}
     \end{equation*}
-    where $C_{ij}=\left( -1 \right)^{i+j}M_{ij}$.
+    where \(C_{ij}=\left( -1 \right)^{i+j}M_{ij}\).
     \begin{equation*}
         \symbfit{A}^{-1}=\frac{1}{\det{\symbfit{A}}} \adj{\left( \symbfit{A} \right)}
     \end{equation*}
-    where $\adj{\left( \symbfit{A} \right)}=C^\top$.
+    where \(\adj{\left( \symbfit{A} \right)}=C^\top\).
 \end{minipage}\hfill%
 \begin{minipage}[t]{126.1962963mm}
     \section*{Linear Maps}
@@ -136,9 +136,9 @@
         \symbfit{M}_{yz}=\mqty[-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1]
     \end{align*}
     where vectors are reflected across the plane formed by the subscripts of
-    $\symbfit{M}$.
+    \(\symbfit{M}\).
 
-    \textbf{2d reflections} about $y=mx + c$, where $\theta=\arctan{\left( m \right)}$:
+    \textbf{2d reflections} about \(y=mx + c\), where \(\theta=\arctan{\left( m \right)}\):
     \begin{align*}
         T\left( \symbfit{v} \right) & = \symbfit{R} \symbfit{M}_{xz} \symbfit{R}^{-1} \left( \symbfit{v} - \mqty[0                                \\ c] \right) + \mqty[0 \\ c] \\
                                     & = \mqty[\cos{\left( \theta \right)}                                          & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}] \mqty[1 & 0 \\ 0 & -1] \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]^{-1} \left( \symbfit{v} - \mqty[0 \\ c] \right) + \mqty[0 \\ c] \\
@@ -148,17 +148,17 @@
         \section*{Invariant Subspaces}
         \textbf{Invariant (IV) subspaces}:
 
-        For $T:V\rightarrow V$, $\mathcal{V}$ is IV if
+        For \(T:V\rightarrow V\), \(\mathcal{V}\) is IV if
         \begin{equation*}
             T\left(\mathcal{V}\right)\subseteq \mathcal{V}\iff\forall \symbfit{v}
             \in \mathcal{V}\implies T\left(\symbfit{v}\right)\in \mathcal{V}.
         \end{equation*}
         \textbf{Trivial IV subspaces}:
         \begin{enumerate}
-            \item $V$
-            \item $\vim{\left( T \right)} \equiv T(V) = \left\{ T\left(\symbfit{v}\right) : \symbfit{v}\in V \right\}$
-            \item $\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : T\left(\symbfit{v}\right) = \symbfup{0} \right\}$
-            \item $\left\{ \symbfup{0} \right\}$
+            \item \(V\)
+            \item \(\vim{\left( T \right)} \equiv T(V) = \left\{ T\left(\symbfit{v}\right) : \symbfit{v}\in V \right\}\)
+            \item \(\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : T\left(\symbfit{v}\right) = \symbfup{0} \right\}\)
+            \item \(\left\{ \symbfup{0} \right\}\)
             \item linear combination of IV subspaces
         \end{enumerate}
         \textbf{Eigenspaces} (1d IV subspace):
@@ -166,12 +166,12 @@
             \mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists
             \lambda \in \mathbb{C}:T\left(\symbfit{q}\right) = \lambda \symbfit{q} \right\}
         \end{equation*}
-        where $\lambda_i$ are the eigenvalues of $\symbfit{A}$ and
-        $\symbfit{q}_i$ are the eigenvectors of $\symbfit{A}$, and they satisfy
-        $\left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q}=\symbfup{0}$.
+        where \(\lambda_i\) are the eigenvalues of \(\symbfit{A}\) and
+        \(\symbfit{q}_i\) are the eigenvectors of \(\symbfit{A}\), and they satisfy
+        \(\left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q}=\symbfup{0}\).
 
-        If $\symbfit{A}$ is invertible:
-        $\det{\left( \symbfit{A} - \lambda\mathbb{1} \right)} = 0$.
+        If \(\symbfit{A}\) is invertible:
+        \(\det{\left( \symbfit{A} - \lambda\mathbb{1} \right)} = 0\).
 
         \textbf{Characteristic polynomial}:
         \begin{equation*}
@@ -189,13 +189,13 @@
         \begin{equation*}
             \symbfit{A}\rightarrow \symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}
         \end{equation*}
-        If $\symbfit{q}_i$ are LI, then $\symbfit{A}$ is
+        If \(\symbfit{q}_i\) are LI, then \(\symbfit{A}\) is
         \textbf{diagonalisable}:
         \begin{equation*}
             \symbfit{\Lambda}=\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q} \iff \symbfit{A}=\symbfit{Q}\symbfit{\Lambda}\symbfit{Q}^{-1}
         \end{equation*}
     \end{multicols*}
-    If $\symbfit{A}$ is diagonalisable:
+    If \(\symbfit{A}\) is diagonalisable:
     \begin{equation*}
         \symbfit{\Lambda}=\mqty[\dmat{\lambda_1,\: \lambda_2,\: \ddots,\: \lambda_n}] \quad
         \symbfit{Q}=\mqty[\vertbar & \vertbar & & \vertbar \\ \symbfit{q}_1 &
@@ -204,14 +204,14 @@
     \begin{equation*}
         \forall k \in \mathbb{N}_0:\symbfit{A}^k = \symbfit{Q} \symbfit{\Lambda}^k \symbfit{Q}^{-1}
     \end{equation*}
-    The eigenvalues of $\symbfit{A}^k$ are the eigenvalues of $\symbfit{A}$
-    to the $k$-th power: $\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k$.
+    The eigenvalues of \(\symbfit{A}^k\) are the eigenvalues of \(\symbfit{A}\)
+    to the \(k\)-th power: \(\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k\).
 
-    The eigenvectors of $\symbfit{A}^k$ equal the eigenvectors of $\symbfit{A}$.
+    The eigenvectors of \(\symbfit{A}^k\) equal the eigenvectors of \(\symbfit{A}\).
 \end{minipage}
 \section*{Differential Equations}
-The \textbf{ordinary differential equation (ODE)}: $x' = a x$,
-has the solution: $x(t) = c_1 \e^{a t}$. $c_1$ is determined through
+The \textbf{ordinary differential equation (ODE)}: \(x' = a x\),
+has the solution: \(x(t) = c_1 \e^{a t}\). \(c_1\) is determined through
 initial conditions.
 \begin{multicols*}{2}
     The \textbf{system of differential equations}:
@@ -234,12 +234,12 @@ initial conditions.
         ] \mqty[x_1                                                       \\ x_2 \\ \vdots \\ x_n] \\
         \iff   & \symbfit{x}' = \symbfit{A} \symbfit{x}
     \end{align*}
-    can be solved using $\symbfit{x}=\symbfit{Q}\symbfit{u}$ where
-    $\symbfit{Q}$ is the matrix that diagonalises $\symbfit{A}$ and
-    $\symbfit{u}$ is the solution to $\symbfit{u}' = \symbfit{\Lambda} \symbfit{u}$ where
-    $\symbfit{\Lambda}$ is the diagonal similarity transformation of $\symbfit{A}$.
+    can be solved using \(\symbfit{x}=\symbfit{Q}\symbfit{u}\) where
+    \(\symbfit{Q}\) is the matrix that diagonalises \(\symbfit{A}\) and
+    \(\symbfit{u}\) is the solution to \(\symbfit{u}' = \symbfit{\Lambda} \symbfit{u}\) where
+    \(\symbfit{\Lambda}\) is the diagonal similarity transformation of \(\symbfit{A}\).
 
-    If $\symbfit{A}$ is diagonalisable, then for $\symbfit{x}' = \symbfit{A} \symbfit{x}$:
+    If \(\symbfit{A}\) is diagonalisable, then for \(\symbfit{x}' = \symbfit{A} \symbfit{x}\):
     \begin{equation*}
         \symbfit{x}(t) = c_1 \e^{\lambda_1 t} \symbfit{q}_1 + c_2 \e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n \e^{\lambda_n t} \symbfit{q}_n
     \end{equation*}
@@ -347,17 +347,17 @@ initial conditions.
         1 \symbfit{u}=\symbfit{u}
     \end{equation*}
     \section*{Subspaces}
-    \textbf{Subspaces of $\mathbb{R}^2$}: $\left\{ \symbfup{0} \right\}$,
-    lines through the origin, and $\mathbb{R}^2$.
+    \textbf{Subspaces of \(\mathbb{R}^2\)}: \(\left\{ \symbfup{0} \right\}\),
+    lines through the origin, and \(\mathbb{R}^2\).
 
-    \textbf{Subspaces of $\mathbb{R}^3$}: $\left\{ \symbfup{0} \right\}$,
-    lines through the origin, planes through the origin, and $\mathbb{R}^3$.
+    \textbf{Subspaces of \(\mathbb{R}^3\)}: \(\left\{ \symbfup{0} \right\}\),
+    lines through the origin, planes through the origin, and \(\mathbb{R}^3\).
 
-    \textbf{Subspaces of $\symbfit{M}_{nn}$}: Upper triangular matrices,
-    lower triangular matrices, diagonal matrices, and $\symbfit{M}_{nn}$.
+    \textbf{Subspaces of \(\symbfit{M}_{nn}\)}: Upper triangular matrices,
+    lower triangular matrices, diagonal matrices, and \(\symbfit{M}_{nn}\).
     \section*{Determinant Properties}
     \begin{enumerate}
-        \item $\det{\left( \mathbb{1} \right)}=1$
+        \item \(\det{\left( \mathbb{1} \right)}=1\)
         \item Exchanging two rows of a matrix reverses the sign of its determinant
         \item Determinants are multilinear, so that
               \begin{equation*}
@@ -368,23 +368,23 @@ initial conditions.
               \begin{equation*}
                   \mdet{ta & tb \\ c & d}=t\mdet{a & b \\ c & d}
               \end{equation*}
-        \item If $\symbfit{A}$ has two equal rows, then $\det{\left( \symbfit{A} \right)}=0$
+        \item If \(\symbfit{A}\) has two equal rows, then \(\det{\left( \symbfit{A} \right)}=0\)
         \item Adding a scalar multiple of one row to another does not change the determinant of a matrix
-        \item If $\symbfit{A}$ has a row of zeros, then $\det{\left( \symbfit{A} \right)}=0$
-        \item If $\symbfit{A}$ is triangular, then $\det{\left( \symbfit{A} \right)}=\prod_{i=1}^{n} a_{ii}$
-        \item If $\symbfit{A}$ is singular, then $\det{\left( \symbfit{A} \right)}=0$
-        \item $\det{\left( \symbfit{A}\symbfit{B} \right)} = \det{\left( \symbfit{A} \right)}\det{\left( \symbfit{B} \right)}$
-        \item $\det{\left( \symbfit{A}^\top \right)} = \det{\left( \symbfit{A} \right)}$
+        \item If \(\symbfit{A}\) has a row of zeros, then \(\det{\left( \symbfit{A} \right)}=0\)
+        \item If \(\symbfit{A}\) is triangular, then \(\det{\left( \symbfit{A} \right)}=\prod_{i=1}^{n} a_{ii}\)
+        \item If \(\symbfit{A}\) is singular, then \(\det{\left( \symbfit{A} \right)}=0\)
+        \item \(\det{\left( \symbfit{A}\symbfit{B} \right)} = \det{\left( \symbfit{A} \right)}\det{\left( \symbfit{B} \right)}\)
+        \item \(\det{\left( \symbfit{A}^\top \right)} = \det{\left( \symbfit{A} \right)}\)
     \end{enumerate}
     \section*{Matrix Identities}
     \begin{enumerate}
-        \item $\symbfit{A}\left( \symbfit{B}\symbfit{C} \right) = \symbfit{A}\symbfit{B}+\symbfit{A}\symbfit{C}$
-        \item $\left( \symbfit{A}+\symbfit{B} \right)^\top = \symbfit{A}^\top + \symbfit{B}^\top$
-        \item $\left( \symbfit{A}\symbfit{B} \right)^\top = \symbfit{B}^\top \symbfit{A}^\top$
-        \item If $\symbfit{A}$ and $\symbfit{B}$ are both invertible:
+        \item \(\symbfit{A}\left( \symbfit{B}\symbfit{C} \right) = \symbfit{A}\symbfit{B}+\symbfit{A}\symbfit{C}\)
+        \item \(\left( \symbfit{A}+\symbfit{B} \right)^\top = \symbfit{A}^\top + \symbfit{B}^\top\)
+        \item \(\left( \symbfit{A}\symbfit{B} \right)^\top = \symbfit{B}^\top \symbfit{A}^\top\)
+        \item If \(\symbfit{A}\) and \(\symbfit{B}\) are both invertible:
               \begin{enumerate}
-                  \item $\left( \symbfit{A}\symbfit{B} \right)^{-1} = \symbfit{B}^{-1}\symbfit{A}^{-1}$
-                  \item $\left( \symbfit{A}^{-1} \right)^\top = \left( \symbfit{A}^\top \right)^{-1}$
+                  \item \(\left( \symbfit{A}\symbfit{B} \right)^{-1} = \symbfit{B}^{-1}\symbfit{A}^{-1}\)
+                  \item \(\left( \symbfit{A}^{-1} \right)^\top = \left( \symbfit{A}^\top \right)^{-1}\)
               \end{enumerate}
     \end{enumerate}
 \end{multicols*}
