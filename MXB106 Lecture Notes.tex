@@ -420,7 +420,7 @@
     \textbf{Matrix addition} is performed by adding the corresponding
     components of two matrices of the same dimension.
     \begin{equation*}
-        \symbf{A} + \symbfit{B} =
+        \symbf{A} + \symbf{B} =
         \begin{bmatrix}
             a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
             a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\
@@ -448,7 +448,7 @@
     \textbf{Matrix multiplication} is performed by multiplying each row
     in the first matrix by the columns of the second matrix.
     \begin{align*}
-        \symbf{A} \symbfit{B} & = \symbfit{C} \\
+        \symbf{A} \symbf{B} & = \symbf{C} \\
         \begin{bmatrix}
             \horzbar & \symbfit{a}_{1} & \horzbar \\
             \horzbar & \symbfit{a}_{2} & \horzbar \\
@@ -668,12 +668,12 @@
     \end{enumerate}
 \end{theorem}
 \begin{theorem}
-    Subspaces of \(\symbfit{M}_{nn}\).
+    Subspaces of \(\symbf{M}_{nn}\).
     \begin{enumerate}
         \item Upper triangular matrices
         \item Lower triangular matrices
         \item Diagonal matrices
-        \item \(\symbfit{M}_{nn}\)
+        \item \(\symbf{M}_{nn}\)
     \end{enumerate}
 \end{theorem}
 \subsection{Spanning Sets}
@@ -1095,20 +1095,20 @@
           \(\det{\left( \symbf{A} \right)}=\prod_{i=1}^{n} a_{ii}\).
     \item If \(\symbf{A}\) is singular, then
           \(\det{\left( \symbf{A} \right)}=0\).
-    \item \(\det{\left( \symbf{A}\symbfit{B} \right)}=\det{\left( \symbf{A} \right)}\det{\left( \symbfit{B} \right)}\).
+    \item \(\det{\left( \symbf{A}\symbf{B} \right)}=\det{\left( \symbf{A} \right)}\det{\left( \symbf{B} \right)}\).
     \item \(\det{\left( \symbf{A}^\top \right)}=\det{\left( \symbf{A} \right)}\).
 \end{enumerate}
 \subsection{Matrix Minors}
 \begin{definition}
     The \textbf{minor} of \(a_{ij}\) in \(\symbf{A}\), denoted
-    \(M_{ij}\), is the determinant of the submatrix formed by deleting
+    \(\symbf{M}_{ij}\), is the determinant of the submatrix formed by deleting
     the \(i\)th row and \(j\)th column of \(\symbf{A}\).
 \end{definition}
 \subsection{Matrix Cofactors}
 \begin{definition}
     The \textbf{cofactor} of \(a_{ij}\) in \(\symbf{A}\) is defined as
     \begin{equation*}
-        C_{ij} = \left( -1 \right)^{i+j} M_{ij}
+        \symbf{C}_{ij} = \left( -1 \right)^{i+j} \symbf{M}_{ij}
     \end{equation*}
 \end{definition}
 \subsection{The Determinant of a Matrix}
@@ -1116,7 +1116,7 @@
     The determinant of an \(n\times n\) matrix \(\symbf{A}\) is given
     by
     \begin{equation*}
-        \det{\left( \symbf{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}
+        \det{\left( \symbf{A} \right)} = \sum_{j=1}^n a_{ij}\symbf{C}_{ij} = \sum_{i=1}^n a_{ij}\symbf{C}_{ij}
     \end{equation*}
     where \(a_{ij}\) is the entry in the \(i\)th row and \(j\)th column
     of \(\symbf{A}\).
@@ -1124,15 +1124,15 @@
 \subsection{The Cofactor Matrix}
 \begin{definition}
     The \textbf{cofactor matrix} of an \(n\times n\) matrix
-    \(\symbf{A}\), denoted \(\symbfit{C}\), is defined as the matrix
+    \(\symbf{A}\), denoted \(\symbf{C}\), is defined as the matrix
     of the cofactors of \(\symbf{A}\).
     \begin{equation*}
-        \symbfit{C} =
+        \symbf{C} =
         \begin{bmatrix}
-            C_{11} & C_{12} & \cdots & C_{1n} \\
-            C_{21} & C_{22} & \cdots & C_{2n} \\
+            c_{11} & c_{12} & \cdots & c_{1n} \\
+            c_{21} & c_{22} & \cdots & c_{2n} \\
             \vdots & \vdots &        & \vdots \\
-            C_{n1} & C_{n2} & \cdots & C_{nn}
+            c_{n1} & c_{n2} & \cdots & c_{nn}
         \end{bmatrix}
     \end{equation*}
 \end{definition}
@@ -1143,7 +1143,7 @@
     \(\adj{\left( \symbf{A} \right)}\), is the transpose its cofactor
     matrix.
     \begin{equation*}
-        \adj{\left( \symbf{A} \right)} = \symbfit{C}^\top
+        \adj{\left( \symbf{A} \right)} = \symbf{C}^\top
     \end{equation*}
 \end{definition}
 \subsection{The Inverse of a Matrix}
@@ -1151,7 +1151,7 @@
     The \textbf{inverse} of a nonsingular matrix \(\symbf{A}\) is
     given by
     \begin{equation*}
-        \symbf{A}^{-1}=\frac{1}{\det{\symbf{A}}} \adj{\left( \symbf{A} \right)}
+        \symbf{A}^{-1}=\frac{1}{\det{\left( \symbf{A} \right)}} \adj{\left( \symbf{A} \right)}
     \end{equation*}
 \end{theorem}
 \newpage
