@@ -55,8 +55,7 @@
     \end{equation*}
     has \(k_i=0\).
 
-    \(S\) forms a \textbf{basis} for \(V\) if \(S\) spans \(V\) and
-    \(S\) is LI.
+    \(S\) forms a \textbf{basis} for \(V\) if \(S\) spans \(V\) and \(S\) is LI\@.
     \section*{Fundamental Subspaces}
     For \(\symbf{A}\in\mathbb{R}^{m \times n}\):
     \begin{itemize}
@@ -99,13 +98,13 @@
     \end{gather*}
     \section*{Determinants}
     \begin{equation*}
-        \det{\left( \symbf{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}
+        \det{\left( \symbf{A} \right)} = \sum_{j=1}^n a_{ij}\symbf{C}_{ij} = \sum_{i=1}^n a_{ij}\symbf{C}_{ij}
     \end{equation*}
-    where \(C_{ij}=\left( -1 \right)^{i+j}M_{ij}\).
+    where \(\symbf{C}_{ij}=\left( -1 \right)^{i+j}\symbf{M}_{ij}\).
     \begin{equation*}
         \symbf{A}^{-1}=\frac{1}{\det{\symbf{A}}} \adj{\left( \symbf{A} \right)}
     \end{equation*}
-    where \(\adj{\left( \symbf{A} \right)}=C^\top\).
+    where \(\adj{\left( \symbf{A} \right)}=\symbf{C}^\top\).
 \end{minipage}\hfill%
 \begin{minipage}[t]{126.1962963mm}
     \section*{Linear Maps}
@@ -117,32 +116,101 @@
     \textbf{Rotations}: Anticlockwise looking down from the positive direction of the
     axis of rotation.
     \begin{align*}
-        \symbfit{R}_x = \mqty[1                           & 0                            & 0 \\ 0 & \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ 0 & \sin{\left( \theta \right)} & \cos{\left( \theta \right)}] \quad \symbfit{R}_y = \mqty[\cos{\left( \theta \right)} & 0                            & \sin{\left( \theta \right)} \\ 0 & 1 & 0 \\ -\sin{\left( \theta \right)} & 0 & \cos{\left( \theta \right)}] \\
-        \symbfit{R}_z = \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} & 0 \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)} & 0 \\ 0 & 0 & 1] \quad \symbfit{R} = \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}].
+        \symbf{R}_x =
+        \begin{bmatrix}
+            1 & 0                           & 0                            \\
+            0 & \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
+            0 & \sin{\left( \theta \right)} & \cos{\left( \theta \right)}
+        \end{bmatrix}
+        \quad \symbf{R}_y =
+        \begin{bmatrix}
+            \cos{\left( \theta \right)}  & 0 & \sin{\left( \theta \right)} \\
+            0                            & 1 & 0                           \\
+            -\sin{\left( \theta \right)} & 0 & \cos{\left( \theta \right)}
+        \end{bmatrix} \\
+        \symbf{R}_z =
+        \begin{bmatrix}
+            \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} & 0 \\
+            \sin{\left( \theta \right)} & \cos{\left( \theta \right)}  & 0 \\
+            0                           & 0                            & 1
+        \end{bmatrix}
+        \quad \symbf{R} =
+        \begin{bmatrix}
+            \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
+            \sin{\left( \theta \right)} & \cos{\left( \theta \right)}
+        \end{bmatrix}.
     \end{align*}
     \textbf{Shears}:
     \begin{align*}
-        \symbfit{S}_x = \mqty[1 & a & b \\ 0 & 1 & 0 \\ 0 & 0 & 1] \quad
-        \symbfit{S}_y=\mqty[1   & 0 & 0 \\ a & 1 & b \\ 0 & 0 & 1] \quad
-        \symbfit{S}_z=\mqty[1   & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1]
+        \symbf{S}_x =
+        \begin{bmatrix}
+            1 & a & b \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}
+        \quad \symbf{S}_y =
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            a & 1 & b \\
+            0 & 0 & 1
+        \end{bmatrix}
+        \quad \symbf{S}_z =
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            a & b & 1
+        \end{bmatrix}
     \end{align*}
     where the standard basis vector in the subscripted axis maps to itself.
     Think about where the standard basis vectors maps.
 
     \textbf{Reflections}:
     \begin{align*}
-        \symbfit{M}_{xy}=\mqty[1  & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1] \quad
-        \symbfit{M}_{xz}=\mqty[1  & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1] \quad
-        \symbfit{M}_{yz}=\mqty[-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1]
+        \symbf{M}_{xy}=
+        \begin{bmatrix}
+            1 & 0 & 0  \\
+            0 & 1 & 0  \\
+            0 & 0 & -1
+        \end{bmatrix}
+        \quad \symbf{M}_{xz} =
+        \begin{bmatrix}
+            1 & 0  & 0 \\
+            0 & -1 & 0 \\
+            0 & 0  & 1
+        \end{bmatrix}
+        \quad \symbf{M}_{yz} =
+        \begin{bmatrix}
+            -1 & 0 & 0 \\
+            0  & 1 & 0 \\
+            0  & 0 & 1
+        \end{bmatrix}
     \end{align*}
     where vectors are reflected across the plane formed by the subscripts of
-    \(\symbfit{M}\).
+    \(\symbf{M}\).
 
     \textbf{2d reflections} about \(y=mx + c\), where \(\theta=\arctan{\left( m \right)}\):
     \begin{align*}
-        T\left( \symbfit{v} \right) & = \symbfit{R} \symbfit{M}_{xz} \symbfit{R}^{-1} \left( \symbfit{v} - \mqty[0                                \\ c] \right) + \mqty[0 \\ c] \\
-                                    & = \mqty[\cos{\left( \theta \right)}                                          & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}] \mqty[1 & 0 \\ 0 & -1] \mqty[\cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\ \sin{\left( \theta \right)} & \cos{\left( \theta \right)}]^{-1} \left( \symbfit{v} - \mqty[0 \\ c] \right) + \mqty[0 \\ c] \\
-                                    & = \frac{1}{1+m^2}\mqty[1-m^2                                                 & 2m                           \\ 2m & m^2-1] \left( \symbfit{v} - \mqty[0 \\ c] \right) + \mqty[0 \\ c] \\
+        T\left( \symbfit{v} \right) & = \symbf{R} \symbf{M}_{xz} \symbf{R}^{-1} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) + \begin{bmatrix} 0 \\ c \end{bmatrix} \\
+                                    & =
+        \begin{bmatrix}
+            \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
+            \sin{\left( \theta \right)} & \cos{\left( \theta \right)}
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 0  \\
+            0 & -1
+        \end{bmatrix}
+        \begin{bmatrix}
+            \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
+            \sin{\left( \theta \right)} & \cos{\left( \theta \right)}
+        \end{bmatrix}^{-1} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
+        \begin{bmatrix} 0 \\ c \end{bmatrix}                                                                                                                                               \\
+                                    & = \frac{1}{1+m^2}
+        \begin{bmatrix}
+            1-m^2 & 2m    \\
+            2m    & m^2-1
+        \end{bmatrix} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
+        \begin{bmatrix} 0 \\ c \end{bmatrix}                                                                                                                                               \\
     \end{align*}
     \begin{multicols*}{2}
         \section*{Invariant Subspaces}
@@ -179,10 +247,10 @@
         \end{equation*}
         \textbf{In 2d}:
         \begin{equation*}
-            p_2\left(\lambda\right) = \lambda^2-\tr{\left( \symbf{A} \right)}\lambda + \det{\left( \symbf{A} \right)}
+            p_2\left(\lambda\right) = \lambda^2-\Tr{\left( \symbf{A} \right)}\lambda + \det{\left( \symbf{A} \right)}
         \end{equation*}
         \begin{equation*}
-            \tr{\left( \symbf{A} \right)} = \sum_{i=1}^n \lambda_i \quad \text{and} \quad
+            \Tr{\left( \symbf{A} \right)} = \sum_{i=1}^n \lambda_i \quad \text{and} \quad
             \det{\left( \symbf{A} \right)} = \prod_{i=1}^n \lambda_i
         \end{equation*}
         \textbf{Similarity transformation}:
@@ -197,9 +265,19 @@
     \end{multicols*}
     If \(\symbf{A}\) is diagonalisable:
     \begin{equation*}
-        \symbf{\Lambda}=\mqty[\dmat{\lambda_1,\: \lambda_2,\: \odifots,\: \lambda_n}] \quad
-        \symbf{Q}=\mqty[\vertbar & \vertbar & & \vertbar \\ \symbfit{q}_1 &
-            \symbfit{q}_2 & \cdots & \symbfit{q}_n \\ \vertbar & \vertbar & & \vertbar]
+        \symbf{\Lambda}=
+        \begin{bmatrix}
+            \lambda_1                         \\
+             & \lambda_2                      \\
+             &           & \ddots             \\
+             &           &        & \lambda_n
+        \end{bmatrix} \quad
+        \symbf{Q}=
+        \begin{bmatrix}
+            \vertbar      & \vertbar      &        & \vertbar      \\
+            \symbfit{q}_1 & \symbfit{q}_2 & \cdots & \symbfit{q}_n \\
+            \vertbar      & \vertbar      &        & \vertbar
+        \end{bmatrix}
     \end{equation*}
     \begin{equation*}
         \forall k \in \mathbb{N}_0:\symbf{A}^k = \symbf{Q} \symbf{\Lambda}^k \symbf{Q}^{-1}
@@ -216,23 +294,32 @@ initial conditions.
 \begin{multicols*}{2}
     The \textbf{system of differential equations}:
     \begin{align*}
-               & \left\{
-        \setlength\arraycolsep{0pt}
-        \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
-            x'_1               & = & a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         \\
-            x'_2               & = & a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         \\
-            \vdotswithin{x'_3} &   & \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} \\
-            x'_n               & = & a_{n1}x_1                         & + & a_{n2}x_2                         & + & \cdots & + & a_{nn}x_n
-        \end{array}
-        \right.                                                           \\
+             & \begin{cases}
+                   \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
+                x'_1               & = & a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         \\
+                x'_2               & = & a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         \\
+                \vdotswithin{x'_3} &   & \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} \\
+                x'_n               & = & a_{n1}x_1                         & + & a_{n2}x_2                         & + & \cdots & + & a_{nn}x_n
+            \end{array}
+               \end{cases}            \\
         \iff
-               & \odv{t}\mqty[x_1                                          \\ x_2 \\ \vdots \\ x_n] = \mqty[
-        a_{11} & a_{12}                                 & \cdots & a_{1n} \\
-        a_{21} & a_{22}                                 & \cdots & a_{2n} \\
-        \vdots & \vdots                                 &        & \vdots \\
-        a_{n1} & a_{n2}                                 & \cdots & a_{nn}
-        ] \mqty[x_1                                                       \\ x_2 \\ \vdots \\ x_n] \\
-        \iff   & \symbfit{x}' = \symbf{A} \symbfit{x}
+             & \odv{}{t}
+        \begin{bmatrix}
+            x_1    \\
+            x_2    \\
+            \vdots \\
+            x_n
+        \end{bmatrix} =
+        \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots & \vdots &        & \vdots \\
+            a_{n1} & a_{n2} & \cdots & a_{nn}
+        \end{bmatrix}
+        \begin{bmatrix}
+            x_1 \\ x_2 \\ \vdots \\ x_n
+        \end{bmatrix}                  \\
+        \iff & \symbfit{x}' = \symbf{A} \symbfit{x}
     \end{align*}
     can be solved using \(\symbfit{x}=\symbf{Q}\symbfit{u}\) where
     \(\symbf{Q}\) is the matrix that diagonalises \(\symbf{A}\) and
@@ -253,32 +340,39 @@ initial conditions.
     \end{equation*}
     and let
     \begin{equation*}
-        \symbfit{x}=\mqty[x_1 \\ x_2 \\ \cdots \\ x_n].
+        \symbfit{x}=
+        \begin{bmatrix}
+            x_1 \\ x_2 \\ \cdots \\ x_n
+        \end{bmatrix}.
     \end{equation*}
     Then solve the following ODE using diagonalisation:
     \begin{equation*}
-        \odv{t}\mqty[
-            x_1 \\
-            x_2 \\
+        \odv{}{t}
+        \begin{bmatrix}
+            x_1               \\
+            x_2               \\
             \vdotswithin{x_3} \\
             x_n
-        ] = \mqty[
-        0 & 1 & 0 & \cdots & 0 \\
-        0 & 0 & 1 & \cdots & 0 \\
-        \vdots & \vdots & \vdots & \odifots & \vdots \\
-        0 & 0 & 0 & \cdots & 1 \\
-        -a_n & -a_{n-1} & -a_{n-2} & \cdots & -a_1
-        ] \mqty[
-            x_1 \\
-            x_2 \\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            0      & 1        & 0        & \cdots & 0      \\
+            0      & 0        & 1        & \cdots & 0      \\
+            \vdots & \vdots   & \vdots   & \ddots & \vdots \\
+            0      & 0        & 0        & \cdots & 1      \\
+            -a_n   & -a_{n-1} & -a_{n-2} & \cdots & -a_1
+        \end{bmatrix}
+        \begin{bmatrix}
+            x_1               \\
+            x_2               \\
             \vdotswithin{x_3} \\
             x_n
-        ].
+        \end{bmatrix}.
     \end{equation*}
     \section*{Vector Operations}
     \textbf{Norm of a vector}:
     \begin{equation*}
-        \norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\dots+v_n^2}
+        \norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\cdots+v_n^2}
     \end{equation*}
     \textbf{Unit vector}:
     \begin{equation*}
@@ -292,17 +386,23 @@ initial conditions.
     \textbf{Cross product}:
     \begin{align*}
         \symbfit{v}\times\symbfit{w} & =
-        \mqty|
-        \symbfit{\hat{i}}            & \symbfit{\hat{j}} & \symbfit{\hat{k}} \\
-        v_1                          & v_2               & v_3               \\
-        w_1                          & w_2               & w_3
-        |                                                                    \\
+        \begin{vmatrix}
+            \symbfit{\hat{\imath}} & \symbfit{\hat{\jmath}} & \symbfit{\hat{k}} \\
+            v_1                    & v_2                    & v_3               \\
+            w_1                    & w_2                    & w_3
+        \end{vmatrix} \\
                                      & =
         \norm{\symbfit{v}}\norm{\symbfit{w}}\sin{\left(\theta\right)}\symbfit{\hat{n}}
     \end{align*}
     \textbf{2-d Inverse}:
     \begin{equation*}
-        \mqty[a & b \\ c & d]^{-1} = \frac{1}{ad - bc} \mqty[d & -b \\ -c & a]
+        \begin{bmatrix}
+            a & b \\ c & d
+        \end{bmatrix}^{-1}
+        = \frac{1}{ad - bc}
+        \begin{bmatrix}
+            d & -b \\ -c & a
+        \end{bmatrix}
     \end{equation*}
     \section*{Vector Space Axioms}
     \textbf{Closure under addition}:
@@ -353,37 +453,56 @@ initial conditions.
     \textbf{Subspaces of \(\mathbb{R}^3\)}: \(\left\{ \symbfup{0} \right\}\),
     lines through the origin, planes through the origin, and \(\mathbb{R}^3\).
 
-    \textbf{Subspaces of \(\symbfit{M}_{nn}\)}: Upper triangular matrices,
-    lower triangular matrices, diagonal matrices, and \(\symbfit{M}_{nn}\).
+    \textbf{Subspaces of \(\symbf{M}_{nn}\)}: Upper triangular matrices,
+    lower triangular matrices, diagonal matrices, and \(\symbf{M}_{nn}\).
     \section*{Determinant Properties}
     \begin{enumerate}
         \item \(\det{\left( \symbf{I} \right)}=1\)
         \item Exchanging two rows of a matrix reverses the sign of its determinant
         \item Determinants are multilinear, so that
               \begin{equation*}
-                  \mdet{a+a' & b+b' \\ c & d}
-                  = \mdet{a & b \\ c & d}+\mdet{a' & b' \\ c & d}
+                  \begin{vmatrix}
+                      a+a' & b+b' \\
+                      c    & d
+                  \end{vmatrix}
+                  =
+                  \begin{vmatrix}
+                      a & b \\
+                      c & d
+                  \end{vmatrix}
+                  +
+                  \begin{vmatrix}
+                      a' & b' \\
+                      c  & d
+                  \end{vmatrix}
               \end{equation*}
               and
               \begin{equation*}
-                  \mdet{ta & tb \\ c & d}=t\mdet{a & b \\ c & d}
+                  \begin{vmatrix}
+                      ta & tb \\
+                      c  & d
+                  \end{vmatrix} = t
+                  \begin{vmatrix}
+                      a & b \\
+                      c & d
+                  \end{vmatrix}
               \end{equation*}
         \item If \(\symbf{A}\) has two equal rows, then \(\det{\left( \symbf{A} \right)}=0\)
         \item Adding a scalar multiple of one row to another does not change the determinant of a matrix
         \item If \(\symbf{A}\) has a row of zeros, then \(\det{\left( \symbf{A} \right)}=0\)
         \item If \(\symbf{A}\) is triangular, then \(\det{\left( \symbf{A} \right)}=\prod_{i=1}^{n} a_{ii}\)
         \item If \(\symbf{A}\) is singular, then \(\det{\left( \symbf{A} \right)}=0\)
-        \item \(\det{\left( \symbf{A}\symbfit{B} \right)} = \det{\left( \symbf{A} \right)}\det{\left( \symbfit{B} \right)}\)
+        \item \(\det{\left( \symbf{A}\symbf{B} \right)} = \det{\left( \symbf{A} \right)}\det{\left( \symbf{B} \right)}\)
         \item \(\det{\left( \symbf{A}^\top \right)} = \det{\left( \symbf{A} \right)}\)
     \end{enumerate}
     \section*{Matrix Identities}
     \begin{enumerate}
-        \item \(\symbf{A}\left( \symbfit{B}\symbfit{C} \right) = \symbf{A}\symbfit{B}+\symbf{A}\symbfit{C}\)
-        \item \(\left( \symbf{A}+\symbfit{B} \right)^\top = \symbf{A}^\top + \symbfit{B}^\top\)
-        \item \(\left( \symbf{A}\symbfit{B} \right)^\top = \symbfit{B}^\top \symbf{A}^\top\)
-        \item If \(\symbf{A}\) and \(\symbfit{B}\) are both invertible:
+        \item \(\symbf{A}\left( \symbf{B}\symbf{C} \right) = \symbf{A}\symbf{B}+\symbf{A}\symbf{C}\)
+        \item \(\left( \symbf{A}+\symbf{B} \right)^\top = \symbf{A}^\top + \symbf{B}^\top\)
+        \item \(\left( \symbf{A}\symbf{B} \right)^\top = \symbf{B}^\top \symbf{A}^\top\)
+        \item If \(\symbf{A}\) and \(\symbf{B}\) are both invertible:
               \begin{enumerate}
-                  \item \(\left( \symbf{A}\symbfit{B} \right)^{-1} = \symbfit{B}^{-1}\symbf{A}^{-1}\)
+                  \item \(\left( \symbf{A}\symbf{B} \right)^{-1} = \symbf{B}^{-1}\symbf{A}^{-1}\)
                   \item \(\left( \symbf{A}^{-1} \right)^\top = \left( \symbf{A}^\top \right)^{-1}\)
               \end{enumerate}
     \end{enumerate}
