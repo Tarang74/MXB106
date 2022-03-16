@@ -3,12 +3,6 @@
 \usepackage{LaTeX-Submodule/template}
 
 % Additional packages & macros
-\makeatletter
-\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-  \hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{#1}}
-\makeatother
 
 % Header and footer
 \newcommand{\unitName}{Linear Algebra}
@@ -316,7 +310,7 @@
     An array having \(m\) rows and \(n\) columns, is an \(m \times n\)
     \textbf{matrix}. This matrix may be denoted as \(a_{ij}\), where
     \(a_{ij}\) is the entry in \(i\)th row and \(j\)th column of the
-    matrix \(\symbfit{A}\).
+    matrix \(\symbf{A}\).
     \begin{equation*}
         \text{\(m\) rows}
         \left\{
@@ -411,7 +405,7 @@
     and \textit{columns}, and can be used to represent a linear
     transformation.
     \begin{equation*}
-        \symbfit{A} =
+        \symbf{A} =
         \begin{bmatrix}
             a_{11} & a_{12} & \cdots & a_{1n} \\
             a_{21} & a_{22} & \cdots & a_{2n} \\
@@ -426,7 +420,7 @@
     \textbf{Matrix addition} is performed by adding the corresponding
     components of two matrices of the same dimension.
     \begin{equation*}
-        \symbfit{A} + \symbfit{B} =
+        \symbf{A} + \symbfit{B} =
         \begin{bmatrix}
             a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
             a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\
@@ -440,7 +434,7 @@
     \textbf{Scalar multiplication} is performed by multiplying each
     element of a matrix by a scalar.
     \begin{equation*}
-        c\symbfit{A} =
+        c\symbf{A} =
         \begin{bmatrix}
             ca_{11} & ca_{12} & \cdots & ca_{1n} \\
             ca_{21} & ca_{22} & \cdots & ca_{2n} \\
@@ -454,7 +448,7 @@
     \textbf{Matrix multiplication} is performed by multiplying each row
     in the first matrix by the columns of the second matrix.
     \begin{align*}
-        \symbfit{A} \symbfit{B} & = \symbfit{C} \\
+        \symbf{A} \symbfit{B} & = \symbfit{C} \\
         \begin{bmatrix}
             \horzbar & \symbfit{a}_{1} & \horzbar \\
             \horzbar & \symbfit{a}_{2} & \horzbar \\
@@ -483,13 +477,13 @@
 \subsection{The Identity Matrix}
 \begin{definition}
     The \textbf{identity matrix} is the simplest nontrivial
-    \textbf{diagonal matrix}, denoted \(\mathbb{1}\), such that
+    \textbf{diagonal matrix}, denoted \(\symbf{I}\), such that
     \begin{equation*}
-        \mathbb{1} \symbfit{A} = \symbfit{A}
+        \symbf{I} \symbf{A} = \symbf{A}
     \end{equation*}
     written explicitly as
     \begin{equation*}
-        \mathbb{1} =
+        \symbf{I} =
         \begin{bmatrix}
             1 &   &        &   \\
               & 1 &        &   \\
@@ -501,15 +495,15 @@
 \subsection{The Inverse Matrix}
 \begin{definition}
     The \textbf{inverse} of a \textbf{square matrix} is a matrix
-    \(\symbfit{A}^{-1}\), such that
+    \(\symbf{A}^{-1}\), such that
     \begin{equation*}
-        \symbfit{A} \symbfit{A}^{-1} = \mathbb{1}
+        \symbf{A} \symbf{A}^{-1} = \symbf{I}
     \end{equation*}
 \end{definition}
 \begin{theorem}
     The inverse of a \(2\times 2\) matrix is given by
     \begin{equation*}
-        \symbfit{A}^{-1} = \frac{1}{ad-bc}
+        \symbf{A}^{-1} = \frac{1}{ad-bc}
         \begin{bmatrix}
             a_{22}  & -a_{12} \\
             -a_{21} & a_{11}
@@ -520,7 +514,7 @@
     The inverse of an \(n\times n\) matrix can be determined by solving
     \(
     \begin{bmatrix}[c|c]
-        \symbfit{A} & \mathbb{1}
+        \symbf{A} & \symbf{I}
     \end{bmatrix}
     \).
 \end{theorem}
@@ -542,16 +536,16 @@
 \end{definition}
 \subsection{Matrix Transpose}
 \begin{definition}
-    The \textbf{transpose} of a matrix, denoted by \(\symbfit{A}^\top\),
+    The \textbf{transpose} of a matrix, denoted by \(\symbf{A}^\top\),
     is obtained by replacing all \(a_{ij}\) elements with \(a_{ji}\), so
-    that the matrix \(\symbfit{A}\) is flipped over its main diagonal.
+    that the matrix \(\symbf{A}\) is flipped over its main diagonal.
 \end{definition}
 \subsection{Matrix Trace}
 \begin{definition}
-    The \textbf{trace} of an \(n \times n\) matrix \(\symbfit{A}\),
-    denoted \(\tr{\left( \symbfit{A} \right)}\), is defined as
+    The \textbf{trace} of an \(n \times n\) matrix \(\symbf{A}\),
+    denoted \(\Tr{\left( \symbf{A} \right)}\), is defined as
     \begin{equation*}
-        \tr{\left( \symbfit{A} \right)} = \sum_{i=1}^n a_{ii}
+        \Tr{\left( \symbf{A} \right)} = \sum_{i=1}^n a_{ii}
     \end{equation*}
 \end{definition}
 \newpage
@@ -744,34 +738,34 @@
 \end{figure}
 \subsection{The Four Fundamental Subspaces of a Matrix}
 \begin{definition}
-    If \(\symbfit{A}\in\mathbb{R}^{m \times n}\) is an \(m \times n\) matrix, then:
+    If \(\symbf{A}\in\mathbb{R}^{m \times n}\) is an \(m \times n\) matrix, then:
     \begin{enumerate}
         \item The subspace spanned by the \textit{column vectors} of
-              \(\symbfit{A}\), is the \textbf{column space} of
-              \(\symbfit{A}\), denoted \(\columnspace{A}\).
+              \(\symbf{A}\), is the \textbf{column space} of
+              \(\symbf{A}\), denoted \(\columnspace{A}\).
         \item The subspace spanned by the \textit{row vectors} of
-              \(\symbfit{A}\), is the \textbf{row space} of \(\symbfit{A}\),
+              \(\symbf{A}\), is the \textbf{row space} of \(\symbf{A}\),
               denoted \(\rowspace{A}\).
         \item The subspace spanned by the \textit{solution space} of the
-              equation \(\symbfit{A}\symbfit{x}=\symbfup{0}\), is the
-              \textbf{null space} of \(\symbfit{A}\), denoted
+              equation \(\symbf{A}\symbfit{x}=\symbfup{0}\), is the
+              \textbf{null space} of \(\symbf{A}\), denoted
               \(\nullspace{A}\).
         \item The subspace spanned by the \textit{solution space} of the
-              equation \(\symbfit{A}^{\top}\symbfit{y}=\symbfup{0}\)
-              (or \(\symbfit{y}^{\top}\symbfit{A}=\symbfup{0}\)), is the
-              \textbf{left null space} of \(\symbfit{A}\), denoted
+              equation \(\symbf{A}^{\top}\symbfit{y}=\symbfup{0}\)
+              (or \(\symbfit{y}^{\top}\symbf{A}=\symbfup{0}\)), is the
+              \textbf{left null space} of \(\symbf{A}\), denoted
               \(\leftnullspace{A}\).
     \end{enumerate}
 \end{definition}
 \subsection{The General Solution of a System of Equations}
 \begin{theorem}
     The \textbf{general solution} to a matrix equation
-    \(\symbfit{A}\symbfit{x}=\symbfit{b}\), can be given by adding the
+    \(\symbf{A}\symbfit{x}=\symbfit{b}\), can be given by adding the
     \underline{particular} and \underline{homogeneous} solutions, where
     the particular solution is the solution to
-    \(\symbfit{A}\symbfit{x}=\symbfit{b}\), or \(\rowspace{A}\), and the
+    \(\symbf{A}\symbfit{x}=\symbfit{b}\), or \(\rowspace{A}\), and the
     homogeneous solution is the solution to
-    \(\symbfit{A}\symbfit{x}=\symbfup{0}\), or \(\nullspace{A}\).
+    \(\symbf{A}\symbfit{x}=\symbfup{0}\), or \(\nullspace{A}\).
     \begin{equation*}
         \symbfit{x} = \symbfit{x}_p + \symbfit{x}_h
     \end{equation*}
@@ -785,19 +779,19 @@
 \subsection{Rank}
 \begin{definition}
     The \textbf{rank} of a matrix, denoted by
-    \(\rank{\left( \symbfit{A} \right)}\), is given by
+    \(\rank{\left( \symbf{A} \right)}\), is given by
     \(\dim{\left( \columnspace{A} \right)}\).
 \end{definition}
 \begin{theorem}
     The column space and row space have the same dimension so that
     \begin{equation*}
-        \rank{\left( \symbfit{A} \right)}=\dim{\left( \columnspace{A} \right)}=\dim{\left( \rowspace{A} \right)}
+        \rank{\left( \symbf{A} \right)}=\dim{\left( \columnspace{A} \right)}=\dim{\left( \rowspace{A} \right)}
     \end{equation*}
 \end{theorem}
 \subsection{Nullity}
 \begin{definition}
     The \textbf{nullity} of a matrix, denoted by
-    \(\vnull{\left( \symbfit{A} \right)}\), is given by
+    \(\vnull{\left( \symbf{A} \right)}\), is given by
     \(\dim{\left( \nullspace{A} \right)}\).
 \end{definition}
 \newpage
@@ -863,7 +857,7 @@
 \begin{definition}
     Let the \textbf{vector projection} of \(\symbfit{b}\) onto
     \(\symbfit{a}\), denoted as \(\proj_{\symbfit{a}}\symbfit{b}\), be
-    the \linebreak \underline{orthogonal projection} of \(\symbfit{b}\)
+    the \textit{orthogonal projection} of \(\symbfit{b}\)
     in the direction of \(\symbfit{a}\), that minimises the error
     vector: \(\symbfit{e}=\symbfit{b}-\symbfit{p}\).
 \end{definition}
@@ -905,7 +899,7 @@
     The projection of \(\symbfit{b}\) onto the vector space \(W\) is
     given by
     \begin{equation*}
-        \proj_{W}\symbfit{b} = \symbfit{A}\symbfit{\hat{x}} = \symbfit{A}\left( \symbfit{A}^\top \symbfit{A} \right)^{-1}\symbfit{A}^\top \symbfit{b}
+        \proj_{W}\symbfit{b} = \symbf{A}\symbfit{\hat{x}} = \symbf{A}\left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
     \end{equation*}
 \end{theorem}
 \begin{solution}[Proof]
@@ -926,7 +920,7 @@
             \cdots    \\
             \hat{x}_n
         \end{bmatrix}                                                                                       \\
-                    & = \symbfit{A}\symbfit{\hat{x}}
+                    & = \symbf{A}\symbfit{\hat{x}}
     \end{align*}
     Consider the error vector \(\symbfit{e}=\symbfit{b}-\symbfit{p}\).
     As \(\symbfit{e}\) is orthogonal to \(W\), it will also be
@@ -934,29 +928,29 @@
     \begin{equation*}
         \left\{
         \begin{aligned}
-            \symbfit{a}_1^\top\left( \symbfit{b}-\symbfit{A}\symbfit{\hat{x}} \right)                         & = 0 \\
-            \symbfit{a}_2^\top\left( \symbfit{b}-\symbfit{A}\symbfit{\hat{x}} \right)                         & = 0 \\
-            \vdotswithin{\symbfit{a}_3^\top}\phantom{\left( \symbfit{b}-\symbfit{A}\symbfit{\hat{x}} \right)} &     \\
-            \symbfit{a}_n^\top\left( \symbfit{b}-\symbfit{A}\symbfit{\hat{x}} \right)                         & = 0
+            \symbfit{a}_1^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0 \\
+            \symbfit{a}_2^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0 \\
+            \vdotswithin{\symbfit{a}_3^\top}\phantom{\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)} &     \\
+            \symbfit{a}_n^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0
         \end{aligned}
         \right.
     \end{equation*}
     which gives the following equation
     \begin{equation*}
-        \symbfit{A}^\top \left( \symbfit{b}-\symbfit{A}\symbfit{\hat{x}} \right) = \symbfup{0}
+        \symbf{A}^\top \left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right) = \symbfup{0}
     \end{equation*}
     where we solve for \(\symbfit{\hat{x}}\)
     \begin{align*}
-        \symbfit{A}^\top \symbfit{b}-\symbfit{A}^\top \symbfit{A}\symbfit{\hat{x}} & = \symbfup{0}                                                                  \\
-        \symbfit{A}^\top \symbfit{A}\symbfit{\hat{x}}                              & = \symbfit{A}^\top \symbfit{b}                                                 \\
-        \symbfit{\hat{x}}                                                          & = \left( \symbfit{A}^\top \symbfit{A} \right)^{-1}\symbfit{A}^\top \symbfit{b}
+        \symbf{A}^\top \symbfit{b}-\symbf{A}^\top \symbf{A}\symbfit{\hat{x}} & = \symbfup{0}                                                                  \\
+        \symbf{A}^\top \symbf{A}\symbfit{\hat{x}}                              & = \symbf{A}^\top \symbfit{b}                                                 \\
+        \symbfit{\hat{x}}                                                          & = \left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
     \end{align*}
 \end{solution}
 \subsection{Least Squares}
 \begin{theorem}
-    Suppose \(\symbfit{A}\symbfit{x}=\symbfit{b}\) is an
+    Suppose \(\symbf{A}\symbfit{x}=\symbfit{b}\) is an
     \underline{inconsistent} linear system. The \textbf{least squares}
-    solution of \(\symbfit{A}\symbfit{x}=\symbfit{b}\) is given by the
+    solution of \(\symbf{A}\symbfit{x}=\symbfit{b}\) is given by the
     orthogonal projection \(\proj_{\columnspace{A}}\symbfit{b}\).
 \end{theorem}
 \newpage
@@ -964,12 +958,12 @@
 \subsection{Matrix Transformations}
 \begin{definition}
     A \textbf{matrix transformation}
-    \(T_{\symbfit{A}}:\mathbb{R}^n\rightarrow \mathbb{R}^m\) is a
+    \(T_{\symbf{A}}:\mathbb{R}^n\rightarrow \mathbb{R}^m\) is a
     mapping of the form
     \begin{equation*}
-        T_{\symbfit{A}}\left(\symbfit{x}\right) = \symbfit{A}\symbfit{x}
+        T_{\symbf{A}}\left(\symbfit{x}\right) = \symbf{A}\symbfit{x}
     \end{equation*}
-    where \(\symbfit{A}\in \mathbb{R}^{m \times n}\). As this
+    where \(\symbf{A}\in \mathbb{R}^{m \times n}\). As this
     transformation is linear, the following linearity properties hold.
     \begin{enumerate}
         \item \(T\left(\symbfit{u}+\symbfit{v}\right)=T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right)\)
@@ -1018,7 +1012,7 @@
     The standard matrix for a linear transformation is given by the
     formula:
     \begin{equation*}
-        \symbfit{A} =
+        \symbf{A} =
         \begin{bmatrix}
             \vertbar                    & \vertbar                    &        & \vertbar                    \\
             T\left(\symbfit{e}_1\right) & T\left(\symbfit{e}_2\right) & \cdots & T\left(\symbfit{e}_n\right) \\
@@ -1058,7 +1052,7 @@
 \section{Determinants}
 \subsection{Properties of Determinants}
 \begin{enumerate}
-    \item \(\det{\left( \mathbb{1} \right)}=1\).
+    \item \(\det{\left( \symbf{I} \right)}=1\).
     \item Exchanging two rows of a matrix reverses the sign of its
           determinant.
     \item Determinants are multilinear, so that
@@ -1091,47 +1085,47 @@
                     \end{vmatrix}
                     \)
           \end{enumerate}
-    \item If \(\symbfit{A}\) has two equal rows, then
-          \(\det{\left( \symbfit{A} \right)}=0\).
+    \item If \(\symbf{A}\) has two equal rows, then
+          \(\det{\left( \symbf{A} \right)}=0\).
     \item Adding a scalar multiple of one row to another does not change
           the determinant of a matrix.
-    \item If \(\symbfit{A}\) has a row of zeros, then
-          \(\det{\left( \symbfit{A} \right)}=0\).
-    \item If \(\symbfit{A}\) is triangular, then
-          \(\det{\left( \symbfit{A} \right)}=\prod_{i=1}^{n} a_{ii}\).
-    \item If \(\symbfit{A}\) is singular, then
-          \(\det{\left( \symbfit{A} \right)}=0\).
-    \item \(\det{\left( \symbfit{A}\symbfit{B} \right)}=\det{\left( \symbfit{A} \right)}\det{\left( \symbfit{B} \right)}\).
-    \item \(\det{\left( \symbfit{A}^\top \right)}=\det{\left( \symbfit{A} \right)}\).
+    \item If \(\symbf{A}\) has a row of zeros, then
+          \(\det{\left( \symbf{A} \right)}=0\).
+    \item If \(\symbf{A}\) is triangular, then
+          \(\det{\left( \symbf{A} \right)}=\prod_{i=1}^{n} a_{ii}\).
+    \item If \(\symbf{A}\) is singular, then
+          \(\det{\left( \symbf{A} \right)}=0\).
+    \item \(\det{\left( \symbf{A}\symbfit{B} \right)}=\det{\left( \symbf{A} \right)}\det{\left( \symbfit{B} \right)}\).
+    \item \(\det{\left( \symbf{A}^\top \right)}=\det{\left( \symbf{A} \right)}\).
 \end{enumerate}
 \subsection{Matrix Minors}
 \begin{definition}
-    The \textbf{minor} of \(a_{ij}\) in \(\symbfit{A}\), denoted
+    The \textbf{minor} of \(a_{ij}\) in \(\symbf{A}\), denoted
     \(M_{ij}\), is the determinant of the submatrix formed by deleting
-    the \(i\)th row and \(j\)th column of \(\symbfit{A}\).
+    the \(i\)th row and \(j\)th column of \(\symbf{A}\).
 \end{definition}
 \subsection{Matrix Cofactors}
 \begin{definition}
-    The \textbf{cofactor} of \(a_{ij}\) in \(\symbfit{A}\) is defined as
+    The \textbf{cofactor} of \(a_{ij}\) in \(\symbf{A}\) is defined as
     \begin{equation*}
         C_{ij} = \left( -1 \right)^{i+j} M_{ij}
     \end{equation*}
 \end{definition}
 \subsection{The Determinant of a Matrix}
 \begin{theorem}
-    The determinant of an \(n\times n\) matrix \(\symbfit{A}\) is given
+    The determinant of an \(n\times n\) matrix \(\symbf{A}\) is given
     by
     \begin{equation*}
-        \det{\left( \symbfit{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}
+        \det{\left( \symbf{A} \right)} = \sum_{j=1}^n a_{ij}C_{ij} = \sum_{i=1}^n a_{ij}C_{ij}
     \end{equation*}
     where \(a_{ij}\) is the entry in the \(i\)th row and \(j\)th column
-    of \(\symbfit{A}\).
+    of \(\symbf{A}\).
 \end{theorem}
 \subsection{The Cofactor Matrix}
 \begin{definition}
     The \textbf{cofactor matrix} of an \(n\times n\) matrix
-    \(\symbfit{A}\), denoted \(\symbfit{C}\), is defined as the matrix
-    of the cofactors of \(\symbfit{A}\).
+    \(\symbf{A}\), denoted \(\symbfit{C}\), is defined as the matrix
+    of the cofactors of \(\symbf{A}\).
     \begin{equation*}
         \symbfit{C} =
         \begin{bmatrix}
@@ -1145,19 +1139,19 @@
 \subsection{The Adjugate of a Matrix}
 \begin{definition}
     The \textbf{adjugate} (or \textit{classical adjoint}) of a square
-    matrix \(\symbfit{A}\), denoted
-    \(\adj{\left( \symbfit{A} \right)}\), is the transpose its cofactor
+    matrix \(\symbf{A}\), denoted
+    \(\adj{\left( \symbf{A} \right)}\), is the transpose its cofactor
     matrix.
     \begin{equation*}
-        \adj{\left( \symbfit{A} \right)} = \symbfit{C}^\top
+        \adj{\left( \symbf{A} \right)} = \symbfit{C}^\top
     \end{equation*}
 \end{definition}
 \subsection{The Inverse of a Matrix}
 \begin{theorem}
-    The \textbf{inverse} of a nonsingular matrix \(\symbfit{A}\) is
+    The \textbf{inverse} of a nonsingular matrix \(\symbf{A}\) is
     given by
     \begin{equation*}
-        \symbfit{A}^{-1}=\frac{1}{\det{\symbfit{A}}} \adj{\left( \symbfit{A} \right)}
+        \symbf{A}^{-1}=\frac{1}{\det{\symbf{A}}} \adj{\left( \symbf{A} \right)}
     \end{equation*}
 \end{theorem}
 \newpage
@@ -1202,41 +1196,41 @@
 \subsection{The Eigenvalue Problem}
 \begin{theorem}
     The eigenvalues \(\lambda\) of an invertible square matrix
-    \(\symbfit{A}\), are the solutions to
+    \(\symbf{A}\), are the solutions to
     \begin{equation*}
-        \det{\left( \symbfit{A} - \lambda\mathbb{1} \right)}=\symbfup{0}
+        \det{\left( \symbf{A} - \lambda \symbf{I} \right)}=\symbfup{0}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     The eigenvectors associated with each eigenvalue, of an invertible
-    square matrix \(\symbfit{A}\), are the solutions to
+    square matrix \(\symbf{A}\), are the solutions to
     \begin{equation*}
-        \left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q}=\symbfup{0}
+        \left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q}=\symbfup{0}
     \end{equation*}
 \end{theorem}
 \begin{solution}[Proof]
     The eigenvalues and associated eigenvectors of a square matrix
-    \(\symbfit{A}\), are the solutions to
-    \(\symbfit{A}\symbfit{q}=\lambda \symbfit{q}\).
+    \(\symbf{A}\), are the solutions to
+    \(\symbf{A}\symbfit{q}=\lambda \symbfit{q}\).
     \begin{align*}
-        \symbfit{A}\symbfit{q}                                      & =\lambda \symbfit{q} \\
-        \symbfit{A}\symbfit{q} - \lambda \symbfit{q}                & =\symbfup{0}         \\
-        \left( \symbfit{A} - \lambda \mathbb{1} \right) \symbfit{q} & =\symbfup{0}
+        \symbf{A}\symbfit{q}                                      & =\lambda \symbfit{q} \\
+        \symbf{A}\symbfit{q} - \lambda \symbfit{q}                & =\symbfup{0}         \\
+        \left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q} & =\symbfup{0}
     \end{align*}
     The linear system
-    \(\left( \symbfit{A} - \lambda\mathbb{1} \right) \symbfit{q}=\symbfup{0}\)
-    has a nontrivial solution iff \(\symbfit{A} - \lambda \mathbb{1}\)
+    \(\left( \symbf{A} - \lambda\symbf{I} \right) \symbfit{q}=\symbfup{0}\)
+    has a nontrivial solution iff \(\symbf{A} - \lambda \symbf{I}\)
     is singular.
 \end{solution}
 \subsection{Properties of Eigenvalues}
 \begin{theorem}
     \begin{equation*}
-        \tr{\left( \symbfit{A} \right)} = \sum_{i=1}^n \lambda_i
+        \Tr{\left( \symbf{A} \right)} = \sum_{i=1}^n \lambda_i
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \det{\left( \symbfit{A} \right)} = \prod_{i=1}^n \lambda_i
+        \det{\left( \symbf{A} \right)} = \prod_{i=1}^n \lambda_i
     \end{equation*}
 \end{theorem}
 \newpage
@@ -1245,30 +1239,30 @@
 \begin{definition}
     A \textbf{similarity transformation} is a linear mapping of the form
     \begin{equation*}
-        \symbfit{A}\rightarrow \symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}
+        \symbf{A}\rightarrow \symbf{Q}^{-1}\symbf{A}\symbf{Q}
     \end{equation*}
-    in which the matrices \(\symbfit{A}\) and \(\symbfit{Q}\) are
-    \(n \times n\) invertible matrices. Here we say, ``\(\symbfit{A}\)
-    is similar to \(\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}\)''.
+    in which the matrices \(\symbf{A}\) and \(\symbf{Q}\) are
+    \(n \times n\) invertible matrices. Here we say, ``\(\symbf{A}\)
+    is similar to \(\symbf{Q}^{-1}\symbf{A}\symbf{Q}\)''.
 \end{definition}
 \subsection{Matrix Diagonalisation}
 \begin{definition}
-    The matrix \(\symbfit{A}\) is a \textbf{diagonalisable} matrix if it
+    The matrix \(\symbf{A}\) is a \textbf{diagonalisable} matrix if it
     is similar to a diagonal matrix. That is, there exists an invertible
-    matrix \(\symbfit{Q}\), and diagonal matrix \(\symbfit{\Lambda}\),
+    matrix \(\symbf{Q}\), and diagonal matrix \(\symbf{\Lambda}\),
     such that
     \begin{equation*}
-        \symbfit{\Lambda}=\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q}
+        \symbf{\Lambda}=\symbf{Q}^{-1}\symbf{A}\symbf{Q}
     \end{equation*}
 \end{definition}
 \begin{theorem}
-    Let \(\symbfit{A}\) be an \(n \times n\) matrix with \(n\) linearly
-    independent eigenvectors, then \(\symbfit{A}\) is diagonalisable if
-    \(\symbfit{\Lambda}=\diag{\left( \lambda_1,\: \lambda_2,\: \dots,\: \lambda_n \right)}\)
-    and \(\symbfit{Q}\) is a matrix composed of the eigenvectors of
-    \(\symbfit{A}\). Explicitly,
+    Let \(\symbf{A}\) be an \(n \times n\) matrix with \(n\) linearly
+    independent eigenvectors, then \(\symbf{A}\) is diagonalisable if
+    \(\symbf{\Lambda}=\diag{\left( \lambda_1,\: \lambda_2,\: \dots,\: \lambda_n \right)}\)
+    and \(\symbf{Q}\) is a matrix composed of the eigenvectors of
+    \(\symbf{A}\). Explicitly,
     \begin{equation*}
-        \symbfit{\Lambda} =
+        \symbf{\Lambda} =
         \begin{bmatrix}
             \lambda_1 &           &        &           \\
                       & \lambda_2 &        &           \\
@@ -1277,7 +1271,7 @@
         \end{bmatrix}
         \quad
         \text{and}\quad
-        \symbfit{Q} =
+        \symbf{Q} =
         \begin{bmatrix}
             \vertbar      & \vertbar      &        & \vertbar      \\
             \symbfit{q}_1 & \symbfit{q}_2 & \cdots & \symbfit{q}_n \\
@@ -1285,62 +1279,62 @@
         \end{bmatrix}
     \end{equation*}
     where \(\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n\)
-    are the eigenvectors of \(\symbfit{A}\).
+    are the eigenvectors of \(\symbf{A}\).
 \end{theorem}
 \begin{solution}[Proof]
     Let \(\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n\) be
-    linearly independent eigenvectors of \(\symbfit{A}\), and
+    linearly independent eigenvectors of \(\symbf{A}\), and
     \(\lambda_1,\: \lambda_2,\: \dots,\: \lambda_n\), the associated
     eigenvalues. By definition of an eigenspace, we have
     \begin{equation*}
         \left\{
         \setlength\arraycolsep{0pt}
         \begin{array}{ r >{{}}c<{{}} l }
-            \symbfit{A}\symbfit{q}_1    & = & \lambda_1 \symbfit{q}_1                            \\
-            \symbfit{A}\symbfit{q}_2    & = & \lambda_2 \symbfit{q}_2                            \\
+            \symbf{A}\symbfit{q}_1    & = & \lambda_1 \symbfit{q}_1                            \\
+            \symbf{A}\symbfit{q}_2    & = & \lambda_2 \symbfit{q}_2                            \\
             \vdotswithin{\symbfit{q}_3} &   & \vdotswithin{\lambda_3}\vdotswithin{\symbfit{q}_3} \\
-            \symbfit{A}\symbfit{q}_n    & = & \lambda_n \symbfit{q}_n
+            \symbf{A}\symbfit{q}_n    & = & \lambda_n \symbfit{q}_n
         \end{array}
         \right.
     \end{equation*}
     which we can rewrite as
     \begin{align}
-        \symbfit{A}\symbfit{Q} & = \symbfit{Q}\symbfit{\Lambda} \label{equation:eigenspace_matrix} \\
-        \symbfit{\Lambda}      & =\symbfit{Q}^{-1}\symbfit{A}\symbfit{Q} \nonumber
+        \symbf{A}\symbf{Q} & = \symbf{Q}\symbf{\Lambda} \label{equation:eigenspace_matrix} \\
+        \symbf{\Lambda}      & =\symbf{Q}^{-1}\symbf{A}\symbf{Q} \nonumber
     \end{align}
     by rearranging
     \hyperref[equation:eigenspace_matrix]{Equation~\ref{equation:eigenspace_matrix}},
-    we have \(\symbfit{A}\) in terms of its eigenvalues and
+    we have \(\symbf{A}\) in terms of its eigenvalues and
     eigenvectors.
     \begin{equation*}
-        \symbfit{A} = \symbfit{Q}\symbfit{\Lambda} \symbfit{Q}^{-1}
+        \symbf{A} = \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1}
     \end{equation*}
 \end{solution}
 \subsection{Powers of a Matrix}
 \begin{theorem}
-    Let \(\symbfit{A}\) be a diagonalisable matrix, then for all
+    Let \(\symbf{A}\) be a diagonalisable matrix, then for all
     \(k \in \mathbb{N}_0\)
     \begin{equation*}
-        \symbfit{A}^k = \symbfit{Q} \symbfit{\Lambda}^k \symbfit{Q}^{-1}
+        \symbf{A}^k = \symbf{Q} \symbf{\Lambda}^k \symbf{Q}^{-1}
     \end{equation*}
 \end{theorem}
 \begin{solutionF}[Proof]
     \begin{align*}
-        \symbfit{A}^k & = \left( \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \right)^k                                                                                                                                                                 \\
-                      & = \underbrace{\left( \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \right)\left( \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \right)\cdots\left( \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \right)}_{\text{\(k\) times}} \\
-                      & = \underbrace{\symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} \cdots \symbfit{Q} \symbfit{\Lambda} \symbfit{Q}^{-1} }_{\text{\(k\) times}}                                          \\
-                      & = \underbrace{\symbfit{Q} \symbfit{\Lambda} \cancel{\symbfit{Q}^{-1} \symbfit{Q}} \symbfit{\Lambda} \cancel{\symbfit{Q}^{-1} \cdots \symbfit{Q}} \symbfit{\Lambda} \symbfit{Q}^{-1} }_{\text{\(k\) times}}                        \\
-                      & = \symbfit{Q} \underbrace{ \symbfit{\Lambda} \symbfit{\Lambda} \cdots \symbfit{\Lambda} }_{\text{\(k\) times}}\symbfit{Q}^{-1}                                                                                                    \\
-                      & = \symbfit{Q} \symbfit{\Lambda}^k\symbfit{Q}^{-1}
+        \symbf{A}^k & = \left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)^k                                                                                                                                                                 \\
+                      & = \underbrace{\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\cdots\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)}_{\text{\(k\) times}} \\
+                      & = \underbrace{\symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \cdots \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                                          \\
+                      & = \underbrace{\symbf{Q} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \cdots \symbf{Q}} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                        \\
+                      & = \symbf{Q} \underbrace{ \symbf{\Lambda} \symbf{\Lambda} \cdots \symbf{\Lambda} }_{\text{\(k\) times}}\symbf{Q}^{-1}                                                                                                    \\
+                      & = \symbf{Q} \symbf{\Lambda}^k\symbf{Q}^{-1}
     \end{align*}
 \end{solutionF}
 \begin{theorem}
-    The eigenvalues of \(\symbfit{A}^k\), \(\forall k \in \mathbb{N}\)
+    The eigenvalues of \(\symbf{A}^k\), \(\forall k \in \mathbb{N}\)
     are \(\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k\).
 \end{theorem}
 \begin{theorem}
-    The eigenvectors of \(\symbfit{A}\) are equal to the eigenvectors of
-    \(\symbfit{A}^k\).
+    The eigenvectors of \(\symbf{A}\) are equal to the eigenvectors of
+    \(\symbf{A}^k\).
 \end{theorem}
 \newpage
 \section{System of Differential Equations}
@@ -1365,21 +1359,20 @@
     A \textbf{first-order system of differential equations} is of the
     form
     \begin{equation*}
-        \left\{
-        \setlength\arraycolsep{0pt}
-        \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
-            x'_1               & = & a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         \\
-            x'_2               & = & a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         \\
-            \vdotswithin{x'_3} &   & \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} \\
-            x'_n               & = & a_{n1}x_1                         & + & a_{n2}x_2                         & + & \cdots & + & a_{nn}x_n
-        \end{array}
-        \right.
+        \begin{cases}
+            \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
+                x'_1               & = & a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         \\
+                x'_2               & = & a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         \\
+                \vdotswithin{x'_3} &   & \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} \\
+                x'_n               & = & a_{n1}x_1                         & + & a_{n2}x_2                         & + & \cdots & + & a_{nn}x_n
+            \end{array}
+        \end{cases}
     \end{equation*}
     where \(x_1=x_1(t),\: x_2=x_2(t),\: \dots,\: x_n=x_n(t)\) are the
     functions to be determined. In matrix form, the system can be
     written as
     \begin{align*}
-        \dv{t}
+        \odv{}{t}
         \begin{bmatrix}
             x_1    \\
             x_2    \\
@@ -1399,25 +1392,25 @@
             \vdots \\
             x_n
         \end{bmatrix}                           \\
-        \symbfit{x}' & = \symbfit{A} \symbfit{x}
+        \symbfit{x}' & = \symbf{A} \symbfit{x}
     \end{align*}
 \end{definition}
 \subsection{Solution using Diagonalisation}
 \begin{theorem}
     The first-order system of differential equations
-    \(\symbfit{x}' = \symbfit{A} \symbfit{x}\) can be solved using the
+    \(\symbfit{x}' = \symbf{A} \symbfit{x}\) can be solved using the
     following substitution
     \begin{equation*}
-        \symbfit{x}=\symbfit{Q}\symbfit{u}
+        \symbfit{x}=\symbf{Q}\symbfit{u}
     \end{equation*}
     where \(\symbfit{u}\) is a vector to be determined, and
-    \(\symbfit{Q}\) is the matrix that diagonalises \(\symbfit{A}\).
+    \(\symbf{Q}\) is the matrix that diagonalises \(\symbf{A}\).
     \(\symbfit{u}\) is determined by solving
     \begin{equation*}
-        \symbfit{u}' = \symbfit{\Lambda} \symbfit{u}
+        \symbfit{u}' = \symbf{\Lambda} \symbfit{u}
     \end{equation*}
-    where \(\symbfit{\Lambda}\) is the diagonal similarity
-    transformation of \(\symbfit{A}\). This substitution uncouples the
+    where \(\symbf{\Lambda}\) is the diagonal similarity
+    transformation of \(\symbf{A}\). This substitution uncouples the
     system of differential equations so that each equation can be solved
     as a first-order differential equation.
 \end{theorem}
@@ -1425,17 +1418,17 @@
     \begingroup
     \allowdisplaybreaks
     \begin{align*}
-        \symbfit{x}'                           & = \symbfit{A} \symbfit{x}                                                                           \\
-        \left( \symbfit{Q}\symbfit{u} \right)' & = \left( \symbfit{Q}\symbfit{\Lambda} \symbfit{Q}^{-1} \right)\left( \symbfit{Q}\symbfit{u} \right) \\
-        \symbfit{Q}\symbfit{u}'                & = \symbfit{Q}\symbfit{\Lambda} \symbfit{Q}^{-1} \symbfit{Q}\symbfit{u}                              \\
-        \cancel{\symbfit{Q}}\symbfit{u}'       & = \cancel{\symbfit{Q}}\symbfit{\Lambda} \cancel{\symbfit{Q}^{-1} \symbfit{Q}}\symbfit{u}            \\
-        \symbfit{u}'                           & = \symbfit{\Lambda} \symbfit{u}
+        \symbfit{x}'                           & = \symbf{A} \symbfit{x}                                                                           \\
+        \left( \symbf{Q}\symbfit{u} \right)' & = \left( \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q}\symbfit{u} \right) \\
+        \symbf{Q}\symbfit{u}'                & = \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q}\symbfit{u}                              \\
+        \cancel{\symbf{Q}}\symbfit{u}'       & = \cancel{\symbf{Q}}\symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}}\symbfit{u}            \\
+        \symbfit{u}'                           & = \symbf{\Lambda} \symbfit{u}
     \end{align*}
     \endgroup
 \end{solutionF}
 \begin{theorem}
-    If \(\symbfit{A}\) is a diagonalisable matrix, then the general
-    solution of \(\symbfit{x}' = \symbfit{A} \symbfit{x}\) can be
+    If \(\symbf{A}\) is a diagonalisable matrix, then the general
+    solution of \(\symbfit{x}' = \symbf{A} \symbfit{x}\) can be
     expressed as
     \begin{equation*}
         \symbfit{x}(t) = c_1 e^{\lambda_1 t} \symbfit{q}_1 + c_2 e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n e^{\lambda_n t} \symbfit{q}_n
@@ -1472,7 +1465,7 @@
     \). Then the first-order linear system of differential equations can
     be written as
     \begin{equation*}
-        \dv{t}
+        \odv{}{t}
         \begin{bmatrix}
             x_1               \\
             x_2               \\

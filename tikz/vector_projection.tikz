@@ -4,7 +4,6 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{graphicx}
-\usepackage{physics}
 
 \usepackage[warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
 \setmathfont{Latin Modern Math}

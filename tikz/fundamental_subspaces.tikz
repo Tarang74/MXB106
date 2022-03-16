@@ -4,16 +4,17 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{graphicx}
-\usepackage{physics}
 
 \usepackage[warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
 \setmathfont{Latin Modern Math}
 \setmathfont{TeX Gyre Pagella Math}[range={bb,bbit}, Scale=MatchUppercase]
 
-\newcommand{\columnspace}[1]{\mathcal{C}\left(\symbfit{#1}\right)}
-\newcommand{\rowspace}[1]{\mathcal{C}\left(\symbfit{#1}^{\top}\right)}
-\newcommand{\nullspace}[1]{\mathcal{N}\left(\symbfit{#1}\right)}
-\newcommand{\leftnullspace}[1]{\mathcal{N}\left(\symbfit{#1}^{\top}\right)}
+\newcommand{\columnspace}[1]{\mathcal{C}\left(\symbf{#1}\right)}
+\newcommand{\rowspace}[1]{\mathcal{C}\left(\symbf{#1}^{\top}\right)}
+\newcommand{\nullspace}[1]{\mathcal{N}\left(\symbf{#1}\right)}
+\newcommand{\leftnullspace}[1]{\mathcal{N}\left(\symbf{#1}^{\top}\right)}
+
+\DeclareMathOperator{\rank}{rank}
 
 \pgfplotsset{compat=newest}
 
@@ -113,16 +114,16 @@
 	\draw [dashed] \rotateXY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne} -- (-1, 1.3);
 	%
 	% Particular Equation Label
-	\node[label={[label distance=0.25]90:{\scalebox{1.25}{\(\symbfit{A}\symbfit{x}_p=\symbfit{b}\)}}}] at ({(\rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateX{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateY{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
+	\node[label={[label distance=0.25]90:{\scalebox{1.25}{\(\symbf{A}\symbfit{x}_p=\symbfit{b}\)}}}] at ({(\rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateX{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo} + \rotateY{\pivotOneX + 1.3}{\pivotOneY + 1.1}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
 	% General Equation Label
-	\node[label={[label distance=0.25]325:{\scalebox{1.25}{\(\symbfit{A}\symbfit{x}=\symbfit{b}\)}}}] at ({(-1 + \rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo}) / 2}, {(1.3 + \rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo}) / 2}) {};
+	\node[label={[label distance=0.25]325:{\scalebox{1.25}{\(\symbf{A}\symbfit{x}=\symbfit{b}\)}}}] at ({(-1 + \rotateX{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo}) / 2}, {(1.3 + \rotateY{\pivotTwoX + 0.9}{\pivotTwoY + 1.7}{\pivotTwoX}{\pivotTwoY}{\angleTwo}) / 2}) {};
 	% Homogeneous Equation Label
-	\node[label={[label distance=0.25]325:{\scalebox{1.25}{\(\symbfit{A}\symbfit{x}_h=\symbfup{0}\)}}}] at ({(\pivotTwoX + \rotateX{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\pivotTwoY + \rotateY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
+	\node[label={[label distance=0.25]325:{\scalebox{1.25}{\(\symbf{A}\symbfit{x}_h=\symbfup{0}\)}}}] at ({(\pivotTwoX + \rotateX{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}, {(\pivotTwoY + \rotateY{\pivotOneX - 1.8}{\pivotOneY - 1.5}{\pivotOneX}{\pivotOneY}{\angleOne}) / 2}) {};
 	% 
 	% Rank definition
-	\node at (0,6.5) {\scalebox{1.75}{\(r=\rank{\left( \symbfit{A} \right)}=\rank{\left( \symbfit{A}^\top \right)}\)}};
+	\node at (0,6.5) {\scalebox{1.75}{\(r=\rank{\left( \symbf{A} \right)}=\rank{\left( \symbf{A}^\top \right)}\)}};
 	%
 	\draw[step=1, opacity=0, very thin] (-12,-7) grid (12,9);
-	\node at (0, 8) {\scalebox{3}{\(\symbfit{A}\in\mathbb{R}^{m \times n}\)}};
+	\node at (0, 8) {\scalebox{3}{\(\symbf{A}\in\mathbb{R}^{m \times n}\)}};
 \end{tikzpicture}
 \end{document}
