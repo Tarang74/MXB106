@@ -1,6 +1,7 @@
-%!TEX program = xelatex
+%!TEX TS-program = xelatex
+%!TEX options = -aux-directory=Debug -shell-escape -file-line-error -interaction=nonstopmode -halt-on-error -synctex=1 "%DOC%"
 \documentclass{article}
-\usepackage{LaTeX-Submodule/template}
+\input{LaTeX-Submodule/template.tex}
 
 % Additional packages and macros
 \usepackage{changepage} % Modify page width
@@ -59,8 +60,8 @@
     \section*{Fundamental Subspaces}
     For \(\symbf{A}\in\mathbb{R}^{m \times n}\):
     \begin{itemize}
-        \item \(r = \rank{\left( \symbf{A} \right)} = \dim{\left( \columnspace{A} \right)}\)
-        \item \(r = \rank{\left( \symbf{A}^\top \right)} = \dim{\left( \rowspace{A} \right)}\)
+        \item \(r = \vrank{\left( \symbf{A} \right)} = \dim{\left( \columnspace{A} \right)}\)
+        \item \(r = \vrank{\left( \symbf{A}^\top \right)} = \dim{\left( \rowspace{A} \right)}\)
         \item \(n - r = \vnull{\left( \symbf{A} \right)}      = \dim{\left( \nullspace{A} \right)}\)
         \item \(m - r = \vnull{\left( \symbf{A}^\top \right)} = \dim{\left( \leftnullspace{A} \right)}\)
     \end{itemize}

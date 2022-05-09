@@ -1,6 +1,7 @@
-%!TEX program = xelatex
+%!TEX TS-program = xelatex
+%!TEX options = -aux-directory=Debug -shell-escape -file-line-error -interaction=nonstopmode -halt-on-error -synctex=1 "%DOC%"
 \documentclass{article}
-\usepackage{LaTeX-Submodule/template}
+\input{LaTeX-Submodule/template.tex}
 
 % Additional packages & macros
 
@@ -460,7 +461,7 @@
             \symbfit{b}_{1} & \symbfit{b}_{2} & \cdots & \symbfit{b}_{n} \\
             \vertbar        & \vertbar        &        & \vertbar
         \end{bmatrix}
-                                & =
+                            & =
         \begin{bmatrix}
             \symbfit{a}_1\symbfit{b}_1 & \symbfit{a}_1\symbfit{b}_2 & \cdots & \symbfit{a}_1\symbfit{b}_n \\
             \symbfit{a}_2\symbfit{b}_1 & \symbfit{a}_2\symbfit{b}_2 & \cdots & \symbfit{a}_2\symbfit{b}_n \\
@@ -779,13 +780,13 @@
 \subsection{Rank}
 \begin{definition}
     The \textbf{rank} of a matrix, denoted by
-    \(\rank{\left( \symbf{A} \right)}\), is given by
+    \(\vrank{\left( \symbf{A} \right)}\), is given by
     \(\dim{\left( \columnspace{A} \right)}\).
 \end{definition}
 \begin{theorem}
     The column space and row space have the same dimension so that
     \begin{equation*}
-        \rank{\left( \symbf{A} \right)}=\dim{\left( \columnspace{A} \right)}=\dim{\left( \rowspace{A} \right)}
+        \vrank{\left( \symbf{A} \right)}=\dim{\left( \columnspace{A} \right)}=\dim{\left( \rowspace{A} \right)}
     \end{equation*}
 \end{theorem}
 \subsection{Nullity}
@@ -941,9 +942,9 @@
     \end{equation*}
     where we solve for \(\symbfit{\hat{x}}\)
     \begin{align*}
-        \symbf{A}^\top \symbfit{b}-\symbf{A}^\top \symbf{A}\symbfit{\hat{x}} & = \symbfup{0}                                                                  \\
-        \symbf{A}^\top \symbf{A}\symbfit{\hat{x}}                              & = \symbf{A}^\top \symbfit{b}                                                 \\
-        \symbfit{\hat{x}}                                                          & = \left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
+        \symbf{A}^\top \symbfit{b}-\symbf{A}^\top \symbf{A}\symbfit{\hat{x}} & = \symbfup{0}                                                            \\
+        \symbf{A}^\top \symbf{A}\symbfit{\hat{x}}                            & = \symbf{A}^\top \symbfit{b}                                             \\
+        \symbfit{\hat{x}}                                                    & = \left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
     \end{align*}
 \end{solution}
 \subsection{Least Squares}
@@ -1213,8 +1214,8 @@
     \(\symbf{A}\), are the solutions to
     \(\symbf{A}\symbfit{q}=\lambda \symbfit{q}\).
     \begin{align*}
-        \symbf{A}\symbfit{q}                                      & =\lambda \symbfit{q} \\
-        \symbf{A}\symbfit{q} - \lambda \symbfit{q}                & =\symbfup{0}         \\
+        \symbf{A}\symbfit{q}                                     & =\lambda \symbfit{q} \\
+        \symbf{A}\symbfit{q} - \lambda \symbfit{q}               & =\symbfup{0}         \\
         \left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q} & =\symbfup{0}
     \end{align*}
     The linear system
@@ -1290,17 +1291,17 @@
         \left\{
         \setlength\arraycolsep{0pt}
         \begin{array}{ r >{{}}c<{{}} l }
-            \symbf{A}\symbfit{q}_1    & = & \lambda_1 \symbfit{q}_1                            \\
-            \symbf{A}\symbfit{q}_2    & = & \lambda_2 \symbfit{q}_2                            \\
+            \symbf{A}\symbfit{q}_1      & = & \lambda_1 \symbfit{q}_1                            \\
+            \symbf{A}\symbfit{q}_2      & = & \lambda_2 \symbfit{q}_2                            \\
             \vdotswithin{\symbfit{q}_3} &   & \vdotswithin{\lambda_3}\vdotswithin{\symbfit{q}_3} \\
-            \symbf{A}\symbfit{q}_n    & = & \lambda_n \symbfit{q}_n
+            \symbf{A}\symbfit{q}_n      & = & \lambda_n \symbfit{q}_n
         \end{array}
         \right.
     \end{equation*}
     which we can rewrite as
     \begin{align}
         \symbf{A}\symbf{Q} & = \symbf{Q}\symbf{\Lambda} \label{equation:eigenspace_matrix} \\
-        \symbf{\Lambda}      & =\symbf{Q}^{-1}\symbf{A}\symbf{Q} \nonumber
+        \symbf{\Lambda}    & =\symbf{Q}^{-1}\symbf{A}\symbf{Q} \nonumber
     \end{align}
     by rearranging
     \hyperref[equation:eigenspace_matrix]{Equation~\ref{equation:eigenspace_matrix}},
@@ -1318,16 +1319,16 @@
         \symbf{A}^k = \symbf{Q} \symbf{\Lambda}^k \symbf{Q}^{-1}
     \end{equation*}
 \end{theorem}
-\begin{solutionF}[Proof]
+\begin{proof}
     \begin{align*}
-        \symbf{A}^k & = \left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)^k                                                                                                                                                                 \\
-                      & = \underbrace{\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\cdots\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)}_{\text{\(k\) times}} \\
-                      & = \underbrace{\symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \cdots \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                                          \\
-                      & = \underbrace{\symbf{Q} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \cdots \symbf{Q}} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                        \\
-                      & = \symbf{Q} \underbrace{ \symbf{\Lambda} \symbf{\Lambda} \cdots \symbf{\Lambda} }_{\text{\(k\) times}}\symbf{Q}^{-1}                                                                                                    \\
-                      & = \symbf{Q} \symbf{\Lambda}^k\symbf{Q}^{-1}
+        \symbf{A}^k & = \left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)^k                                                                                                                                                     \\
+                    & = \underbrace{\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\cdots\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)}_{\text{\(k\) times}} \\
+                    & = \underbrace{\symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \cdots \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                                          \\
+                    & = \underbrace{\symbf{Q} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \cdots \symbf{Q}} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                        \\
+                    & = \symbf{Q} \underbrace{ \symbf{\Lambda} \symbf{\Lambda} \cdots \symbf{\Lambda} }_{\text{\(k\) times}}\symbf{Q}^{-1}                                                                                            \\
+                    & = \symbf{Q} \symbf{\Lambda}^k\symbf{Q}^{-1}
     \end{align*}
-\end{solutionF}
+\end{proof}
 \begin{theorem}
     The eigenvalues of \(\symbf{A}^k\), \(\forall k \in \mathbb{N}\)
     are \(\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k\).
@@ -1391,7 +1392,7 @@
             x_2    \\
             \vdots \\
             x_n
-        \end{bmatrix}                           \\
+        \end{bmatrix}                         \\
         \symbfit{x}' & = \symbf{A} \symbfit{x}
     \end{align*}
 \end{definition}
@@ -1414,18 +1415,18 @@
     system of differential equations so that each equation can be solved
     as a first-order differential equation.
 \end{theorem}
-\begin{solutionF}[Proof]
+\begin{proof}
     \begingroup
     \allowdisplaybreaks
     \begin{align*}
-        \symbfit{x}'                           & = \symbf{A} \symbfit{x}                                                                           \\
+        \symbfit{x}'                         & = \symbf{A} \symbfit{x}                                                                     \\
         \left( \symbf{Q}\symbfit{u} \right)' & = \left( \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q}\symbfit{u} \right) \\
         \symbf{Q}\symbfit{u}'                & = \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q}\symbfit{u}                              \\
         \cancel{\symbf{Q}}\symbfit{u}'       & = \cancel{\symbf{Q}}\symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}}\symbfit{u}            \\
-        \symbfit{u}'                           & = \symbf{\Lambda} \symbfit{u}
+        \symbfit{u}'                         & = \symbf{\Lambda} \symbfit{u}
     \end{align*}
     \endgroup
-\end{solutionF}
+\end{proof}
 \begin{theorem}
     If \(\symbf{A}\) is a diagonalisable matrix, then the general
     solution of \(\symbfit{x}' = \symbf{A} \symbfit{x}\) can be
