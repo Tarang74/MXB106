@@ -6,6 +6,13 @@
 
 ---
 
+## Downloads
+
+Lecture notes download: [MXB106 Lecture Notes PDF](MXB106%20Lecture%20Notes.pdf)
+Exam notes download: [MXB106 Exam Notes PDF](MXB106%20Exam%20Notes.pdf)
+
+---
+
 This repository provides **lecture notes** and **exam notes** for **MXB106 - Linear Algebra**.
 
 *The contents of the lecture notes are described below.*
