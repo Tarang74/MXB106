@@ -8,8 +8,8 @@
 
 ## Downloads
 
-Lecture notes download: [MXB106 Lecture Notes PDF](MXB106%20Lecture%20Notes.pdf)
-Exam notes download: [MXB106 Exam Notes PDF](MXB106%20Exam%20Notes.pdf)
+Lecture notes download: [MXB106 Lecture Notes PDF](https://www.github.com/Tarang74/MXB106/raw/main/MXB106%20Lecture%20Notes.pdf)
+Exam notes download: [MXB106 Exam Notes PDF](https://www.github.com/Tarang74/MXB106/raw/main/MXB106%20Exam%20Notes.pdf)
 
 ---
 
