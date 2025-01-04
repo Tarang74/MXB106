@@ -14,7 +14,7 @@
 	margin = 10mm
 }
 
-%% Hide horizontal rule 
+%% Hide horizontal rule
 \renewcommand{\headrulewidth}{0pt}
 
 % Hide page numbers
@@ -44,7 +44,7 @@
     A \textbf{vector space} \(V\) is closed under vector addition
     and scalar multiplication:
     \begin{equation*}
-        \symbfit{u}+\symbfit{v} \in V \ \text{and} \ k\symbfit{u} \in V.
+        \symbf{u}+\symbf{v} \in V \ \text{and} \ k\symbf{u} \in V.
     \end{equation*}
     A \textit{subset} \(W\) of a vector space \(V\) is called a
     \textbf{subspace} of \(V\) if \(W\) is itself a vector space. The
@@ -52,7 +52,7 @@
 
     \(S\) is \textbf{linearly independent (LI)} if
     \begin{equation*}
-        k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n = \symbfup{0}
+        k_1 \symbf{v}_1 + k_2 \symbf{v}_2 + \cdots + k_n \symbf{v}_n = \symbf{0}
     \end{equation*}
     has \(k_i=0\).
 
@@ -71,14 +71,14 @@
     The subspaces \(U\) and \(W\) of a vector space \(V\) are
     \textbf{orthogonal subspaces} iff
     \begin{equation*}
-        \forall \symbfit{u}\in U:\forall \symbfit{w}\in W:\symbfit{u}^{\top}\symbfit{w} = 0.
+        \forall \symbf{u}\in U:\forall \symbf{w}\in W:\symbf{u}^{\top}\symbf{w} = 0.
     \end{equation*}
     \begin{itemize}
-        \item \(\symbfit{v}^\top \symbfit{v}=\norm{\symbfit{v}}^2\)
+        \item \(\symbf{v}^\top \symbf{v}=\norm{\symbf{v}}^2\)
     \end{itemize}
     The \textbf{orthogonal complement} of \(U\):
     \begin{equation*}
-        U^{\perp} = \left\{ \forall \symbfit{u}\in U:\symbfit{v}\in V: \symbfit{v}^{\top}\symbfit{u}=0 \right\}
+        U^{\perp} = \left\{ \forall \symbf{u}\in U:\symbf{v}\in V: \symbf{v}^{\top}\symbf{u}=0 \right\}
     \end{equation*}
     \begin{itemize}
         \item \(\left( U^{\perp} \right)^{\perp} = U\)
@@ -88,14 +88,14 @@
     \end{itemize}
     \textbf{Projections}:
     \begin{equation*}
-        \proj_{\symbfit{a}}\symbfit{b}
-        = \symbfit{a} x
-        = \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}}.
+        \proj_{\symbf{a}}\symbf{b}
+        = \symbf{a} x
+        = \symbf{a} \frac{\symbf{a}^\top \symbf{b}}{\symbf{a}^\top \symbf{a}}.
     \end{equation*}
     \begin{gather*}
-        \forall \symbfit{w}\in W:\symbfit{w}\neq \symbfit{p}: \\
-        \proj_{W}\symbfit{b} = \symbf{A}\symbfit{\hat{x}} = \symbf{A}\left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}: \\
-        \norm{\symbfit{b}-\symbfit{p}}<\norm{\symbfit{b}-\symbfit{w}}.
+        \forall \symbf{w}\in W:\symbf{w}\neq \symbf{p}: \\
+        \proj_{W}\symbf{b} = \symbf{A}\symbf{\hat{x}} = \symbf{A}\left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbf{b}: \\
+        \norm{\symbf{b}-\symbf{p}}<\norm{\symbf{b}-\symbf{w}}.
     \end{gather*}
     \section*{Determinants}
     \begin{equation*}
@@ -111,8 +111,8 @@
     \section*{Linear Maps}
     \textbf{Linear transformations}:
     \begin{gather*}
-        T:V\rightarrow W \iff \forall \symbfit{u},\: \symbfit{v} \in V:\forall k \in \mathbb{R}: \\
-        T\left(\symbfit{u}+\symbfit{v}\right) = T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right) \wedge T\left(k\symbfit{u}\right) = kT\left(\symbfit{u}\right)
+        T:V\rightarrow W \iff \forall \symbf{u},\: \symbf{v} \in V:\forall k \in \mathbb{R}: \\
+        T\left(\symbf{u}+\symbf{v}\right) = T\left(\symbf{u}\right) + T\left(\symbf{v}\right) \wedge T\left(k\symbf{u}\right) = kT\left(\symbf{u}\right)
     \end{gather*}
     \textbf{Rotations}: Anticlockwise looking down from the positive direction of the
     axis of rotation.
@@ -191,7 +191,7 @@
 
     \textbf{2d reflections} about \(y=mx + c\), where \(\theta=\arctan{\left( m \right)}\):
     \begin{align*}
-        T\left( \symbfit{v} \right) & = \symbf{R} \symbf{M}_{xz} \symbf{R}^{-1} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) + \begin{bmatrix} 0 \\ c \end{bmatrix} \\
+        T\left( \symbf{v} \right) & = \symbf{R} \symbf{M}_{xz} \symbf{R}^{-1} \left( \symbf{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) + \begin{bmatrix} 0 \\ c \end{bmatrix} \\
                                     & =
         \begin{bmatrix}
             \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
@@ -204,13 +204,13 @@
         \begin{bmatrix}
             \cos{\left( \theta \right)} & -\sin{\left( \theta \right)} \\
             \sin{\left( \theta \right)} & \cos{\left( \theta \right)}
-        \end{bmatrix}^{-1} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
+        \end{bmatrix}^{-1} \left( \symbf{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
         \begin{bmatrix} 0 \\ c \end{bmatrix}                                                                                                                                               \\
                                     & = \frac{1}{1+m^2}
         \begin{bmatrix}
             1-m^2 & 2m    \\
             2m    & m^2-1
-        \end{bmatrix} \left( \symbfit{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
+        \end{bmatrix} \left( \symbf{v} - \begin{bmatrix} 0 \\ c \end{bmatrix} \right) +
         \begin{bmatrix} 0 \\ c \end{bmatrix}                                                                                                                                               \\
     \end{align*}
     \begin{multicols*}{2}
@@ -219,25 +219,25 @@
 
         For \(T:V\rightarrow V\), \(\mathcal{V}\) is IV if
         \begin{equation*}
-            T\left(\mathcal{V}\right)\subseteq \mathcal{V}\iff\forall \symbfit{v}
-            \in \mathcal{V}\implies T\left(\symbfit{v}\right)\in \mathcal{V}.
+            T\left(\mathcal{V}\right)\subseteq \mathcal{V}\iff\forall \symbf{v}
+            \in \mathcal{V}\implies T\left(\symbf{v}\right)\in \mathcal{V}.
         \end{equation*}
         \textbf{Trivial IV subspaces}:
         \begin{enumerate}
             \item \(V\)
-            \item \(\vim{\left( T \right)} \equiv T(V) = \left\{ T\left(\symbfit{v}\right) : \symbfit{v}\in V \right\}\)
-            \item \(\vker{\left( T \right)} = \left\{ \symbfit{v}\in V : T\left(\symbfit{v}\right) = \symbfup{0} \right\}\)
-            \item \(\left\{ \symbfup{0} \right\}\)
+            \item \(\vim{\left( T \right)} \equiv T(V) = \left\{ T\left(\symbf{v}\right) : \symbf{v}\in V \right\}\)
+            \item \(\vker{\left( T \right)} = \left\{ \symbf{v}\in V : T\left(\symbf{v}\right) = \symbf{0} \right\}\)
+            \item \(\left\{ \symbf{0} \right\}\)
             \item linear combination of IV subspaces
         \end{enumerate}
         \textbf{Eigenspaces} (1d IV subspace):
         \begin{equation*}
-            \mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists
-            \lambda \in \mathbb{C}:T\left(\symbfit{q}\right) = \lambda \symbfit{q} \right\}
+            \mathcal{V} = \left\{ \forall \symbf{v}\in \mathcal{V}:\exists
+            \lambda \in \mathbb{C}:T\left(\symbf{v}\right) = \lambda \symbf{v} \right\}
         \end{equation*}
         where \(\lambda_i\) are the eigenvalues of \(\symbf{A}\) and
-        \(\symbfit{q}_i\) are the eigenvectors of \(\symbf{A}\), and they satisfy
-        \(\left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q}=\symbfup{0}\).
+        \(\symbf{v}_i\) are the eigenvectors of \(\symbf{A}\), and they satisfy
+        \(\left( \symbf{A} - \lambda \symbf{I} \right) \symbf{v}=\symbf{0}\).
 
         If \(\symbf{A}\) is invertible:
         \(\det{\left( \symbf{A} - \lambda\symbf{I} \right)} = 0\).
@@ -256,32 +256,32 @@
         \end{equation*}
         \textbf{Similarity transformation}:
         \begin{equation*}
-            \symbf{A}\rightarrow \symbf{Q}^{-1}\symbf{A}\symbf{Q}
+            \symbf{A}\rightarrow \symbf{V}^{-1}\symbf{A}\symbf{V}
         \end{equation*}
-        If \(\symbfit{q}_i\) are LI, then \(\symbf{A}\) is
+        If \(\symbf{v}_i\) are LI, then \(\symbf{A}\) is
         \textbf{diagonalisable}:
         \begin{equation*}
-            \symbf{\Lambda}=\symbf{Q}^{-1}\symbf{A}\symbf{Q} \iff \symbf{A}=\symbf{Q}\symbf{\Lambda}\symbf{Q}^{-1}
+            \symbf{D}=\symbf{V}^{-1}\symbf{A}\symbf{V} \iff \symbf{A}=\symbf{V}\symbf{D}\symbf{V}^{-1}
         \end{equation*}
     \end{multicols*}
     If \(\symbf{A}\) is diagonalisable:
     \begin{equation*}
-        \symbf{\Lambda}=
+        \symbf{D}=
         \begin{bmatrix}
             \lambda_1                         \\
              & \lambda_2                      \\
              &           & \ddots             \\
              &           &        & \lambda_n
         \end{bmatrix} \quad
-        \symbf{Q}=
+        \symbf{V}=
         \begin{bmatrix}
             \vertbar      & \vertbar      &        & \vertbar      \\
-            \symbfit{q}_1 & \symbfit{q}_2 & \cdots & \symbfit{q}_n \\
+            \symbf{v}_1 & \symbf{v}_2 & \cdots & \symbf{v}_n \\
             \vertbar      & \vertbar      &        & \vertbar
         \end{bmatrix}
     \end{equation*}
     \begin{equation*}
-        \forall k \in \mathbb{N}_0:\symbf{A}^k = \symbf{Q} \symbf{\Lambda}^k \symbf{Q}^{-1}
+        \forall k \in \mathbb{N}_0:\symbf{A}^k = \symbf{V} \symbf{D}^k \symbf{V}^{-1}
     \end{equation*}
     The eigenvalues of \(\symbf{A}^k\) are the eigenvalues of \(\symbf{A}\)
     to the \(k\)-th power: \(\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k\).
@@ -320,16 +320,16 @@ initial conditions.
         \begin{bmatrix}
             x_1 \\ x_2 \\ \vdots \\ x_n
         \end{bmatrix}                  \\
-        \iff & \symbfit{x}' = \symbf{A} \symbfit{x}
+        \iff & \symbf{x}' = \symbf{A} \symbf{x}
     \end{align*}
-    can be solved using \(\symbfit{x}=\symbf{Q}\symbfit{u}\) where
-    \(\symbf{Q}\) is the matrix that diagonalises \(\symbf{A}\) and
-    \(\symbfit{u}\) is the solution to \(\symbfit{u}' = \symbf{\Lambda} \symbfit{u}\) where
-    \(\symbf{\Lambda}\) is the diagonal similarity transformation of \(\symbf{A}\).
+    can be solved using \(\symbf{x}=\symbf{V}\symbf{u}\) where
+    \(\symbf{V}\) is the matrix that diagonalises \(\symbf{A}\) and
+    \(\symbf{u}\) is the solution to \(\symbf{u}' = \symbf{D} \symbf{u}\) where
+    \(\symbf{D}\) is the diagonal similarity transformation of \(\symbf{A}\).
 
-    If \(\symbf{A}\) is diagonalisable, then for \(\symbfit{x}' = \symbf{A} \symbfit{x}\):
+    If \(\symbf{A}\) is diagonalisable, then for \(\symbf{x}' = \symbf{A} \symbf{x}\):
     \begin{equation*}
-        \symbfit{x}(t) = c_1 e^{\lambda_1 t} \symbfit{q}_1 + c_2 e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n e^{\lambda_n t} \symbfit{q}_n
+        \symbf{x}(t) = c_1 e^{\lambda_1 t} \symbf{v}_1 + c_2 e^{\lambda_2 t} \symbf{v}_2 + \cdots + c_n e^{\lambda_n t} \symbf{v}_n
     \end{equation*}
     For the \textbf{higher-order linear differential equation}:
     \begin{equation*}
@@ -341,7 +341,7 @@ initial conditions.
     \end{equation*}
     and let
     \begin{equation*}
-        \symbfit{x}=
+        \symbf{x}=
         \begin{bmatrix}
             x_1 \\ x_2 \\ \cdots \\ x_n
         \end{bmatrix}.
@@ -373,27 +373,27 @@ initial conditions.
     \section*{Vector Operations}
     \textbf{Norm of a vector}:
     \begin{equation*}
-        \norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\cdots+v_n^2}
+        \norm{\symbf{v}} = \sqrt{v_1^2 + v_2^2+\cdots+v_n^2}
     \end{equation*}
     \textbf{Unit vector}:
     \begin{equation*}
-        \symbfit{\hat{v}} = \frac{\symbfit{v}}{\norm{\symbfit{v}}}
+        \symbf{\hat{v}} = \frac{\symbf{v}}{\norm{\symbf{v}}}
     \end{equation*}
     \textbf{Dot product}:
     \begin{align*}
-        \symbfit{v}\cdot\symbfit{w} & = v_1 w_1 + v_2 w_2 + \cdots + v_n w_n                            \\
-                                    & = \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}
+        \symbf{v}\cdot\symbf{w} & = v_1 w_1 + v_2 w_2 + \cdots + v_n w_n                            \\
+                                    & = \norm{\symbf{v}} \norm{\symbf{w}} \cos{\left(\theta\right)}
     \end{align*}
     \textbf{Cross product}:
     \begin{align*}
-        \symbfit{v}\times\symbfit{w} & =
+        \symbf{v}\times\symbf{w} & =
         \begin{vmatrix}
-            \symbfit{\hat{\imath}} & \symbfit{\hat{\jmath}} & \symbfit{\hat{k}} \\
+            \symbf{\hat{\imath}} & \symbf{\hat{\jmath}} & \symbf{\hat{k}} \\
             v_1                    & v_2                    & v_3               \\
             w_1                    & w_2                    & w_3
         \end{vmatrix} \\
                                      & =
-        \norm{\symbfit{v}}\norm{\symbfit{w}}\sin{\left(\theta\right)}\symbfit{\hat{n}}
+        \norm{\symbf{v}}\norm{\symbf{w}}\sin{\left(\theta\right)}\symbf{\hat{n}}
     \end{align*}
     \textbf{2-d Inverse}:
     \begin{equation*}
@@ -408,50 +408,50 @@ initial conditions.
     \section*{Vector Space Axioms}
     \textbf{Closure under addition}:
     \begin{equation*}
-        \symbfit{u}+\symbfit{v} \in V
+        \symbf{u}+\symbf{v} \in V
     \end{equation*}
     \textbf{Commutativity of vector addition}:
     \begin{equation*}
-        \symbfit{u} + \symbfit{v} = \symbfit{v} + \symbfit{u}
+        \symbf{u} + \symbf{v} = \symbf{v} + \symbf{u}
     \end{equation*}
     \textbf{Associativity of vector addition}:
     \begin{equation*}
-        \symbfit{u} + \left(\symbfit{v} + \symbfit{w}\right) =
-        \left(\symbfit{u} + \symbfit{v}\right) + \symbfit{w}
+        \symbf{u} + \left(\symbf{v} + \symbf{w}\right) =
+        \left(\symbf{u} + \symbf{v}\right) + \symbf{w}
     \end{equation*}
     \textbf{Additive identity}:
     \begin{equation*}
-        \symbfit{u} + \symbfup{0} = \symbfit{u}
+        \symbf{u} + \symbf{0} = \symbf{u}
     \end{equation*}
     \textbf{Additive inverse}:
     \begin{equation*}
-        \symbfit{u} + \left(-\symbfit{u}\right) = \symbfup{0}
+        \symbf{u} + \left(-\symbf{u}\right) = \symbf{0}
     \end{equation*}
     \textbf{Closure under scalar multiplication}:
     \begin{equation*}
-        k\symbfit{u} \in V
+        k\symbf{u} \in V
     \end{equation*}
     \textbf{Distributivity of vector addition}:
     \begin{equation*}
-        k \left(\symbfit{u} + \symbfit{v}\right) = k\symbfit{u} + k\symbfit{v}
+        k \left(\symbf{u} + \symbf{v}\right) = k\symbf{u} + k\symbf{v}
     \end{equation*}
     \textbf{Distributivity of scalar addition}:
     \begin{equation*}
-        \left(k+m\right)\symbfit{u} = k\symbfit{u} + m\symbfit{u}
+        \left(k+m\right)\symbf{u} = k\symbf{u} + m\symbf{u}
     \end{equation*}
     \textbf{Associativity of scalar multiplication}:
     \begin{equation*}
-        k\left(m\symbfit{u}\right)=\left(km\right)\symbfit{u}
+        k\left(m\symbf{u}\right)=\left(km\right)\symbf{u}
     \end{equation*}
     \textbf{Scalar multiplication identity}:
     \begin{equation*}
-        1 \symbfit{u}=\symbfit{u}
+        1 \symbf{u}=\symbf{u}
     \end{equation*}
     \section*{Subspaces}
-    \textbf{Subspaces of \(\mathbb{R}^2\)}: \(\left\{ \symbfup{0} \right\}\),
+    \textbf{Subspaces of \(\mathbb{R}^2\)}: \(\left\{ \symbf{0} \right\}\),
     lines through the origin, and \(\mathbb{R}^2\).
 
-    \textbf{Subspaces of \(\mathbb{R}^3\)}: \(\left\{ \symbfup{0} \right\}\),
+    \textbf{Subspaces of \(\mathbb{R}^3\)}: \(\left\{ \symbf{0} \right\}\),
     lines through the origin, planes through the origin, and \(\mathbb{R}^3\).
 
     \textbf{Subspaces of \(\symbf{M}_{nn}\)}: Upper triangular matrices,

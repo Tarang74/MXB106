@@ -52,26 +52,27 @@
     An \(n\)-dimensional \textbf{vector} is an ordered list of \(n\)
     numbers.
     \begin{equation*}
-        \symbfit{v} =
+        \symbf{v} =
         \begin{bmatrix}
             v_1    \\
             v_2    \\
             \vdots \\
             v_n
         \end{bmatrix}
-        \in \mathbb{R}^n
+        \in \R^n
     \end{equation*}
 \end{definition}
 \begin{theorem}
-    \(\mathbb{R}^n\) is the set of all ordered \(n\)-tuples of real
+    \(\R^n\) is the set of all ordered \(n\)-tuples of real
     numbers.
     \begin{equation*}
-        \mathbb{R}^n = \bigl\{\left(v_1,\: v_2,\: \ldots,\: v_n\right): v_1,\: v_2,\: \ldots,\: v_n \in \mathbb{R}: n \in \mathbb{N}\bigr\}
+        \R^n = \bigl\{\left(v_1,\: v_2,\: \ldots,\: v_n\right): v_1,\: v_2,\: \ldots,\: v_n \in \R: n \in \N\bigr\}
     \end{equation*}
 \end{theorem}
 \underline{Notation:}
 \begin{enumerate}
-    \item Component form: \(\symbfit{v} = \left\langle{v_1,\: v_2}\right\rangle = \left(v_1,\: v_2\right) =
+    \item Component form: \(\symbf{v} = \abracket*{v_1,\:
+          v_2} = \left(v_1,\: v_2\right) =
           \begin{pmatrix}
               v_1 \\
               v_2
@@ -82,14 +83,17 @@
               v_2
           \end{bmatrix}
           \)
-    \item Unit vector form: \(\symbfit{v} = v_1\symbfit{\hat{\imath}} + v_2\symbfit{\hat{\jmath}}\), where \(\symbfit{\hat{\imath}}\) and \(\symbfit{\hat{\jmath}}\) are basis vectors along the \(x\) and \(y\) axes respectively.
-    \item Denotation: \(\symbfit{v} = \underset{\sim}{v} = \vec{v}\)
+    \item Unit vector form: \(\symbf{v} = v_1\hat{\symbf{i}} +
+          v_2\hat{\symbf{j}}\), where \(\hat{\symbf{i}}\) and
+          \(\hat{\symbf{j}}\) are basis vectors along the \(x\)
+          and \(y\) axes respectively.
+    \item Denotation: \(\symbf{v} = \underset{\sim}{v} = \vec{v}\)
 \end{enumerate}
 \subsection{Position and Displacement Vectors}
 \begin{definition}
     The \textbf{displacement vector} \(\overrightarrow{AB}\) from
-    \(\symbfit{a}\) to \(\symbfit{b}\) can be defined as
-    \(\symbfit{b}-\symbfit{a}\).
+    \(\symbf{a}\) to \(\symbf{b}\) can be defined as
+    \(\symbf{b}-\symbf{a}\).
     \begin{figure}[H]
         \centering
         \includegraphics*{figures/vector_position.pdf}
@@ -101,7 +105,7 @@
     \textbf{Vector addition} is performed by adding the corresponding
     components of two vectors of the same dimension.
     \begin{equation*}
-        \symbfit{a} + \symbfit{b} =
+        \symbf{a} + \symbf{b} =
         \begin{bmatrix}
             a_1+b_1 \\
             \vdots  \\
@@ -114,7 +118,7 @@
     \textbf{Scalar multiplication} is performed by multiplying each
     element of the vector by the scalar.
     \begin{equation*}
-        a\symbfit{v} =
+        a\symbf{v} =
         \begin{bmatrix}
             av_1   \\
             \vdots \\
@@ -124,126 +128,126 @@
 \end{definition}
 \subsection{Norm of a Vector}
 \begin{definition}
-    The \textbf{norm} of a vector \(\symbfit{v}\), denoted by
-    \(\norm{\symbfit{v}}\), is the \textit{length} or \textit{magnitude}
-    of \(\symbfit{v}\).
+    The \textbf{norm} of a vector \(\symbf{v}\), denoted by
+    \(\norm{\symbf{v}}\), is the \textit{length} or \textit{magnitude}
+    of \(\symbf{v}\).
     \begin{equation*}
-        \norm{\symbfit{v}} = \sqrt{v_1^2 + v_2^2+\cdots+v_n^2}
+        \norm{\symbf{v}} = \sqrt{v_1^2 + v_2^2+\cdots+v_n^2}
     \end{equation*}
 \end{definition}
 \subsection{The Unit Vector}
 \begin{definition}
-    A \textbf{unit vector} is a vector, denoted \(\symbfit{\hat{v}}\),
-    that has a length of 1 in the direction of \(\symbfit{v}\).
+    A \textbf{unit vector} is a vector, denoted \(\symbf{\hat{v}}\),
+    that has a length of 1 in the direction of \(\symbf{v}\).
     \begin{equation*}
-        \symbfit{\hat{v}} = \frac{\symbfit{v}}{\norm{\symbfit{v}}}
+        \symbf{\hat{v}} = \frac{\symbf{v}}{\norm{\symbf{v}}}
     \end{equation*}
 \end{definition}
 \subsection{The Dot Product}
 \begin{definition}
     The \textbf{dot product} is a function that associates each pair of
-    vectors \(\symbfit{v},\: \symbfit{w} \in \mathbb{R}^n\) a real
-    number \(\symbfit{v}\cdot\symbfit{w}\).
+    vectors \(\symbf{v},\: \symbf{w} \in \R^n\) a real
+    number \(\symbf{v}\cdot\symbf{w}\).
     \begin{align*}
-        \symbfit{v}\cdot\symbfit{w} & = v_1 w_1 + v_2 w_2 + \cdots + v_n w_n                            \\
-                                    & = \norm{\symbfit{v}} \norm{\symbfit{w}} \cos{\left(\theta\right)}
+        \symbf{v}\cdot\symbf{w} & = v_1 w_1 + v_2 w_2 + \cdots + v_n w_n                        \\
+                                & = \norm{\symbf{v}} \norm{\symbf{w}} \cos{\left(\theta\right)}
     \end{align*}
-    where \(\theta\) is the angle between \(\symbfit{v}\) and
-    \(\symbfit{w}\).
+    where \(\theta\) is the angle between \(\symbf{v}\) and
+    \(\symbf{w}\).
 \end{definition}
 \begin{theorem}
-    If \(\symbfit{v} \cdot \symbfit{w}=0\) then \(\symbfit{v}\) and
-    \(\symbfit{w}\) are orthogonal.
+    If \(\symbf{v} \cdot \symbf{w}=0\) then \(\symbf{v}\) and
+    \(\symbf{w}\) are orthogonal.
 \end{theorem}
 \subsection{The Cross Product}
 \begin{definition}
     The \textbf{cross product} is a function that associates each
     ordered pair of vectors
-    \(\symbfit{v},\: \symbfit{w}\in \mathbb{R}^3\) a vector
-    \(\symbfit{v}\times\symbfit{w}\in \mathbb{R}^3\).
+    \(\symbf{v},\: \symbf{w}\in \R^3\) a vector
+    \(\symbf{v}\times\symbf{w}\in \R^3\).
     \begin{align*}
-        \symbfit{v}\times\symbfit{w} & =
+        \symbf{v}\times\symbf{w} & =
         \begin{vmatrix}
-            \symbfit{\hat{\imath}} & \symbfit{\hat{\jmath}} & \symbfit{\hat{k}} \\
-            v_1                    & v_2                    & v_3               \\
-            w_1                    & w_2                    & w_3
-        \end{vmatrix}          \\
-                                     & = \norm{\symbfit{v}}\norm{\symbfit{w}}\sin{\left(\theta\right)}\symbfit{\hat{n}}
+            \symbf{\hat{\imath}} & \symbf{\hat{\jmath}} & \symbf{\hat{k}} \\
+            v_1                  & v_2                  & v_3             \\
+            w_1                  & w_2                  & w_3
+        \end{vmatrix}
+        \\
+                                 & = \norm{\symbf{v}}\norm{\symbf{w}}\sin{\left(\theta\right)}\symbf{\hat{n}}
     \end{align*}
-    where \(\symbfit{\hat{n}}\) is the normal vector given by the
+    where \(\symbf{\hat{n}}\) is the normal vector given by the
     right-hand rule.
 \end{definition}
-\newpage
 \section{Vector Identities}
+Let \(\symbf{a}, \symbf{b}, \symbf{c} \in V\) with \(r \in \R\).
 \begin{theorem}
     Commutativity of vector addition.
     \begin{equation*}
-        \symbfit{a} + \symbfit{b} = \symbfit{b} + \symbfit{a}
+        \symbf{a} + \symbf{b} = \symbf{b} + \symbf{a}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \symbfit{a}\cdot\symbfit{a}=\norm{\symbfit{a}}^2
+        \symbf{a}\cdot\symbf{a}=\norm{\symbf{a}}^2
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Commutativity of dot products.
     \begin{equation*}
-        \symbfit{a}\cdot \symbfit{b} = \symbfit{b}\cdot \symbfit{a}
+        \symbf{a}\cdot \symbf{b} = \symbf{b}\cdot \symbf{a}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Distributivity of dot products over vector addition.
     \begin{equation*}
-        \symbfit{a}\cdot \left(\symbfit{b}+\symbfit{c}\right) = \symbfit{a}\cdot\symbfit{b} + \symbfit{a}\cdot\symbfit{c}
+        \symbf{a}\cdot \left(\symbf{b}+\symbf{c}\right) = \symbf{a}\cdot\symbf{b} + \symbf{a}\cdot\symbf{c}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Associativity of dot products over scalar multiplication.
     \begin{equation*}
-        \left(r\symbfit{a}\right)\cdot\symbfit{b} = r\left(\symbfit{a}\cdot\symbfit{b}\right)=\symbfit{a}\cdot\left(r\symbfit{b}\right)
+        \left(r\symbf{a}\right)\cdot\symbf{b} = r\left(\symbf{a}\cdot\symbf{b}\right)=\symbf{a}\cdot\left(r\symbf{b}\right)
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Bilinearity of dot products.
     \begin{equation*}
-        \symbfit{a}\cdot\left(r\symbfit{b}+\symbfit{c}\right)=r\left(\symbfit{a}\cdot\symbfit{b}\right)+\left(\symbfit{a}\cdot\symbfit{c}\right)
+        \symbf{a}\cdot\left(r\symbf{b}+\symbf{c}\right)=r\left(\symbf{a}\cdot\symbf{b}\right)+\left(\symbf{a}\cdot\symbf{c}\right)
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \symbfit{a}\times \symbfit{a} = \symbfup{0}
+        \symbf{a}\times \symbf{a} = \symbf{0}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Anticommutativity of cross products.
     \begin{equation*}
-        \symbfit{a}\times \symbfit{b} = -\symbfit{b}\times \symbfit{a}
+        \symbf{a}\times \symbf{b} = -\symbf{b}\times \symbf{a}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Distributivity of cross products over vector addition.
     \begin{equation*}
-        \symbfit{a}\times\left( \symbfit{b}+\symbfit{c} \right) = \symbfit{a}\times\symbfit{b} + \symbfit{a}\times\symbfit{c}
+        \symbf{a}\times\left( \symbf{b}+\symbf{c} \right) = \symbf{a}\times\symbf{b} + \symbf{a}\times\symbf{c}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     Associativity of cross products over scalar multiplication.
     \begin{equation*}
-        \left( r \symbfit{a}\right)\times\symbfit{b} = \symbfit{a}\times\left( r \symbfit{b} \right) = r\left(\symbfit{a}\times\symbfit{b}\right)
+        \left( r \symbf{a}\right)\times\symbf{b} = \symbf{a}\times\left( r \symbf{b} \right) = r\left(\symbf{a}\times\symbf{b}\right)
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \symbfit{a} \cdot \left(\symbfit{b}\times\symbfit{c}\right) = \symbfit{b} \cdot \left(\symbfit{c}\times\symbfit{a}\right) = \symbfit{c} \cdot \left(\symbfit{a}\times\symbfit{b}\right)
+        \symbf{a} \cdot \left(\symbf{b}\times\symbf{c}\right) = \symbf{b} \cdot \left(\symbf{c}\times\symbf{a}\right) = \symbf{c} \cdot \left(\symbf{a}\times\symbf{b}\right)
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \symbfit{a} \times \left(\symbfit{b}\times\symbfit{c}\right) = \symbfit{b} \left(\symbfit{a}\cdot\symbfit{c}\right) - \symbfit{c}\left(\symbfit{a}\cdot\symbfit{b}\right)
+        \symbf{a} \times \left(\symbf{b}\times\symbf{c}\right) = \symbf{b} \left(\symbf{a}\cdot\symbf{c}\right) - \symbf{c}\left(\symbf{a}\cdot\symbf{b}\right)
     \end{equation*}
 \end{theorem}
-\newpage
 \section{Linear System of Equations}
 \subsection{Linear Equations}
 \begin{definition}
@@ -269,7 +273,8 @@
     \begin{equation*}
         \left\{
         \setlength\arraycolsep{0pt}
-        \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c }
+        \begin{array}
+            { c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c }
             a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         & = & b_1    \\
             a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         & = & b_2    \\
             \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} &   & \vdots \\
@@ -316,7 +321,10 @@
         \text{\(m\) rows}
         \left\{
         \left[
-        \vphantom{\begin{array}{c} 1 \\ 1 \\ 1 \\ 1 \end{array}}
+        \vphantom{
+            \begin{array}{c} 1 \\ 1 \\ 1 \\ 1
+            \end{array}
+        }
         \smash{\underbrace{
             \begin{array}{cccc}
                 a_{11} & a_{12} & \cdots & a_{1n} \\
@@ -346,7 +354,8 @@
     The first non-zero entry of the row in a matrix is called the
     \textbf{pivot} of the row.
 \end{definition}
-\begin{theorem}\label{theorem:pivots}
+\begin{theorem}
+    \label{theorem:pivots}
     If a row apart from the first has a pivot, then this pivot must be
     to the \textit{right} of the pivot in the preceding row.
 \end{theorem}
@@ -399,7 +408,6 @@
     A \textbf{consistent system} of equations has at least one solution,
     and an \linebreak \textbf{inconsistent system} has no solution.
 \end{definition}
-\newpage
 \section{Matrices}
 \begin{definition}
     A \textbf{matrix} is an array of numbers arranged into \textit{rows}
@@ -413,7 +421,7 @@
             \vdots & \vdots &        & \vdots \\
             a_{m1} & a_{m2} & \cdots & a_{mn} \\
         \end{bmatrix}
-        \in \mathbb{R}^{m \times n}
+        \in \R^{m \times n}
     \end{equation*}
 \end{definition}
 \subsection{Matrix Addition}
@@ -451,22 +459,22 @@
     \begin{align*}
         \symbf{A} \symbf{B} & = \symbf{C} \\
         \begin{bmatrix}
-            \horzbar & \symbfit{a}_{1} & \horzbar \\
-            \horzbar & \symbfit{a}_{2} & \horzbar \\
-                     & \vdots          &          \\
-            \horzbar & \symbfit{a}_{m} & \horzbar
+            \horzbar & \symbf{a}_{1} & \horzbar \\
+            \horzbar & \symbf{a}_{2} & \horzbar \\
+                     & \vdots        &          \\
+            \horzbar & \symbf{a}_{m} & \horzbar
         \end{bmatrix}
         \begin{bmatrix}
-            \vertbar        & \vertbar        &        & \vertbar        \\
-            \symbfit{b}_{1} & \symbfit{b}_{2} & \cdots & \symbfit{b}_{n} \\
-            \vertbar        & \vertbar        &        & \vertbar
+            \vertbar      & \vertbar      &        & \vertbar      \\
+            \symbf{b}_{1} & \symbf{b}_{2} & \cdots & \symbf{b}_{n} \\
+            \vertbar      & \vertbar      &        & \vertbar
         \end{bmatrix}
                             & =
         \begin{bmatrix}
-            \symbfit{a}_1\symbfit{b}_1 & \symbfit{a}_1\symbfit{b}_2 & \cdots & \symbfit{a}_1\symbfit{b}_n \\
-            \symbfit{a}_2\symbfit{b}_1 & \symbfit{a}_2\symbfit{b}_2 & \cdots & \symbfit{a}_2\symbfit{b}_n \\
-            \vdots                     & \vdots                     &        & \vdots                     \\
-            \symbfit{a}_m\symbfit{b}_1 & \symbfit{a}_m\symbfit{b}_2 & \cdots & \symbfit{a}_m\symbfit{b}_n
+            \symbf{a}_1\symbf{b}_1 & \symbf{a}_1\symbf{b}_2 & \cdots & \symbf{a}_1\symbf{b}_n \\
+            \symbf{a}_2\symbf{b}_1 & \symbf{a}_2\symbf{b}_2 & \cdots & \symbf{a}_2\symbf{b}_n \\
+            \vdots                 & \vdots                 &        & \vdots                 \\
+            \symbf{a}_m\symbf{b}_1 & \symbf{a}_m\symbf{b}_2 & \cdots & \symbf{a}_m\symbf{b}_n
         \end{bmatrix}
     \end{align*}
 \end{definition}
@@ -523,10 +531,10 @@
 \begin{definition}
     A \textbf{diagonal} matrix, denoted
     \(\diag{\left( d_{11},\: d_{22},\: \ldots,\: d_{nn} \right)}\), is
-    an \(n \times n\) matrix \(\symbfit{D}\) in which entries outside
+    an \(n \times n\) matrix \(\symbf{D}\) in which entries outside
     the main diagonal are all zero.
     \begin{equation*}
-        \symbfit{D} = \diag{\left( d_{11}, d_{22}, \ldots, d_{nn} \right)} =
+        \symbf{D} = \diag{\left( d_{11}, d_{22}, \ldots, d_{nn} \right)} =
         \begin{bmatrix}
             d_{11} &        &        &        \\
                    & d_{22} &        &        \\
@@ -549,7 +557,6 @@
         \Tr{\left( \symbf{A} \right)} = \sum_{i=1}^n a_{ii}
     \end{equation*}
 \end{definition}
-\newpage
 \section{General Vector Spaces}
 \subsection{Real Vector Spaces}
 \begin{definition}
@@ -558,58 +565,68 @@
 \end{definition}
 \begin{theorem}
     If the following axioms are satisfied by all objects
-    \(\symbfit{u},\: \symbfit{v},\: \symbfit{w} \in V\), and all scalars
+    \(\symbf{u},\: \symbf{v},\: \symbf{w} \in V\), and all scalars
     \(k\) and \(m\), then \(V\) is a \textbf{vector space}, and the
     objects in \(V\) are vectors.
 \end{theorem}
 \begin{axiom}[Closure under addition]
-    \begin{equation*} \label{axiom:5_1_1}
-        \symbfit{u}+\symbfit{v} \in V
+    \begin{equation*}
+        \label{axiom:5_1_1}
+        \symbf{u}+\symbf{v} \in V
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Commutativity of vector addition]
-    \begin{equation*} \label{axiom:5_1_2}
-        \symbfit{u} + \symbfit{v} = \symbfit{v} + \symbfit{u}
+    \begin{equation*}
+        \label{axiom:5_1_2}
+        \symbf{u} + \symbf{v} = \symbf{v} + \symbf{u}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Associativity of vector addition]
-    \begin{equation*} \label{axiom:5_1_3}
-        \symbfit{u} + \left(\symbfit{v} + \symbfit{w}\right) = \left(\symbfit{u} + \symbfit{v}\right) + \symbfit{w}
+    \begin{equation*}
+        \label{axiom:5_1_3}
+        \symbf{u} + \left(\symbf{v} + \symbf{w}\right) = \left(\symbf{u} + \symbf{v}\right) + \symbf{w}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Additive identity]
-    \begin{equation*} \label{axiom:5_1_4}
-        \symbfit{u} + \symbfup{0} = \symbfit{u}
+    \begin{equation*}
+        \label{axiom:5_1_4}
+        \symbf{u} + \symbf{0} = \symbf{u}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Additive inverse]
-    \begin{equation*} \label{axiom:5_1_5}
-        \symbfit{u} + \left(-\symbfit{u}\right) = \symbfup{0}
+    \begin{equation*}
+        \label{axiom:5_1_5}
+        \symbf{u} + \left(-\symbf{u}\right) = \symbf{0}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Closure under scalar multiplication]
-    \begin{equation*} \label{axiom:5_1_6}
-        k\symbfit{u} \in V
+    \begin{equation*}
+        \label{axiom:5_1_6}
+        k\symbf{u} \in V
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Distributivity of vector addition]
-    \begin{equation*} \label{axiom:5_1_7}
-        k \left(\symbfit{u} + \symbfit{v}\right) = k\symbfit{u} + k\symbfit{v}
+    \begin{equation*}
+        \label{axiom:5_1_7}
+        k \left(\symbf{u} + \symbf{v}\right) = k\symbf{u} + k\symbf{v}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Distributivity of scalar addition]
-    \begin{equation*}\label{axiom:5_1_8}
-        \left(k+m\right)\symbfit{u} = k\symbfit{u} + m\symbfit{u}
+    \begin{equation*}
+        \label{axiom:5_1_8}
+        \left(k+m\right)\symbf{u} = k\symbf{u} + m\symbf{u}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Associativity of scalar multiplication]
-    \begin{equation*}\label{axiom:5_1_9}
-        k\left(m\symbfit{u}\right)=\left(km\right)\symbfit{u}
+    \begin{equation*}
+        \label{axiom:5_1_9}
+        k\left(m\symbf{u}\right)=\left(km\right)\symbf{u}
     \end{equation*}
 \end{axiom}
 \begin{axiom}[Scalar multiplication identity]
-    \begin{equation*}\label{axiom:5_1_10}
-        1 \symbfit{u}=\symbfit{u}
+    \begin{equation*}
+        \label{axiom:5_1_10}
+        1 \symbf{u}=\symbf{u}
     \end{equation*}
 \end{axiom}
 \noindent To identify that a set with two operations is a vector space:
@@ -618,17 +635,19 @@
     \item Identify the addition and scalar multiplication operations on
           \(V\).
     \item Verify Axioms~\ref{axiom:5_1_1} and~\ref{axiom:5_1_6}.
-    \item Confirm that Axioms~\ref{axiom:5_1_2},~\ref{axiom:5_1_3},~\ref{axiom:5_1_4},~\ref{axiom:5_1_5},~\ref{axiom:5_1_7},~\ref{axiom:5_1_8},~\ref{axiom:5_1_9}, and~\ref{axiom:5_1_10} hold.
+    \item Confirm that
+          Axioms~\ref{axiom:5_1_2},~\ref{axiom:5_1_3},~\ref{axiom:5_1_4},~\ref{axiom:5_1_5},~\ref{axiom:5_1_7},~\ref{axiom:5_1_8},~\ref{axiom:5_1_9},
+          and~\ref{axiom:5_1_10} hold.
 \end{enumerate}
 \begin{theorem}
-    Let \(V\) be a vector space. If \(\symbfit{v} \in V\), and \(k\) is
+    Let \(V\) be a vector space. If \(\symbf{v} \in V\), and \(k\) is
     a scalar.
     \begin{enumerate}
-        \item \(0\symbfit{v}=\symbfup{0}\)
-        \item \(k\symbfup{0}=\symbfup{0}\)
-        \item \(\left(-1\right)\symbfit{v}=-\symbfit{v}\)
-        \item If \(k\symbfit{v}=\symbfup{0}\), then \(k=0\) or
-              \(\symbfit{v}=\symbfup{0}\)
+        \item \(0\symbf{v}=\symbf{0}\)
+        \item \(k\symbf{0}=\symbf{0}\)
+        \item \(\left(-1\right)\symbf{v}=-\symbf{v}\)
+        \item If \(k\symbf{v}=\symbf{0}\), then \(k=0\) or
+              \(\symbf{v}=\symbf{0}\)
     \end{enumerate}
 \end{theorem}
 \subsection{Subspaces}
@@ -652,20 +671,20 @@
     subspace.
 \end{theorem}
 \begin{theorem}
-    Subspaces of \(\mathbb{R}^2\).
+    Subspaces of \(\R^2\).
     \begin{enumerate}
-        \item \(\left\{ \symbfup{0} \right\}\)
+        \item \(\left\{ \symbf{0} \right\}\)
         \item Lines through the origin
-        \item \(\mathbb{R}^2\)
+        \item \(\R^2\)
     \end{enumerate}
 \end{theorem}
 \begin{theorem}
-    Subspaces of \(\mathbb{R}^3\).
+    Subspaces of \(\R^3\).
     \begin{enumerate}
-        \item \(\left\{ \symbfup{0} \right\}\)
+        \item \(\left\{ \symbf{0} \right\}\)
         \item Lines through the origin
         \item Planes through the origin
-        \item \(\mathbb{R}^3\)
+        \item \(\R^3\)
     \end{enumerate}
 \end{theorem}
 \begin{theorem}
@@ -679,16 +698,16 @@
 \end{theorem}
 \subsection{Spanning Sets}
 \begin{definition}
-    If the vector \(\symbfit{w}\) is in a vector space \(V\), then
-    \(\symbfit{w}\) is a \textbf{linear combination} of the vectors
-    \(\symbfit{v}_1,\: \symbfit{v}_2,\: \dots,\: \symbfit{v}_n \in V\),
-    if \(\symbfit{w}\) can be expressed in the form
+    If the vector \(\symbf{w}\) is in a vector space \(V\), then
+    \(\symbf{w}\) is a \textbf{linear combination} of the vectors
+    \(\symbf{v}_1,\: \symbf{v}_2,\: \dots,\: \symbf{v}_n \in V\),
+    if \(\symbf{w}\) can be expressed in the form
     \begin{equation*}
-        \symbfit{w} = k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n
+        \symbf{w} = k_1 \symbf{v}_1 + k_2 \symbf{v}_2 + \cdots + k_n \symbf{v}_n
     \end{equation*}
 \end{definition}
 \begin{theorem}
-    If \(S=\left\{ \symbfit{w}_1,\: \symbfit{w}_2,\: \dots,\: \symbfit{w}_n \right\}\)
+    If \(S=\left\{ \symbf{w}_1,\: \symbf{w}_2,\: \dots,\: \symbf{w}_n \right\}\)
     is a nonempty set of vectors in a vector space \(V\), then the set
     \(W\) of all possible linear combinations of the vectors in \(S\) is
     a subspace of \(V\). The subspace \(W\) is called the subspace of
@@ -707,7 +726,7 @@
     A set \(S\) is linearly independent if and only if there is one
     solution to the equation
     \begin{equation*}
-        k_1 \symbfit{v}_1 + k_2 \symbfit{v}_2 + \cdots + k_n \symbfit{v}_n = \symbfup{0}
+        k_1 \symbf{v}_1 + k_2 \symbf{v}_2 + \cdots + k_n \symbf{v}_n = \symbf{0}
     \end{equation*}
     where the coefficients satisfying this equation are
     \(k_1=0, k_2=0, \dots, k_n=0\).
@@ -730,7 +749,6 @@
 \begin{theorem}
     The zero vector space is defined to have dimension zero.
 \end{theorem}
-\newpage
 \section{Fundamental Subspaces}
 \begin{figure}[H]
     \centering
@@ -739,21 +757,21 @@
 \end{figure}
 \subsection{The Four Fundamental Subspaces of a Matrix}
 \begin{definition}
-    If \(\symbf{A}\in\mathbb{R}^{m \times n}\) is an \(m \times n\) matrix, then:
+    If \(\symbf{A}\in\R^{m \times n}\) is an \(m \times n\) matrix, then:
     \begin{enumerate}
         \item The subspace spanned by the \textit{column vectors} of
               \(\symbf{A}\), is the \textbf{column space} of
               \(\symbf{A}\), denoted \(\columnspace{A}\).
         \item The subspace spanned by the \textit{row vectors} of
-              \(\symbf{A}\), is the \textbf{row space} of \(\symbf{A}\),
-              denoted \(\rowspace{A}\).
-        \item The subspace spanned by the \textit{solution space} of the
-              equation \(\symbf{A}\symbfit{x}=\symbfup{0}\), is the
+              \(\symbf{A}\), is the \textbf{row space} of
+              \(\symbf{A}\), denoted \(\rowspace{A}\).
+        \item The subspace spanned by the \textit{solution space} of
+              the equation \(\symbf{A}\symbf{x}=\symbf{0}\), is the
               \textbf{null space} of \(\symbf{A}\), denoted
               \(\nullspace{A}\).
-        \item The subspace spanned by the \textit{solution space} of the
-              equation \(\symbf{A}^{\top}\symbfit{y}=\symbfup{0}\)
-              (or \(\symbfit{y}^{\top}\symbf{A}=\symbfup{0}\)), is the
+        \item The subspace spanned by the \textit{solution space} of
+              the equation \(\symbf{A}^{\top}\symbf{y}=\symbf{0}\) (or
+              \(\symbf{y}^{\top}\symbf{A}=\symbf{0}\)), is the
               \textbf{left null space} of \(\symbf{A}\), denoted
               \(\leftnullspace{A}\).
     \end{enumerate}
@@ -761,14 +779,14 @@
 \subsection{The General Solution of a System of Equations}
 \begin{theorem}
     The \textbf{general solution} to a matrix equation
-    \(\symbf{A}\symbfit{x}=\symbfit{b}\), can be given by adding the
+    \(\symbf{A}\symbf{x}=\symbf{b}\), can be given by adding the
     \underline{particular} and \underline{homogeneous} solutions, where
     the particular solution is the solution to
-    \(\symbf{A}\symbfit{x}=\symbfit{b}\), or \(\rowspace{A}\), and the
+    \(\symbf{A}\symbf{x}=\symbf{b}\), or \(\rowspace{A}\), and the
     homogeneous solution is the solution to
-    \(\symbf{A}\symbfit{x}=\symbfup{0}\), or \(\nullspace{A}\).
+    \(\symbf{A}\symbf{x}=\symbf{0}\), or \(\nullspace{A}\).
     \begin{equation*}
-        \symbfit{x} = \symbfit{x}_p + \symbfit{x}_h
+        \symbf{x} = \symbf{x}_p + \symbf{x}_h
     \end{equation*}
 \end{theorem}
 \subsection{Row Equivalence}
@@ -795,29 +813,28 @@
     \(\vnull{\left( \symbf{A} \right)}\), is given by
     \(\dim{\left( \nullspace{A} \right)}\).
 \end{definition}
-\newpage
 \section{Orthogonality}
 \begin{definition}
     Two vectors are \textbf{orthogonal} if the following holds.
     \begin{equation*}
-        \symbfit{v}\cdot \symbfit{w}=0 \iff \symbfit{v}^{\top}\symbfit{w}=0
+        \symbf{v}\cdot \symbf{w}=0 \iff \symbf{v}^{\top}\symbf{w}=0
     \end{equation*}
 \end{definition}
 \begin{theorem}
-    \(\symbfup{0}\) is orthogonal to every vector in \(V\).
+    \(\symbf{0}\) is orthogonal to every vector in \(V\).
 \end{theorem}
 \begin{theorem}
-    \(\symbfup{0}\) is the only vector in \(V\), that is orthogonal to
+    \(\symbf{0}\) is the only vector in \(V\), that is orthogonal to
     itself.
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \norm{\symbfit{v}}^2=\symbfit{v}^{\top}\symbfit{v}
+        \norm{\symbf{v}}^2=\symbf{v}^{\top}\symbf{v}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     \begin{equation*}
-        \norm{\symbfit{v}}=\sqrt{\symbfit{v}^{\top}\symbfit{v}}
+        \norm{\symbf{v}}=\sqrt{\symbf{v}^{\top}\symbf{v}}
     \end{equation*}
 \end{theorem}
 \subsection{Orthogonal Subspaces}
@@ -826,7 +843,7 @@
     \textbf{orthogonal subspaces} iff every vector in \(U\) is
     orthogonal to every vector in \(W\).
     \begin{equation*}
-        \forall \symbfit{u}\in U:\forall \symbfit{w}\in W:\symbfit{u}^{\top}\symbfit{w}=0
+        \forall \symbf{u}\in U:\forall \symbf{w}\in W:\symbf{u}^{\top}\symbf{w}=0
     \end{equation*}
 \end{definition}
 \subsection{Orthogonal Complements}
@@ -836,7 +853,7 @@
     the set of all vectors in \(V\) that are orthogonal to every vector
     in \(U\).
     \begin{equation*}
-        U^{\perp} = \left\{ \forall \symbfit{u}\in U:\symbfit{v}\in V: \symbfit{v}^{\top}\symbfit{u}=0 \right\}
+        U^{\perp} = \left\{ \forall \symbf{u}\in U:\symbf{v}\in V: \symbf{v}^{\top}\symbf{u}=0 \right\}
     \end{equation*}
 \end{definition}
 \begin{theorem}
@@ -853,122 +870,122 @@
 \begin{figure}[H]
     \centering
     \includegraphics[height=5cm, keepaspectratio]{figures/vector_projection.pdf}
-    \caption{Vector Projection of \(\symbfit{b}\) onto \(\symbfit{a}\).}
+    \caption{Vector Projection of \(\symbf{b}\) onto \(\symbf{a}\).}
 \end{figure}
 \begin{definition}
-    Let the \textbf{vector projection} of \(\symbfit{b}\) onto
-    \(\symbfit{a}\), denoted as \(\proj_{\symbfit{a}}\symbfit{b}\), be
-    the \textit{orthogonal projection} of \(\symbfit{b}\)
-    in the direction of \(\symbfit{a}\), that minimises the error
-    vector: \(\symbfit{e}=\symbfit{b}-\symbfit{p}\).
+    Let the \textbf{vector projection} of \(\symbf{b}\) onto
+    \(\symbf{a}\), denoted as \(\proj_{\symbf{a}}\symbf{b}\), be
+    the \textit{orthogonal projection} of \(\symbf{b}\)
+    in the direction of \(\symbf{a}\), that minimises the error
+    vector: \(\symbf{e}=\symbf{b}-\symbf{p}\).
 \end{definition}
 \begin{theorem}
-    The projection of \(\symbfit{b}\) onto \(\symbfit{a}\) is given by
+    The projection of \(\symbf{b}\) onto \(\symbf{a}\) is given by
     \begin{equation*}
-        \proj_{\symbfit{a}}\symbfit{b} = \symbfit{a} x = \symbfit{a} \left( \symbfit{a}^\top \symbfit{a} \right)^{-1}\symbfit{a}^\top \symbfit{b}
+        \proj_{\symbf{a}}\symbf{b} = \symbf{a} x = \symbf{a} \left( \symbf{a}^\top \symbf{a} \right)^{-1}\symbf{a}^\top \symbf{b}
     \end{equation*}
     alternatively
     \begin{equation*}
-        \proj_{\symbfit{a}}\symbfit{b} = \symbfit{a} x = \symbfit{a} \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}} = \symbfit{a} \frac{\symbfit{a}\cdot\symbfit{b}}{\symbfit{a}\cdot\symbfit{a}}
+        \proj_{\symbf{a}}\symbf{b} = \symbf{a} x = \symbf{a} \frac{\symbf{a}^\top \symbf{b}}{\symbf{a}^\top \symbf{a}} = \symbf{a} \frac{\symbf{a}\cdot\symbf{b}}{\symbf{a}\cdot\symbf{a}}
     \end{equation*}
 \end{theorem}
-\begin{solution}[Proof]
-    As \(\symbfit{p}\) lies on line through
-    \(\symbfit{a}\), \(\symbfit{p}=\symbfit{a}x\), so that
-    \(\symbfit{e}=\symbfit{b}-\symbfit{a}x\). As \(\symbfit{e}\) is
-    orthogonal to \(\symbfit{a}\), we can construct the following
+\begin{proof}
+    As \(\symbf{p}\) lies on line through
+    \(\symbf{a}\), \(\symbf{p}=\symbf{a}x\), so that
+    \(\symbf{e}=\symbf{b}-\symbf{a}x\). As \(\symbf{e}\) is
+    orthogonal to \(\symbf{a}\), we can construct the following
     relationship.
     \begin{align*}
-        \symbfit{a}^\top \symbfit{e}                                 & = 0                                                                                                                                                \\
-        \symbfit{a}^\top \left( \symbfit{b} - \symbfit{a}x \right)   & = 0                                                                                                                                                \\
-        \symbfit{a}^\top \symbfit{b} - \symbfit{a}^\top \symbfit{a}x & = 0                                                                                                                                                \\
-        \symbfit{a}^\top \symbfit{a}x                                & = \symbfit{a}^\top \symbfit{b}                                                                                                                     \\
-        x                                                            & = \left( \symbfit{a}^\top \symbfit{a} \right)^{-1}\symbfit{a}^\top \symbfit{b} = \frac{\symbfit{a}^\top \symbfit{b}}{\symbfit{a}^\top \symbfit{a}}
+        \symbf{a}^\top \symbf{e}                             & = 0                                                                                                                                \\
+        \symbf{a}^\top \left( \symbf{b} - \symbf{a}x \right) & = 0                                                                                                                                \\
+        \symbf{a}^\top \symbf{b} - \symbf{a}^\top \symbf{a}x & = 0                                                                                                                                \\
+        \symbf{a}^\top \symbf{a}x                            & = \symbf{a}^\top \symbf{b}                                                                                                         \\
+        x                                                    & = \left( \symbf{a}^\top \symbf{a} \right)^{-1}\symbf{a}^\top \symbf{b} = \frac{\symbf{a}^\top \symbf{b}}{\symbf{a}^\top \symbf{a}}
     \end{align*}
-\end{solution}
+\end{proof}
 \subsection{Projection onto a Subspace}
 \begin{theorem}
     Let \(W\) be a subspace of the vector space \(V\) such that if
-    \(\symbfit{b}\in V\), then \(\symbfit{p}=\proj_{W}\symbfit{b}\) is
-    the \textbf{best approximation} of \(\symbfit{b}\) on \(W\), so that
+    \(\symbf{b}\in V\), then \(\symbf{p}=\proj_{W}\symbf{b}\) is
+    the \textbf{best approximation} of \(\symbf{b}\) on \(W\), so that
     \begin{equation*}
-        \norm{\symbfit{b}-\symbfit{p}}<\norm{\symbfit{b}-\symbfit{w}}
+        \norm{\symbf{b}-\symbf{p}}<\norm{\symbf{b}-\symbf{w}}
     \end{equation*}
-    for all \(\symbfit{w}\in W\), where \(\symbfit{w}\neq \symbfit{p}\).
+    for all \(\symbf{w}\in W\), where \(\symbf{w}\neq \symbf{p}\).
 \end{theorem}
 \begin{theorem}
-    The projection of \(\symbfit{b}\) onto the vector space \(W\) is
+    The projection of \(\symbf{b}\) onto the vector space \(W\) is
     given by
     \begin{equation*}
-        \proj_{W}\symbfit{b} = \symbf{A}\symbfit{\hat{x}} = \symbf{A}\left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
+        \proj_{W}\symbf{b} = \symbf{A}\symbf{\hat{x}} = \symbf{A}\left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbf{b}
     \end{equation*}
 \end{theorem}
-\begin{solution}[Proof]
-    As \(\symbfit{p}\in W\), \(\symbfit{p}\) can be represented as the
-    linear combination of the basis vectors \(\symbfit{a}_i\) that span
+\begin{proof}
+    As \(\symbf{p}\in W\), \(\symbf{p}\) can be represented as the
+    linear combination of the basis vectors \(\symbf{a}_i\) that span
     \(W\).
     \begin{align*}
-        \symbfit{p} & = \hat{x}_1 \symbfit{a}_1 + \hat{x}_2 \symbfit{a}_2 + \cdots + \hat{x}_n \symbfit{a}_n \\
-                    & =
+        \symbf{p} & = \hat{x}_1 \symbf{a}_1 + \hat{x}_2 \symbf{a}_2 + \cdots + \hat{x}_n \symbf{a}_n \\
+                  & =
         \begin{bmatrix}
-            \vertbar      & \vertbar      &        & \vertbar      \\
-            \symbfit{a}_1 & \symbfit{a}_2 & \cdots & \symbfit{a}_n \\
-            \vertbar      & \vertbar      &        & \vertbar
+            \vertbar    & \vertbar    &        & \vertbar    \\
+            \symbf{a}_1 & \symbf{a}_2 & \cdots & \symbf{a}_n \\
+            \vertbar    & \vertbar    &        & \vertbar
         \end{bmatrix}
         \begin{bmatrix}
             \hat{x}_1 \\
             \hat{x}_2 \\
             \cdots    \\
             \hat{x}_n
-        \end{bmatrix}                                                                                       \\
-                    & = \symbf{A}\symbfit{\hat{x}}
+        \end{bmatrix}
+        \\
+                  & = \symbf{A}\symbf{\hat{x}}
     \end{align*}
-    Consider the error vector \(\symbfit{e}=\symbfit{b}-\symbfit{p}\).
-    As \(\symbfit{e}\) is orthogonal to \(W\), it will also be
+    Consider the error vector \(\symbf{e}=\symbf{b}-\symbf{p}\).
+    As \(\symbf{e}\) is orthogonal to \(W\), it will also be
     orthogonal to the vectors that span \(W\). Therefore
     \begin{equation*}
         \left\{
         \begin{aligned}
-            \symbfit{a}_1^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0 \\
-            \symbfit{a}_2^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0 \\
-            \vdotswithin{\symbfit{a}_3^\top}\phantom{\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)} &     \\
-            \symbfit{a}_n^\top\left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right)                         & = 0
+            \symbf{a}_1^\top\left( \symbf{b}-\symbf{A}\symbf{\hat{x}} \right)                         & = 0 \\
+            \symbf{a}_2^\top\left( \symbf{b}-\symbf{A}\symbf{\hat{x}} \right)                         & = 0 \\
+            \vdotswithin{\symbf{a}_3^\top}\phantom{\left( \symbf{b}-\symbf{A}\symbf{\hat{x}} \right)} &     \\
+            \symbf{a}_n^\top\left( \symbf{b}-\symbf{A}\symbf{\hat{x}} \right)                         & = 0
         \end{aligned}
         \right.
     \end{equation*}
     which gives the following equation
     \begin{equation*}
-        \symbf{A}^\top \left( \symbfit{b}-\symbf{A}\symbfit{\hat{x}} \right) = \symbfup{0}
+        \symbf{A}^\top \left( \symbf{b}-\symbf{A}\symbf{\hat{x}} \right) = \symbf{0}
     \end{equation*}
-    where we solve for \(\symbfit{\hat{x}}\)
+    where we solve for \(\symbf{\hat{x}}\)
     \begin{align*}
-        \symbf{A}^\top \symbfit{b}-\symbf{A}^\top \symbf{A}\symbfit{\hat{x}} & = \symbfup{0}                                                            \\
-        \symbf{A}^\top \symbf{A}\symbfit{\hat{x}}                            & = \symbf{A}^\top \symbfit{b}                                             \\
-        \symbfit{\hat{x}}                                                    & = \left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbfit{b}
+        \symbf{A}^\top \symbf{b}-\symbf{A}^\top \symbf{A}\symbf{\hat{x}} & = \symbf{0}                                                            \\
+        \symbf{A}^\top \symbf{A}\symbf{\hat{x}}                          & = \symbf{A}^\top \symbf{b}                                             \\
+        \symbf{\hat{x}}                                                  & = \left( \symbf{A}^\top \symbf{A} \right)^{-1}\symbf{A}^\top \symbf{b}
     \end{align*}
-\end{solution}
+\end{proof}
 \subsection{Least Squares}
 \begin{theorem}
-    Suppose \(\symbf{A}\symbfit{x}=\symbfit{b}\) is an
+    Suppose \(\symbf{A}\symbf{x}=\symbf{b}\) is an
     \underline{inconsistent} linear system. The \textbf{least squares}
-    solution of \(\symbf{A}\symbfit{x}=\symbfit{b}\) is given by the
-    orthogonal projection \(\proj_{\columnspace{A}}\symbfit{b}\).
+    solution of \(\symbf{A}\symbf{x}=\symbf{b}\) is given by the
+    orthogonal projection \(\proj_{\columnspace{A}}\symbf{b}\).
 \end{theorem}
-\newpage
 \section{Linear Maps}
 \subsection{Matrix Transformations}
 \begin{definition}
     A \textbf{matrix transformation}
-    \(T_{\symbf{A}}:\mathbb{R}^n\rightarrow \mathbb{R}^m\) is a
+    \(T_{\symbf{A}}:\R^n\rightarrow \R^m\) is a
     mapping of the form
     \begin{equation*}
-        T_{\symbf{A}}\left(\symbfit{x}\right) = \symbf{A}\symbfit{x}
+        T_{\symbf{A}}\left(\symbf{x}\right) = \symbf{A}\symbf{x}
     \end{equation*}
-    where \(\symbf{A}\in \mathbb{R}^{m \times n}\). As this
+    where \(\symbf{A}\in \R^{m \times n}\). As this
     transformation is linear, the following linearity properties hold.
     \begin{enumerate}
-        \item \(T\left(\symbfit{u}+\symbfit{v}\right)=T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right)\)
-        \item \(T\left(k\symbfit{u}\right)= kT\left(\symbfit{u}\right)\)
+        \item \(T\left(\symbf{u}+\symbf{v}\right)=T\left(\symbf{u}\right) + T\left(\symbf{v}\right)\)
+        \item \(T\left(k\symbf{u}\right)= kT\left(\symbf{u}\right)\)
     \end{enumerate}
 \end{definition}
 \subsection{General Linear Transformations}
@@ -977,8 +994,8 @@
     \(V\) and \(W\), then \(T\) is the \textbf{linear transformation}
     from \(V\) to \(W\), and the following properties hold.
     \begin{enumerate}
-        \item \(T\left(\symbfit{u}+\symbfit{v}\right)=T\left(\symbfit{u}\right) + T\left(\symbfit{v}\right)\)
-        \item \(T\left(k\symbfit{u}\right) = kT\left(\symbfit{u}\right)\)
+        \item \(T\left(\symbf{u}+\symbf{v}\right)=T\left(\symbf{u}\right) + T\left(\symbf{v}\right)\)
+        \item \(T\left(k\symbf{u}\right) = kT\left(\symbf{u}\right)\)
     \end{enumerate}
 \end{theorem}
 \begin{theorem}
@@ -996,15 +1013,15 @@
     \begin{enumerate}
         \item The vector space \(V\) is the \textbf{domain} of \(T\).
         \item The vector space \(W\) is the \textbf{codomain} of \(T\).
-        \item The \textbf{image} (or \textbf{range}) of \(T\) is the set
-              of vectors the linear transformation maps to.
+        \item The \textbf{image} (or \textbf{range}) of \(T\) is the
+              set of vectors the linear transformation maps to.
               \begin{equation*}
-                  \vim{\left( T \right)} = T\left(V\right) = \left\{ T\left(\symbfit{v}\right) : \symbfit{v}\in V \right\} \subset W
+                  \vim{\left( T \right)} = T\left(V\right) = \left\{ T\left(\symbf{v}\right) : \symbf{v}\in V \right\} \subset W
               \end{equation*}
         \item The \textbf{kernel} of \(T\) is the set of vectors that
               map to the zero vector.
               \begin{equation*}
-                  \vker{\left( T \right)} = \left\{ \symbfit{v}\in V : T\left(\symbfit{v}\right)=\symbfup{0} \right\}
+                  \vker{\left( T \right)} = \left\{ \symbf{v}\in V : T\left(\symbf{v}\right)=\symbf{0} \right\}
               \end{equation*}
     \end{enumerate}
 \end{definition}
@@ -1015,14 +1032,14 @@
     \begin{equation*}
         \symbf{A} =
         \begin{bmatrix}
-            \vertbar                    & \vertbar                    &        & \vertbar                    \\
-            T\left(\symbfit{e}_1\right) & T\left(\symbfit{e}_2\right) & \cdots & T\left(\symbfit{e}_n\right) \\
-            \vertbar                    & \vertbar                    &        & \vertbar
+            \vertbar                  & \vertbar                  &        & \vertbar                  \\
+            T\left(\symbf{e}_1\right) & T\left(\symbf{e}_2\right) & \cdots & T\left(\symbf{e}_n\right) \\
+            \vertbar                  & \vertbar                  &        & \vertbar
         \end{bmatrix}
     \end{equation*}
     where
     \begin{equation*}
-        \symbfit{e}_1 =
+        \symbf{e}_1 =
         \begin{bmatrix}
             1      \\
             0      \\
@@ -1030,7 +1047,7 @@
             \vdots \\
             0
         \end{bmatrix}
-        ,\, \symbfit{e}_2 =
+        ,\, \symbf{e}_2 =
         \begin{bmatrix}
             0      \\
             1      \\
@@ -1038,7 +1055,7 @@
             \vdots \\
             0
         \end{bmatrix}
-        ,\, \dots,\, \symbfit{e}_n =
+        ,\, \dots,\, \symbf{e}_n =
         \begin{bmatrix}
             0      \\
             0      \\
@@ -1047,9 +1064,8 @@
             1
         \end{bmatrix}
     \end{equation*}
-    are the \textbf{standard basis vectors} for \(\mathbb{R}^n\).
+    are the \textbf{standard basis vectors} for \(\R^n\).
 \end{theorem}
-\newpage
 \section{Determinants}
 \subsection{Properties of Determinants}
 \begin{enumerate}
@@ -1086,16 +1102,16 @@
                     \end{vmatrix}
                     \)
           \end{enumerate}
-    \item If \(\symbf{A}\) has two equal rows, then
-          \(\det{\left( \symbf{A} \right)}=0\).
-    \item Adding a scalar multiple of one row to another does not change
-          the determinant of a matrix.
-    \item If \(\symbf{A}\) has a row of zeros, then
-          \(\det{\left( \symbf{A} \right)}=0\).
-    \item If \(\symbf{A}\) is triangular, then
-          \(\det{\left( \symbf{A} \right)}=\prod_{i=1}^{n} a_{ii}\).
-    \item If \(\symbf{A}\) is singular, then
-          \(\det{\left( \symbf{A} \right)}=0\).
+    \item If \(\symbf{A}\) has two equal rows, then \(\det{\left(
+          \symbf{A} \right)}=0\).
+    \item Adding a scalar multiple of one row to another does not
+          change the determinant of a matrix.
+    \item If \(\symbf{A}\) has a row of zeros, then \(\det{\left(
+          \symbf{A} \right)}=0\).
+    \item If \(\symbf{A}\) is triangular, then \(\det{\left( \symbf{A}
+          \right)}=\prod_{i=1}^{n} a_{ii}\).
+    \item If \(\symbf{A}\) is singular, then \(\det{\left( \symbf{A}
+          \right)}=0\).
     \item \(\det{\left( \symbf{A}\symbf{B} \right)}=\det{\left( \symbf{A} \right)}\det{\left( \symbf{B} \right)}\).
     \item \(\det{\left( \symbf{A}^\top \right)}=\det{\left( \symbf{A} \right)}\).
 \end{enumerate}
@@ -1155,7 +1171,6 @@
         \symbf{A}^{-1}=\frac{1}{\det{\left( \symbf{A} \right)}} \adj{\left( \symbf{A} \right)}
     \end{equation*}
 \end{theorem}
-\newpage
 \section{Invariant Subspaces}
 \begin{definition}
     Consider the subspace \(\mathcal{V}\) of the linear mapping
@@ -1169,13 +1184,13 @@
     If \(\mathcal{V}\) is an invariant subspace of a linear mapping
     \(T: V \rightarrow V\) from a vector space \(V\) to itself, then
     \begin{equation*}
-        \forall \symbfit{v}\in \mathcal{V}\implies T\left(\symbfit{v}\right)\in \mathcal{V}
+        \forall \symbf{v}\in \mathcal{V}\implies T\left(\symbf{v}\right)\in \mathcal{V}
     \end{equation*}
 \end{theorem}
 \subsection{Trivial Invariant Subspaces}
 \begin{enumerate}
     \item \(V\).
-    \item \(\left\{ \symbfup{0} \right\}\).
+    \item \(\left\{ \symbf{0} \right\}\).
     \item \(\vker{\left( T \right)}\).
     \item \(\vim{\left( T \right)}\).
     \item Any linear combination of invariant subspaces.
@@ -1189,40 +1204,40 @@
     If \(\mathcal{V}\) is an eigenspace of the linear mapping
     \(T: V \rightarrow V\), then
     \begin{equation*}
-        \mathcal{V} = \left\{ \forall \symbfit{q}\in \mathcal{V}:\exists \lambda \in \mathbb{C}:T\left(\symbfit{q}\right)=\lambda \symbfit{q} \right\}
+        \mathcal{V} = \left\{ \forall \symbf{v}\in \mathcal{V}:\exists \lambda \in \mathbb{C}:T\left(\symbf{v}\right)=\lambda \symbf{v} \right\}
     \end{equation*}
     where \(\lambda\) is the \textbf{eigenvalue} associated with the
-    \textbf{eigenvector} \(\symbfit{q}\).
+    \textbf{eigenvector} \(\symbf{v}\).
 \end{theorem}
 \subsection{The Eigenvalue Problem}
 \begin{theorem}
     The eigenvalues \(\lambda\) of an invertible square matrix
     \(\symbf{A}\), are the solutions to
     \begin{equation*}
-        \det{\left( \symbf{A} - \lambda \symbf{I} \right)}=\symbfup{0}
+        \det{\left( \symbf{A} - \lambda \symbf{I} \right)}=\symbf{0}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
     The eigenvectors associated with each eigenvalue, of an invertible
     square matrix \(\symbf{A}\), are the solutions to
     \begin{equation*}
-        \left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q}=\symbfup{0}
+        \left( \symbf{A} - \lambda \symbf{I} \right) \symbf{v}=\symbf{0}
     \end{equation*}
 \end{theorem}
-\begin{solution}[Proof]
+\begin{proof}
     The eigenvalues and associated eigenvectors of a square matrix
     \(\symbf{A}\), are the solutions to
-    \(\symbf{A}\symbfit{q}=\lambda \symbfit{q}\).
+    \(\symbf{A}\symbf{v}=\lambda \symbf{v}\).
     \begin{align*}
-        \symbf{A}\symbfit{q}                                     & =\lambda \symbfit{q} \\
-        \symbf{A}\symbfit{q} - \lambda \symbfit{q}               & =\symbfup{0}         \\
-        \left( \symbf{A} - \lambda \symbf{I} \right) \symbfit{q} & =\symbfup{0}
+        \symbf{A}\symbf{v}                                     & =\lambda \symbf{v} \\
+        \symbf{A}\symbf{v} - \lambda \symbf{v}                 & =\symbf{0}         \\
+        \left( \symbf{A} - \lambda \symbf{I} \right) \symbf{v} & =\symbf{0}
     \end{align*}
     The linear system
-    \(\left( \symbf{A} - \lambda\symbf{I} \right) \symbfit{q}=\symbfup{0}\)
+    \(\left( \symbf{A} - \lambda\symbf{I} \right) \symbf{v}=\symbf{0}\)
     has a nontrivial solution iff \(\symbf{A} - \lambda \symbf{I}\)
     is singular.
-\end{solution}
+\end{proof}
 \subsection{Properties of Eigenvalues}
 \begin{theorem}
     \begin{equation*}
@@ -1234,36 +1249,35 @@
         \det{\left( \symbf{A} \right)} = \prod_{i=1}^n \lambda_i
     \end{equation*}
 \end{theorem}
-\newpage
 \section{Eigen Decomposition}
 \subsection{Similarity Transformations}
 \begin{definition}
     A \textbf{similarity transformation} is a linear mapping of the form
     \begin{equation*}
-        \symbf{A}\rightarrow \symbf{Q}^{-1}\symbf{A}\symbf{Q}
+        \symbf{A}\rightarrow \symbf{V}^{-1}\symbf{A}\symbf{V}
     \end{equation*}
-    in which the matrices \(\symbf{A}\) and \(\symbf{Q}\) are
+    in which the matrices \(\symbf{A}\) and \(\symbf{V}\) are
     \(n \times n\) invertible matrices. Here we say, ``\(\symbf{A}\)
-    is similar to \(\symbf{Q}^{-1}\symbf{A}\symbf{Q}\)''.
+    is similar to \(\symbf{V}^{-1}\symbf{A}\symbf{V}\)''.
 \end{definition}
 \subsection{Matrix Diagonalisation}
 \begin{definition}
     The matrix \(\symbf{A}\) is a \textbf{diagonalisable} matrix if it
     is similar to a diagonal matrix. That is, there exists an invertible
-    matrix \(\symbf{Q}\), and diagonal matrix \(\symbf{\Lambda}\),
+    matrix \(\symbf{V}\), and diagonal matrix \(\symbf{D}\),
     such that
     \begin{equation*}
-        \symbf{\Lambda}=\symbf{Q}^{-1}\symbf{A}\symbf{Q}
+        \symbf{D}=\symbf{V}^{-1}\symbf{A}\symbf{V}
     \end{equation*}
 \end{definition}
 \begin{theorem}
     Let \(\symbf{A}\) be an \(n \times n\) matrix with \(n\) linearly
     independent eigenvectors, then \(\symbf{A}\) is diagonalisable if
-    \(\symbf{\Lambda}=\diag{\left( \lambda_1,\: \lambda_2,\: \dots,\: \lambda_n \right)}\)
-    and \(\symbf{Q}\) is a matrix composed of the eigenvectors of
+    \(\symbf{D}=\diag{\left( \lambda_1,\: \lambda_2,\: \dots,\: \lambda_n \right)}\)
+    and \(\symbf{V}\) is a matrix composed of the eigenvectors of
     \(\symbf{A}\). Explicitly,
     \begin{equation*}
-        \symbf{\Lambda} =
+        \symbf{D} =
         \begin{bmatrix}
             \lambda_1 &           &        &           \\
                       & \lambda_2 &        &           \\
@@ -1272,72 +1286,72 @@
         \end{bmatrix}
         \quad
         \text{and}\quad
-        \symbf{Q} =
+        \symbf{V} =
         \begin{bmatrix}
-            \vertbar      & \vertbar      &        & \vertbar      \\
-            \symbfit{q}_1 & \symbfit{q}_2 & \cdots & \symbfit{q}_n \\
-            \vertbar      & \vertbar      &        & \vertbar
+            \vertbar    & \vertbar    &        & \vertbar    \\
+            \symbf{v}_1 & \symbf{v}_2 & \cdots & \symbf{v}_n \\
+            \vertbar    & \vertbar    &        & \vertbar
         \end{bmatrix}
     \end{equation*}
-    where \(\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n\)
+    where \(\symbf{v}_1,\: \symbf{v}_2,\: \dots,\: \symbf{v}_n\)
     are the eigenvectors of \(\symbf{A}\).
 \end{theorem}
-\begin{solution}[Proof]
-    Let \(\symbfit{q}_1,\: \symbfit{q}_2,\: \dots,\: \symbfit{q}_n\) be
+\begin{proof}
+    Let \(\symbf{v}_1,\: \symbf{v}_2,\: \dots,\: \symbf{v}_n\) be
     linearly independent eigenvectors of \(\symbf{A}\), and
     \(\lambda_1,\: \lambda_2,\: \dots,\: \lambda_n\), the associated
     eigenvalues. By definition of an eigenspace, we have
     \begin{equation*}
         \left\{
         \setlength\arraycolsep{0pt}
-        \begin{array}{ r >{{}}c<{{}} l }
-            \symbf{A}\symbfit{q}_1      & = & \lambda_1 \symbfit{q}_1                            \\
-            \symbf{A}\symbfit{q}_2      & = & \lambda_2 \symbfit{q}_2                            \\
-            \vdotswithin{\symbfit{q}_3} &   & \vdotswithin{\lambda_3}\vdotswithin{\symbfit{q}_3} \\
-            \symbf{A}\symbfit{q}_n      & = & \lambda_n \symbfit{q}_n
+        \begin{array}
+            { r >{{}}c<{{}} l }
+            \symbf{A}\symbf{v}_1      & = & \lambda_1 \symbf{v}_1                            \\
+            \symbf{A}\symbf{v}_2      & = & \lambda_2 \symbf{v}_2                            \\
+            \vdotswithin{\symbf{v}_3} &   & \vdotswithin{\lambda_3}\vdotswithin{\symbf{v}_3} \\
+            \symbf{A}\symbf{v}_n      & = & \lambda_n \symbf{v}_n
         \end{array}
         \right.
     \end{equation*}
     which we can rewrite as
     \begin{align}
-        \symbf{A}\symbf{Q} & = \symbf{Q}\symbf{\Lambda} \label{equation:eigenspace_matrix} \\
-        \symbf{\Lambda}    & =\symbf{Q}^{-1}\symbf{A}\symbf{Q} \nonumber
+        \symbf{A}\symbf{V} & = \symbf{V}\symbf{D} \label{equation:eigenspace_matrix} \\
+        \symbf{D}          & =\symbf{V}^{-1}\symbf{A}\symbf{V} \nonumber
     \end{align}
     by rearranging
     \hyperref[equation:eigenspace_matrix]{Equation~\ref{equation:eigenspace_matrix}},
     we have \(\symbf{A}\) in terms of its eigenvalues and
     eigenvectors.
     \begin{equation*}
-        \symbf{A} = \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1}
+        \symbf{A} = \symbf{V}\symbf{D} \symbf{V}^{-1}
     \end{equation*}
-\end{solution}
+\end{proof}
 \subsection{Powers of a Matrix}
 \begin{theorem}
     Let \(\symbf{A}\) be a diagonalisable matrix, then for all
-    \(k \in \mathbb{N}_0\)
+    \(k \in \N_0\)
     \begin{equation*}
-        \symbf{A}^k = \symbf{Q} \symbf{\Lambda}^k \symbf{Q}^{-1}
+        \symbf{A}^k = \symbf{V} \symbf{D}^k \symbf{V}^{-1}
     \end{equation*}
 \end{theorem}
 \begin{proof}
     \begin{align*}
-        \symbf{A}^k & = \left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)^k                                                                                                                                                     \\
-                    & = \underbrace{\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)\cdots\left( \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \right)}_{\text{\(k\) times}} \\
-                    & = \underbrace{\symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} \cdots \symbf{Q} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                                          \\
-                    & = \underbrace{\symbf{Q} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}} \symbf{\Lambda} \cancel{\symbf{Q}^{-1} \cdots \symbf{Q}} \symbf{\Lambda} \symbf{Q}^{-1} }_{\text{\(k\) times}}                        \\
-                    & = \symbf{Q} \underbrace{ \symbf{\Lambda} \symbf{\Lambda} \cdots \symbf{\Lambda} }_{\text{\(k\) times}}\symbf{Q}^{-1}                                                                                            \\
-                    & = \symbf{Q} \symbf{\Lambda}^k\symbf{Q}^{-1}
+        \symbf{A}^k & = \left( \symbf{V} \symbf{D} \symbf{V}^{-1} \right)^k                                                                                                                                         \\
+                    & = \underbrace{\left( \symbf{V} \symbf{D} \symbf{V}^{-1} \right)\left( \symbf{V} \symbf{D} \symbf{V}^{-1} \right)\cdots\left( \symbf{V} \symbf{D} \symbf{V}^{-1} \right)}_{\text{\(k\) times}} \\
+                    & = \underbrace{\symbf{V} \symbf{D} \symbf{V}^{-1} \symbf{V} \symbf{D} \symbf{V}^{-1} \cdots \symbf{V} \symbf{D} \symbf{V}^{-1} }_{\text{\(k\) times}}                                          \\
+                    & = \underbrace{\symbf{V} \symbf{D} \cancel{\symbf{V}^{-1} \symbf{V}} \symbf{D} \cancel{\symbf{V}^{-1} \cdots \symbf{V}} \symbf{D} \symbf{V}^{-1} }_{\text{\(k\) times}}                        \\
+                    & = \symbf{V} \underbrace{ \symbf{D} \symbf{D} \cdots \symbf{D} }_{\text{\(k\) times}}\symbf{V}^{-1}                                                                                            \\
+                    & = \symbf{V} \symbf{D}^k\symbf{V}^{-1}
     \end{align*}
 \end{proof}
 \begin{theorem}
-    The eigenvalues of \(\symbf{A}^k\), \(\forall k \in \mathbb{N}\)
+    The eigenvalues of \(\symbf{A}^k\), \(\forall k \in \N\)
     are \(\lambda_1^k,\: \lambda_2^k,\: \dots,\: \lambda_n^k\).
 \end{theorem}
 \begin{theorem}
     The eigenvectors of \(\symbf{A}\) are equal to the eigenvectors of
     \(\symbf{A}^k\).
 \end{theorem}
-\newpage
 \section{System of Differential Equations}
 \subsection{First-Order Differential Equations}
 \begin{definition}
@@ -1351,7 +1365,7 @@
     The general solution to a first-order linear differential equation
     is of the form
     \begin{equation*}
-        x(t) = c_1 e^{a t}
+        x\left( t \right) = c_1 e^{a t}
     \end{equation*}
     where \(c_1\) is an arbitrary constant.
 \end{theorem}
@@ -1361,7 +1375,8 @@
     form
     \begin{equation*}
         \begin{cases}
-            \begin{array}{ c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
+            \begin{array}
+                { c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c >{{}}c<{{}} c  }
                 x'_1               & = & a_{11}x_1                         & + & a_{12}x_2                         & + & \cdots & + & a_{1n}x_n                         \\
                 x'_2               & = & a_{21}x_1                         & + & a_{22}x_2                         & + & \cdots & + & a_{2n}x_n                         \\
                 \vdotswithin{x'_3} &   & \vdotswithin{a_{31}}\phantom{x_1} &   & \vdotswithin{a_{32}}\phantom{x_2} &   &        &   & \vdotswithin{a_{3n}}\phantom{x_n} \\
@@ -1369,7 +1384,7 @@
             \end{array}
         \end{cases}
     \end{equation*}
-    where \(x_1=x_1(t),\: x_2=x_2(t),\: \dots,\: x_n=x_n(t)\) are the
+    where \(x_1=x_1\left( t \right),\: x_2=x_2\left( t \right),\: \dots,\: x_n=x_n\left( t \right)\) are the
     functions to be determined. In matrix form, the system can be
     written as
     \begin{align*}
@@ -1380,7 +1395,7 @@
             \vdots \\
             x_n
         \end{bmatrix}
-                     & =
+                   & =
         \begin{bmatrix}
             a_{11} & a_{12} & \cdots & a_{1n} \\
             a_{21} & a_{22} & \cdots & a_{2n} \\
@@ -1392,25 +1407,26 @@
             x_2    \\
             \vdots \\
             x_n
-        \end{bmatrix}                         \\
-        \symbfit{x}' & = \symbf{A} \symbfit{x}
+        \end{bmatrix}
+        \\
+        \symbf{x}' & = \symbf{A} \symbf{x}
     \end{align*}
 \end{definition}
 \subsection{Solution using Diagonalisation}
 \begin{theorem}
     The first-order system of differential equations
-    \(\symbfit{x}' = \symbf{A} \symbfit{x}\) can be solved using the
+    \(\symbf{x}' = \symbf{A} \symbf{x}\) can be solved using the
     following substitution
     \begin{equation*}
-        \symbfit{x}=\symbf{Q}\symbfit{u}
+        \symbf{x}=\symbf{V}\symbf{u}
     \end{equation*}
-    where \(\symbfit{u}\) is a vector to be determined, and
-    \(\symbf{Q}\) is the matrix that diagonalises \(\symbf{A}\).
-    \(\symbfit{u}\) is determined by solving
+    where \(\symbf{u}\) is a vector to be determined, and
+    \(\symbf{V}\) is the matrix that diagonalises \(\symbf{A}\).
+    \(\symbf{u}\) is determined by solving
     \begin{equation*}
-        \symbfit{u}' = \symbf{\Lambda} \symbfit{u}
+        \symbf{u}' = \symbf{D} \symbf{u}
     \end{equation*}
-    where \(\symbf{\Lambda}\) is the diagonal similarity
+    where \(\symbf{D}\) is the diagonal similarity
     transformation of \(\symbf{A}\). This substitution uncouples the
     system of differential equations so that each equation can be solved
     as a first-order differential equation.
@@ -1419,20 +1435,20 @@
     \begingroup
     \allowdisplaybreaks
     \begin{align*}
-        \symbfit{x}'                         & = \symbf{A} \symbfit{x}                                                                     \\
-        \left( \symbf{Q}\symbfit{u} \right)' & = \left( \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \right)\left( \symbf{Q}\symbfit{u} \right) \\
-        \symbf{Q}\symbfit{u}'                & = \symbf{Q}\symbf{\Lambda} \symbf{Q}^{-1} \symbf{Q}\symbfit{u}                              \\
-        \cancel{\symbf{Q}}\symbfit{u}'       & = \cancel{\symbf{Q}}\symbf{\Lambda} \cancel{\symbf{Q}^{-1} \symbf{Q}}\symbfit{u}            \\
-        \symbfit{u}'                         & = \symbf{\Lambda} \symbfit{u}
+        \symbf{x}'                         & = \symbf{A} \symbf{x}                                                               \\
+        \left( \symbf{V}\symbf{u} \right)' & = \left( \symbf{V}\symbf{D} \symbf{V}^{-1} \right)\left( \symbf{V}\symbf{u} \right) \\
+        \symbf{V}\symbf{u}'                & = \symbf{V}\symbf{D} \symbf{V}^{-1} \symbf{V}\symbf{u}                              \\
+        \cancel{\symbf{V}}\symbf{u}'       & = \cancel{\symbf{V}}\symbf{D} \cancel{\symbf{V}^{-1} \symbf{V}}\symbf{u}            \\
+        \symbf{u}'                         & = \symbf{D} \symbf{u}
     \end{align*}
     \endgroup
 \end{proof}
 \begin{theorem}
     If \(\symbf{A}\) is a diagonalisable matrix, then the general
-    solution of \(\symbfit{x}' = \symbf{A} \symbfit{x}\) can be
+    solution of \(\symbf{x}' = \symbf{A} \symbf{x}\) can be
     expressed as
     \begin{equation*}
-        \symbfit{x}(t) = c_1 e^{\lambda_1 t} \symbfit{q}_1 + c_2 e^{\lambda_2 t} \symbfit{q}_2 + \cdots + c_n e^{\lambda_n t} \symbfit{q}_n
+        \symbf{x}\left( t \right) = c_1 e^{\lambda_1 t} \symbf{v}_1 + c_2 e^{\lambda_2 t} \symbf{v}_2 + \cdots + c_n e^{\lambda_n t} \symbf{v}_n
     \end{equation*}
 \end{theorem}
 \subsection{Principle of Superposition}
@@ -1459,10 +1475,11 @@
             & \vdotswithin{=}          \\
         x_n & = x^{\left( n-1 \right)}
     \end{align*}
-    Let \(\symbfit{x}=
+    Let \(\symbf{x}=
     \begin{bmatrix}
         x_1 & x_2 & \cdots & x_n
-    \end{bmatrix}^\top
+    \end{bmatrix}
+    ^\top
     \). Then the first-order linear system of differential equations can
     be written as
     \begin{equation*}
@@ -1489,15 +1506,4 @@
         \end{bmatrix}
     \end{equation*}
 \end{theorem}
-\newpage
-%
-\listoffigures
-%
-\newpage
-%
-\nocite{*}
-%
-\bibliographystyle{plainurl}
-\bibliography{MXB106_Lecture_Notes.bib}
-%
 \end{document}
