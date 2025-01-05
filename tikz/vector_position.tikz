@@ -15,16 +15,16 @@
 \begin{tikzpicture}
 	\draw [<->] (0,5) -- (0,0) -- (5,0); % Axes
 	% First Vector
-	\draw [->, dashed, opacity=0.65] (0,0) -- (1,4); 
+	\draw [->, dashed, opacity=0.65] (0,0) -- (1,4);
 	\node [right] at (0.5,2) {\(\overrightarrow{OA}\)};
-	\node [above left] at (1,4) {\(\symbfit{a}\)};
+	\node [above left] at (1,4) {\(\symbf{a}\)};
 	% Second Vector
 	\draw [->, dashed, opacity=0.65] (0,0) -- (4,2);
 	\node [below right] at (2,1) {\(\overrightarrow{OB}\)};
-	\node [below right] at (4,2) {\(\symbfit{b}\)};
+	\node [below right] at (4,2) {\(\symbf{b}\)};
 	% Displacement Vector
 	\draw [->, thick] (1,4) -- (4,2);
-	\node [above right] at (2.5,3) {\(\overrightarrow{AB} = \symbfit{b} - \symbfit{a}\)};
+	\node [above right] at (2.5,3) {\(\overrightarrow{AB} = \symbf{b} - \symbf{a}\)};
 	\node [below left] at (0,0) {\(O\)};
 \end{tikzpicture}
 \end{document}
